@@ -8,14 +8,10 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-
-
 const App = () => (
   <div>
     <header>
-      <Link to="/" className="header-link">
         <h1>Droppyboy</h1>
-      </Link>
     </header>
   </div>
 );
