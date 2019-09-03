@@ -8,10 +8,12 @@ import {
   HashRouter
 } from 'react-router-dom';
 
+import NavBar from './nav/nav_bar'
+
 const App = () => (
   <div>
     <header>
-        <h1>Droppyboy</h1>
+        <NavBar />
     </header>
   </div>
 );
