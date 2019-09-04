@@ -1,0 +1,201 @@
+.RebrandHero {
+    position: relative;
+    background: #61082b;
+    background: -webkit-gradient(linear, left top, right top, color-stop(66.666%, #61082b), color-stop(33.334%, #b4d0e7));
+    background: linear-gradient(90deg, #61082b 66.666%, #b4d0e7 33.334%);
+    min-height: 800px;
+    height: 100vh
+}
+
+@media only screen and (max-width: 1023px) {
+    .RebrandHero {
+        min-height:auto;
+        height: auto;
+        background: #61082b
+    }
+}
+
+.RebrandHero-container,.RebrandHero-container.ob-grid {
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: start !important;
+    -ms-flex-pack: start !important;
+    justify-content: flex-start !important;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-top: 90px;
+    padding-bottom: 0;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    background: -webkit-gradient(linear, left top, right top, color-stop(66.666%, #61082b), color-stop(33.334%, #b4d0e7));
+    background: linear-gradient(90deg, #61082b 66.666%, #b4d0e7 33.334%)
+}
+
+@media only screen and (max-width: 1023px) {
+    .RebrandHero-container,.RebrandHero-container.ob-grid {
+        padding-top:130px;
+        background: none
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .RebrandHero-container,.RebrandHero-container.ob-grid {
+        padding-top:90px;
+        padding-bottom: 0
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .RebrandHero-container,.RebrandHero-container.ob-grid {
+        padding-bottom:0
+    }
+}
+
+.top-notification-bar .RebrandHero-container {
+    margin-top: 65px
+}
+
+.RebrandHero-header {
+    margin-top: auto;
+    margin-bottom: auto
+}
+
+.RebrandHero-aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.RebrandHero-aside .ob-button__cta {
+    display: none;
+    margin-bottom: 50px
+}
+
+@media (max-width: 1023px) {
+    .RebrandHero-aside .ob-button__cta {
+        display:block
+    }
+}
+
+@media (max-width: 1023px) {
+    .RebrandHero-aside {
+        width:100%;
+        max-width: 100%;
+        padding: 0
+    }
+}
+
+.RebrandHero--title {
+    color: #b4d0e7
+}
+
+.RebrandHero--copy {
+    color: #fff;
+    max-width: 360px
+}
+
+@media only screen and (max-width: 1023px) {
+    .RebrandHero--copy {
+        margin-bottom:40px
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .RebrandHero--copy {
+        margin-bottom:20px
+    }
+}
+
+.RebrandHero--waypoint.ob-button--waypoint {
+    margin-top: 50px
+}
+
+@media only screen and (max-width: 1023px) {
+    .RebrandHero--waypoint.ob-button--waypoint {
+        position:relative;
+        left: auto;
+        bottom: auto;
+        margin-top: 0;
+        margin-bottom: 50px
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .RebrandHero--waypoint.ob-button--waypoint {
+        display:none
+    }
+}
+
+.RebrandHero--brand-campaign {
+    background: #005744;
+    background: -webkit-gradient(linear, left top, right top, color-stop(66.666%, #005744), color-stop(33.334%, #ffd830));
+    background: linear-gradient(90deg, #005744 66.666%, #ffd830 33.334%)
+}
+
+@media only screen and (max-width: 1023px) {
+    .RebrandHero--brand-campaign {
+        background:#005744
+    }
+}
+
+.RebrandHero--brand-campaign .RebrandHero-container,.RebrandHero--brand-campaign .RebrandHero-container.ob-grid {
+    background: -webkit-gradient(linear, left top, right top, color-stop(66.666%, #005744), color-stop(33.334%, #ffd830));
+    background: linear-gradient(90deg, #005744 66.666%, #ffd830 33.334%)
+}
+
+@media only screen and (max-width: 1023px) {
+    .RebrandHero--brand-campaign .RebrandHero-container,.RebrandHero--brand-campaign .RebrandHero-container.ob-grid {
+        background:none
+    }
+}
+
+.RebrandHero--brand-campaign .RebrandHero-aside .ob-button__cta--small-bottom {
+    margin-bottom: 20px
+}
+
+.RebrandHero--brand-campaign .RebrandHero--title {
+    color: #ffd830
+}
+
+.RebrandHero__secondary-cta {
+    margin: 0;
+    color: #fff
+}
+
+.RebrandHero__secondary-cta--small {
+    display: none
+}
+
+@media only screen and (max-width: 1023px) {
+    .RebrandHero__secondary-cta--small {
+        display:inline-block;
+        margin-bottom: 50px
+    }
+}
+
+.RebrandHero__secondary-cta--large {
+    display: inline-block
+}
+
+@media only screen and (max-width: 1023px) {
+    .RebrandHero__secondary-cta--large {
+        display:none
+    }
+}
+
+.RebrandHero__secondary-link {
+    color: #fff;
+    text-decoration: underline
+}
+
+.RebrandHero__secondary-link:hover,.RebrandHero__secondary-link:focus {
+    text-decoration: none
+}

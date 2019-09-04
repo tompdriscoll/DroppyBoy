@@ -1,0 +1,13 @@
+.drawer {
+    height: 100%;
+    width: 33.333%;
+    background: white;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+
+.drawerNav {
+    text-align: right;
+}

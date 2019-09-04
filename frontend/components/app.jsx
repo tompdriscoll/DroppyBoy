@@ -8,14 +8,15 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-import NavBar from './nav/nav_bar'
-
+import Splash from './splash/splash'
+import Drawer from './drawer/drawer'
 const App = () => (
-  <div>
-    <header>
-        <NavBar />
-    </header>
+  <div id="embedded-app" class="embedded-app IndexRebrandPage">
+    <Splash/> 
+    <Drawer/>  
   </div>
+    
+ 
 );
 
 export default App;

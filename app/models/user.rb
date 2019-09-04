@@ -12,8 +12,8 @@ class User < ApplicationRecord
     foreign_key: :uploader_id
       
   
-    def self.find_by_credentials(username, password)
-      user = User.find_by(username: username)
+    def self.find_by_credentials(email, password)
+      user = User.find_by(email: email)
       return nil unless user
       user.is_password?(password) ? user : nil
     end
@@ -38,6 +38,18 @@ class User < ApplicationRecord
     def ensure_session_token
       generate_unique_session_token unless self.session_token
     end
+    def new_session_token
+      SecureRandom.urlsafe_base64
+    end
+  
+    def generate_unique_session_token
+      self.session_token = new_session_token
+      while User.find_by(session_token: self.session_token)
+        self.session_token = new_session_token
+      end
+      self.session_token
+    end
+  
   
   end
   
