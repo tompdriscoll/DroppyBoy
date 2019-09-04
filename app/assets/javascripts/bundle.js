@@ -354,35 +354,50 @@ function (_React$Component) {
       //   return <li>{error}</li>
       // })
 
-      var linkButton = formType === 'login' ? "Login" : "Sign Up";
+      var linkButton = formType === 'login' ? "Login" : "Sign up";
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         id: "session-form",
         onSubmit: this.handleSubmit
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, formType, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "or", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, formType), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "session-header-sub"
+      }, "or", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "/signin"
       }, " sign into your account"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        "class": "session-form-element",
         type: "text",
         id: "first_name",
         value: this.state.first_name,
         placeholder: "First Name",
         onChange: this.update('first_name')
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        "class": "session-form-element",
         type: "text",
         id: "last_name",
         value: this.state.last_name,
         placeholder: "Last Name",
         onChange: this.update('last_name')
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        "class": "session-form-element",
         type: "text",
         id: "email",
         value: this.state.email,
+        placeholder: "Email",
         onChange: this.update('email')
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        "class": "session-form-element",
         type: "password",
         id: "password",
         value: this.state.password,
+        placeholder: "Password",
         onChange: this.update('password')
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, linkButton));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        "class": "session-form-element",
+        type: "checkbox"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        "class": "session-header-sub"
+      }, "This page is protected by reCAPTCHA, and subject to the Google Privacy Policy and Terms of service."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        "class": "session-form-element"
+      }, linkButton));
     }
   }]);
 
@@ -412,7 +427,7 @@ __webpack_require__.r(__webpack_exports__);
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
     errors: state.errors,
-    formType: 'Sign Up'
+    formType: 'Sign up'
   };
 };
 
@@ -445,7 +460,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var GridContent = function GridContent() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "ob-grid-content ob-grid-content--pad-2 ob-grid-content--xlarge--pad-2 ob-grid-content--large--pad-2 ob-grid-content--medium--pad-2 ob-grid-content--small--pad-1 ob-grid-content--xsmall--pad-2 "
+    className: "grid"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_hero_header__WEBPACK_IMPORTED_MODULE_1__["default"], null));
 };
 
@@ -468,13 +483,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var HeroAside = function HeroAside() {
+var Hero = function Hero() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "RebrandHero-aside ob-grid-column ob-grid-column--xlarge-16 ob-grid-column--large-16 ob-grid-column--medium-20 ob-grid-column--small-24 ob-grid-column--xsmall-24 "
+    className: "hero"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid_content__WEBPACK_IMPORTED_MODULE_1__["default"], null));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (HeroAside);
+/* harmony default export */ __webpack_exports__["default"] = (Hero);
 
 /***/ }),
 
@@ -493,14 +508,12 @@ __webpack_require__.r(__webpack_exports__);
 
 var HeroHeader = function HeroHeader() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    className: "RebrandHero--title ob-title ob-title--1"
+    className: "hero-title"
   }, "Put your creative energy to work, with Dropbox"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "RebrandHero--copy ob-copy ob-copy--standard"
+    className: "hero-copy"
   }, "Dropbox is a modern workspace designed to reduce busywork\u2014so you can focus on the things that matter."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "RebrandHero--cta ob-button ob-button__cta ob-button--white"
-  }, "Sign up for free"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     "aria-label": "waypoint",
-    className: "RebrandHero--waypoint ob-button ob-button--waypoint"
+    className: "arrow"
   }));
 };
 
@@ -523,17 +536,15 @@ __webpack_require__.r(__webpack_exports__);
 
 var DroppyboyLogo = function DroppyboyLogo(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "DropboxLogo"
+    className: "droppyboy-logo"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://cfl.dropboxstatic.com/static/images/index/rebrand/logos/glyphs/glyph_aqua.svg",
-    className: "DropboxLogo--glyph",
-    alt: "",
-    role: "presentation"
+    className: "dropbox-glyph",
+    alt: ""
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "https://cfl.dropboxstatic.com/static/images/index/rebrand/logos/wordmarks/wordmark_white.svg",
-    className: "DropboxLogo--wordmark",
-    alt: "",
-    role: "presentation"
+    src: "https://previews.dropbox.com/p/orig/AAh5mBWCXX_HI8CraUWZ7gMjaACTUGQJTSK96d838VXPw8iHDJLAEyxdoMt9QZKjvbUtnsGiBvuVYE7RZu0YouxeBqzUd5EwmkUPxHXsT2I-w5FgmZLPO6USdRjXmNMY7U-DPOdWfV-zWMf1YnPrT5pN_ia2aimBBa0VPKaD60Ak2nucDIMd_5FxS3xIzp-bdpjhK7UssQYrFcXMyFDNyOYzW66axZzHEsxlZKd-y8ZxKOe6l1VS0MHXlZgYUjVgJedUUjlEQs-SDwovBdV9XtQNTWaN2EaH4KyADSZMqfA5-oTJvi2tABc4L5Xx6qU7GecNYt_PAvB2o8wMMormVkFtaxosOLK6SzHskKKBU3hcsO4VLKkCE3je8RBabExPFCSIiY4oBqQwl9tc5A8B3QEGXqUXSsTfGQeX1E3MzLjxHkJ5PDxqP1VsMEhJNigXC3OebiI14_nkV1XhaWrvcjRJXAQ8uE_ExXskLPx3AiGOEwyCe4ROD7RCIQZeE_xT5rWHWWhJEk6PTrr7BSs7VKfjaAp02zcsb18lZoVe8TBW6A/p.gif?fv_content=true&size_mode=5",
+    className: "droppyboy-logo",
+    alt: ""
   }));
 };
 
@@ -560,7 +571,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var Nav = function Nav() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "RebrandNavigation-container"
+    className: "splash-nav"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 };
 
@@ -587,7 +598,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var NavBar = function NavBar() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    className: "RebrandNavigation-container-content"
+    className: "splash-nav-nav"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_droppyboylogo__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar_nav__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 };
 
@@ -614,7 +625,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var NavBarNav = function NavBarNav() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "RebrandNavigation-nav"
+    className: "splash-nav-content"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar_nav_cta__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar_nav_links__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 };
 
@@ -637,7 +648,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var NavBarNavCta = function NavBarNavCta() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "RebrandNavigation-nav-cta"
+    className: "splash-nav-nav-links"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "ob-button ob-button--link RebrandNavigation-nav--links-item",
     href: "",
@@ -668,7 +679,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var NavBarNavLinks = function NavBarNavLinks() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "RebrandNavigation-nav--links"
+    className: "splash-nav-nav-buttons"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "RebrandNavigation-nav--links-item RebrandNavigation-nav--links-item__sign-up ob-button ob-button--link",
     tabIndex: "0"
@@ -707,19 +718,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var Splash = function Splash() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "component1819192764109869114"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
-    className: "IndexRebrandPage AtlasGrotesk-Regular-Web ob-type"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-    className: "RebrandHero ob-grid"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-    className: "RebrandNavigation RebrandNavigation-theme__burgundy-aqua",
-    "aria-hidden": "false"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_nav__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-    className: "RebrandHero-container ob-grid-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid_hero_aside__WEBPACK_IMPORTED_MODULE_4__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-    className: "RebrandCreation ob-grid"
-  })));
+    id: "splash"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_nav__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid_hero_aside__WEBPACK_IMPORTED_MODULE_4__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Splash);

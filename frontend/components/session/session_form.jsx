@@ -30,14 +30,13 @@ class SessionForm extends React.Component {
     //   return <li>{error}</li>
     // })
 
-    const linkButton = formType === 'login' ? "Login" : "Sign Up"
+    const linkButton = formType === 'login' ? "Login" : "Sign up"
 
     return (
       <form id='session-form' onSubmit={this.handleSubmit}>
         <header>
-        {formType}
-        <br></br>
-        <div>
+        <h2>{formType}</h2>
+        <div class='session-header-sub'>
           or
           <a href='/signin'> sign into your account</a>
         </div>
@@ -47,15 +46,17 @@ class SessionForm extends React.Component {
           {errorsLi}
         </ul> */}
         
-        <input type="text" id="first_name" value={this.state.first_name} placeholder='First Name' onChange={this.update('first_name')} />
+        <input class='session-form-element' type="text" id="first_name" value={this.state.first_name} placeholder='First Name' onChange={this.update('first_name')} />
         
-        <input type="text" id="last_name" value={this.state.last_name} placeholder='Last Name' onChange={this.update('last_name')} />
+        <input class='session-form-element' type="text" id="last_name" value={this.state.last_name} placeholder='Last Name' onChange={this.update('last_name')} />
        
-        <input type="text" id="email" value={this.state.email} onChange={this.update('email')} />
+        <input class='session-form-element' type="text" id="email" value={this.state.email} placeholder="Email" onChange={this.update('email')} />
         
-        <input type="password" id="password" value={this.state.password} onChange={this.update('password')} />
+        <input class='session-form-element' type="password" id="password" value={this.state.password} placeholder="Password" onChange={this.update('password')} />
 
-        <button>{linkButton}</button>
+        <input class='session-form-element' type='checkbox'/> 
+        <p class='session-header-sub'>This page is protected by reCAPTCHA, and subject to the Google Privacy Policy and Terms of service.</p>
+        <button class='session-form-element'>{linkButton}</button>
       </form>
     );
   }

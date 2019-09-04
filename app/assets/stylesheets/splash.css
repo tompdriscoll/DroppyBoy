@@ -1,0 +1,71 @@
+.splash-nav {
+    display: flex;
+}
+
+.splash-nav-content {
+    display: inherit;
+    margin: 30px;
+    margin-left: 145px;
+    font-family: sans-serif;
+}
+
+.droppyboy-logo {
+    margin: 21px;
+    margin-left: 52px;
+}
+
+.splash-nav-nav {
+    display: inherit;
+}
+
+.splash-nav-nav img:last-of-type{
+    height: 48px;
+    width: auto;
+    margin: 0px;
+    left: 71px;
+    position: absolute;
+    top: 23px;
+}
+
+.splash-nav-nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.splash-nav-nav-buttons button{
+    border: none;
+    background: inherit;
+    font-size: inherit;
+    color: aqua;
+}
+
+.hero {
+    width: 66.666%;
+    color: #b4d1e7;
+    padding-top: 140px;
+}
+
+
+.grid {
+   margin: auto;
+   width: 77%; 
+}
+
+.grid header h1{
+    font-size: 72px;
+}
+
+ .grid header p{
+    width: 50%;
+    color: white;
+}
+        
+
+.arrow {
+    width: 24px;
+    height: 35px;
+    padding: 0;
+    background: url(/static/images/index/rebrand/ob-arrow-aqua-vflrYQuro.svg) center center no-repeat;
+    background-size: contain;
+}

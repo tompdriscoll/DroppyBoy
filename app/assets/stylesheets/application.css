@@ -15,5 +15,5 @@
  */
 
  body{
-    background: #61082b;
- };
+   background: linear-gradient(90deg, #61082b 66.666%, #b4d0e7 33.334%);
+}

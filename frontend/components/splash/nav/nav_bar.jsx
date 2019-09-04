@@ -6,7 +6,7 @@ import NavBarNav from './nav_bar_nav'
 const NavBar = () => (
    
         
-    <nav className="RebrandNavigation-container-content">
+    <nav className="splash-nav-nav">
         <DroppyboyLogo/>
         <NavBarNav/>
     </nav>
