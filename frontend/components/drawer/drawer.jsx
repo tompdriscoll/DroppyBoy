@@ -1,12 +1,12 @@
 import React from 'react'
-import SessionForm from '../session/session_form'
+import SignUpForm from '../session/signup_form_container'
 import DrawerNav from './drawer_nav'
 const Drawer = () => (
    
         
-    <div class="drawer">
+    <div className="drawer">
         <DrawerNav/>
-        <SessionForm />
+        <SignUpForm/>
     </div>
 
 )

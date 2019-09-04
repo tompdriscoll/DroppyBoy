@@ -1,7 +1,7 @@
 import React from 'react'
 import HeroHeader from './hero_header'
 const GridContent = () => (
-   <div class="ob-grid-content
+   <div className="ob-grid-content
    ob-grid-content--pad-2
    ob-grid-content--xlarge--pad-2
    ob-grid-content--large--pad-2

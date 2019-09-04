@@ -6,7 +6,7 @@ import NavBar from './nav_bar'
 const Nav = () => (
    
         
-    <div class="RebrandNavigation-container">
+    <div className="RebrandNavigation-container">
         <NavBar />
     </div> 
 

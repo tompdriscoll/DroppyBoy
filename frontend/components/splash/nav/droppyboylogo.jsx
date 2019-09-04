@@ -3,15 +3,15 @@ import React from 'react';
 const DroppyboyLogo = props => (
    
         
-    <div class="DropboxLogo">
+    <div className="DropboxLogo">
         <img 
         src="https://cfl.dropboxstatic.com/static/images/index/rebrand/logos/glyphs/glyph_aqua.svg" 
-        class="DropboxLogo--glyph" 
+        className="DropboxLogo--glyph" 
         alt="" 
         role="presentation"
         />
         <img src="https://cfl.dropboxstatic.com/static/images/index/rebrand/logos/wordmarks/wordmark_white.svg" 
-        class="DropboxLogo--wordmark" 
+        className="DropboxLogo--wordmark" 
         alt="" 
         role="presentation"
         />

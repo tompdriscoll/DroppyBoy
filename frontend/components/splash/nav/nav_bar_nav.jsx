@@ -4,7 +4,7 @@ import NavBarNavLinks from './nav_bar_nav_links'
 const NavBarNav = () => (
    
         
-    <div class="RebrandNavigation-nav">
+    <div className="RebrandNavigation-nav">
         <NavBarNavCta/>
         <NavBarNavLinks/>
     </div>

@@ -15,16 +15,16 @@ import Drawer from '../drawer/drawer'
 const Splash = () => (
 
     <div id="component1819192764109869114">
-        <main class="IndexRebrandPage AtlasGrotesk-Regular-Web ob-type">
-            <section class="RebrandHero ob-grid">
-                <section class="RebrandNavigation RebrandNavigation-theme__burgundy-aqua" aria-hidden="false">
+        <main className="IndexRebrandPage AtlasGrotesk-Regular-Web ob-type">
+            <section className="RebrandHero ob-grid">
+                <section className="RebrandNavigation RebrandNavigation-theme__burgundy-aqua" aria-hidden="false">
                     <Nav/>
                 </section>
-                <section class="RebrandHero-container ob-grid-container">
+                <section className="RebrandHero-container ob-grid-container">
                     <HeroAside/>
                 </section>
             </section>
-            <section class="RebrandCreation ob-grid">
+            <section className="RebrandCreation ob-grid">
                 
             </section>     
         </main>

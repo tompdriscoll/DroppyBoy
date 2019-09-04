@@ -1,7 +1,7 @@
 import React from 'react'
 import GridContent from './grid_content'
 const HeroAside = () => (
-   <div class="RebrandHero-aside
+   <div className="RebrandHero-aside
    ob-grid-column
    ob-grid-column--xlarge-16
    ob-grid-column--large-16

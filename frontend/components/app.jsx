@@ -11,7 +11,7 @@ import {
 import Splash from './splash/splash'
 import Drawer from './drawer/drawer'
 const App = () => (
-  <div id="embedded-app" class="embedded-app IndexRebrandPage">
+  <div id="embedded-app" className="embedded-app IndexRebrandPage">
     <Splash/> 
     <Drawer/>  
   </div>
