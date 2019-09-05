@@ -662,16 +662,48 @@ var Grid2 = function Grid2() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "grid2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "grid2-contents"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "grid2-text"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Keep everything organized without breaking your flow"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Dropbox brings your files together, in one central place. They\u2019re easy to find and safely synced across all your devices\u2014so you can access them anytime, anywhere. No more wasting the day tracking down work.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "grid2-pic-1",
     src: "https://cfl.dropboxstatic.com/static/images/index/rebrand/co_create/desktop/dropbox_digital_desktop_01-vflTDaJ3U.jpg"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://cfl.dropboxstatic.com/static/images/index/rebrand/co_create/desktop/dropbox_digital_desktop_02-vflq-5NiU.jpg"
-  }));
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Grid2);
+
+/***/ }),
+
+/***/ "./frontend/components/splash/grid3/grid3.jsx":
+/*!****************************************************!*\
+  !*** ./frontend/components/splash/grid3/grid3.jsx ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Grid3 = function Grid3() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "grid3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "grid3-contents"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    id: "grid3-pic-1",
+    src: "https://cfl.dropboxstatic.com/static/images/index/rebrand/product/core/core_ui_desktop@2x-vflLsWztX.jpg"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "grid3-text"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Collaborate on presentations, designs, and any kind of file"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Dropbox is built for creative collaboration. Share a big file\u2014PowerPoint, Photoshop, Sketch\u2014with anyone. You\u2019ve all got the right version, and everybody\u2019s on the same page. Finally."))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Grid3);
 
 /***/ }),
 
@@ -856,6 +888,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _grid_hero_aside__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./grid/hero_aside */ "./frontend/components/splash/grid/hero_aside.jsx");
 /* harmony import */ var _drawer_drawer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./drawer/drawer */ "./frontend/components/splash/drawer/drawer.jsx");
 /* harmony import */ var _grid2_grid2__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./grid2/grid2 */ "./frontend/components/splash/grid2/grid2.jsx");
+/* harmony import */ var _grid3_grid3__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./grid3/grid3 */ "./frontend/components/splash/grid3/grid3.jsx");
+
 
 
 
@@ -867,7 +901,7 @@ __webpack_require__.r(__webpack_exports__);
 var Splash = function Splash() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "splash"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_nav__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid_hero_aside__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid2_grid2__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_drawer_drawer__WEBPACK_IMPORTED_MODULE_5__["default"], null));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_nav__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid_hero_aside__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid2_grid2__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid3_grid3__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_drawer_drawer__WEBPACK_IMPORTED_MODULE_5__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Splash);
