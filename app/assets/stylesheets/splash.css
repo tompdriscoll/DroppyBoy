@@ -1,3 +1,7 @@
+#splash {
+    height: inherit;
+    background: linear-gradient(90deg, #61082b 66.666%, #b4d0e7 33.334%);
+}
 .splash-nav {
     display: flex;
 }
@@ -7,15 +11,22 @@
     margin: 30px;
     margin-left: 145px;
     font-family: sans-serif;
+    width: inherit;
 }
 
 .droppyboy-logo {
-    margin: 21px;
-    margin-left: 52px;
+    /* margin: 29px;
+    margin-left: 63px; */
+    background: image-url("pic.jpg");
+    background-size: contain;
+    height:30px;
+    width: 100px;
 }
 
 .splash-nav-nav {
     display: inherit;
+    width: 100%;
+    max-width:1440px;
 }
 
 .splash-nav-nav img:last-of-type{
@@ -33,23 +44,29 @@
     margin: 10px;
 }
 
+.splash-nav-nav-buttons {
+    margin-left: auto;
+}
 .splash-nav-nav-buttons button{
     border: none;
     background: inherit;
     font-size: inherit;
-    color: aqua;
+   
 }
 
 .hero {
     width: 66.666%;
     color: #b4d1e7;
-    padding-top: 140px;
+    padding-top: 180px;
+    max-width: 1440px;
 }
 
 
 .grid {
    margin: auto;
    width: 77%; 
+   padding-left: calc(1440px * (2 / 24));
+   padding-right: calc(1440px * (2 / 24));
 }
 
 .grid header h1{
@@ -59,6 +76,7 @@
  .grid header p{
     width: 50%;
     color: white;
+    line-height: 28px;
 }
         
 
@@ -66,6 +84,45 @@
     width: 24px;
     height: 35px;
     padding: 0;
-    background: url(/static/images/index/rebrand/ob-arrow-aqua-vflrYQuro.svg) center center no-repeat;
+    
     background-size: contain;
+}
+
+#grid2 {
+    background: linear-gradient(90deg, #61082b 66.666%, #b4d0e7 33.334%);
+    padding-top: 200px;
+    padding-bottom: 200px;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    overflow: hidden;
+    display:flex;
+  
+}
+
+#grid2-text {
+    width: calc(8/24 * 100%);
+    max-width: calc(1440px / (8/24));
+
+}
+
+
+#grid2-text h2{
+    color: #b4d0e7;
+    width: 75%;
+    margin: auto;
+    font-size: 48px;
+}
+
+#grid2-text p{
+    color: white;
+    width: 75%;
+    margin: auto;
+    font-size: 24px;
+}
+
+
+#grid2-pic-1 {
+    width: calc(8/24 * 100%);
+    max-width: calc(1440px / (8/24));
 }

@@ -6,7 +6,7 @@ const HeroHeader = () => (
        <p className="hero-copy">
            Dropbox is a modern workspace designed to reduce busywork—so you can focus on the things that matter.
         </p>
-        <button aria-label="waypoint" className="arrow"></button>
+        {/* <button className="arrow"></button> */}
    </header>
 )
 export default HeroHeader;

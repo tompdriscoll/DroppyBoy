@@ -8,6 +8,7 @@
     position: absolute;
 }
 
+
 .drawer-link {
     
     font-family: inherit;
@@ -16,6 +17,7 @@
     text-decoration: none;
     margin: 5px;
     border: none;
+    background: inherit;
 }
 
 .drawerNav {
@@ -34,6 +36,15 @@
 .session-header-sub {
     margin-top: 5px;
     font-size: 12px;
+}
+
+.session-header-sub p{
+    color:blue;
+    display: inline;
+}
+
+.session-header-sub p:hover{
+    cursor: pointer;
 }
 
 .session-header-sub a{
@@ -61,6 +72,13 @@
     height: 23px;
 }
 
+#recaptcha {
+    border:none;
+    font-size:12px;
+    font-family: sans-serif;
+    padding: 0px;
+}
+
 #session-form button {
     background: rgb(28, 107, 255);
     color: white;
@@ -70,7 +88,16 @@
     height: inherit;
 }
 
-#drawer-close {
-    display:none;
+#terms-checkbox {
+    border: none;
+    font-family: inherit;
+    font-size: 16px;
+    font-family: sans-serif;
+    padding-left: 0px;
 }
+
+#drawer-close {
+    background: url(https://cfl.dropboxstatic.com/static/images/index/rebrand/ob-button-close-vflzGggYo.svg) no-repeat;
+}
+
 

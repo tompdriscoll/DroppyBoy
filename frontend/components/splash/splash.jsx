@@ -9,14 +9,16 @@ import {
 } from 'react-router-dom';
 
 import Nav from './nav/nav'
-import Hero from './grid/hero_aside'
-import Drawer from '../drawer/drawer'
-
+import Grid from './grid/hero_aside'
+import Drawer from './drawer/drawer'
+import Grid2 from './grid2/grid2'
 const Splash = () => (
 
     <div id='splash'>
         <Nav/>                          
-        <Hero/>                        
+        <Grid/>  
+        <Grid2 />
+        <Drawer/>                      
     </div>
 
 );

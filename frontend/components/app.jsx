@@ -9,11 +9,11 @@ import {
 } from 'react-router-dom';
 
 import Splash from './splash/splash'
-import Drawer from './drawer/drawer'
+import UserHome from './home/user_home'
 const App = () => (
-  <div id="embedded-app" className="embedded-app IndexRebrandPage">
-    <Splash/> 
-    <Drawer/>  
+  <div id="app">
+    <Route exact path='/' component={Splash}/>
+    <Route path='/h' component={UserHome}/>
   </div>
     
  

@@ -15,5 +15,14 @@
  */
 
  body{
-   background: linear-gradient(90deg, #61082b 66.666%, #b4d0e7 33.334%);
+   height: -webkit-fill-available;
+   margin: 0;
+}
+
+main{
+  height:inherit
+}
+
+#app{
+  height:inherit
 }

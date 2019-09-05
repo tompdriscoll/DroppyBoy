@@ -1,0 +1,25 @@
+.user-home {
+    height: inherit;
+    background: white;
+}
+
+.user-home h1 {
+    margin: 0;
+}
+
+.home-nav {
+    height: inherit;
+    width: 240px;
+    background: lightgrey;
+}
+
+.home-nav ul{
+    margin: 0;
+    list-style: none;
+    padding-top: 200px;
+}
+
+.home-nav ul li h2{
+    margin: 0;
+
+}

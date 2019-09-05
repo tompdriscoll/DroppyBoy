@@ -1,8 +1,8 @@
 import React from 'react'
 import GridContent from './grid_content'
-const Hero = () => (
+const Grid = () => (
    <div className="hero">
        <GridContent/>
    </div>
 )
-export default Hero;
+export default Grid;
