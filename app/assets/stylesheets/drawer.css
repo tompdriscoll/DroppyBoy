@@ -12,7 +12,7 @@
 
 .drawer-link {
     
-    font-family: inherit;
+    font-family: Atlas Grotesk Web;
     font-size: 20px;
     color: black;
     text-decoration: none;
@@ -130,7 +130,7 @@
     /* This section calls the slideInFromLeft animation we defined above */
     animation: 1s ease-out 0s 1 slideInFromLeft;
   }
-/* 
+
   @keyframes slitherOut {
     0% {
       transform: translateX(0);
@@ -140,7 +140,7 @@
     }
   }
 
-  .drawer {  
+  .drawer-close {  
     
     animation: 1s ease-out 0s 1 slitherOut;
-  } */
+  }

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const HomeNav = props => (
-   
+
         
     <div className="home-nav">
         <ul>
@@ -11,6 +11,7 @@ const HomeNav = props => (
             <li><h2>Showcase</h2></li>
             <li><h2>Admin Console</h2></li>
         </ul>
+        <button onClick={props.logout}>Logout</button>
     </div>
 
 )
