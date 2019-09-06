@@ -6,6 +6,7 @@
     right: 0;
     top: 0;
     position: absolute;
+  
 }
 
 
@@ -22,15 +23,19 @@
 
 .drawerNav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin: 28px;
     margin-right: 42px;
     font-family: sans-serif;
    
 }
 
-#drawer-sign-in {
+.drawerNav button {
+    width: 18px;
+}
 
+#drawer-sign-in {
+    width: auto;
 }
 
 .session-header-sub {
@@ -88,6 +93,10 @@
     height: inherit;
 }
 
+#session-form button:hover{
+    cursor: pointer;
+}
+
 #terms-checkbox {
     border: none;
     font-family: inherit;
@@ -96,8 +105,42 @@
     padding-left: 0px;
 }
 
+.errors {
+    position: absolute;
+    bottom: 150px;
+    font-family: monospace;
+    color: red;
+    right: 60px;
+}
+
 #drawer-close {
     background: url(https://cfl.dropboxstatic.com/static/images/index/rebrand/ob-button-close-vflzGggYo.svg) no-repeat;
 }
 
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .drawer {  
+    /* This section calls the slideInFromLeft animation we defined above */
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+  }
+/* 
+  @keyframes slitherOut {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
 
+  .drawer {  
+    
+    animation: 1s ease-out 0s 1 slitherOut;
+  } */

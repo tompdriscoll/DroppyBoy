@@ -71,11 +71,9 @@ class SessionForm extends React.Component {
     else {
       return (
         <form id='session-form' onSubmit={this.handleSubmit}>
-          <ul className="errors">
-            {errorsLi}
-          </ul>
+          
           <header>
-            <h2>{formType}</h2>
+            <h2>{this.state.linkButton}</h2>
             <div className='session-header-sub'>
               or
               <p onClick={this.changeLinkButton}> create an account</p>
@@ -95,6 +93,9 @@ class SessionForm extends React.Component {
             
           </span> 
           <button className='session-form-element'>{this.state.linkButton}</button>
+          <ul className="errors">
+            {errorsLi}
+          </ul>
         </form>
         )
     }

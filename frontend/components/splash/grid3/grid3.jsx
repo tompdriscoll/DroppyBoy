@@ -3,7 +3,7 @@ import React from 'react'
 const Grid3 = () => (
     <div id='grid3'>
         <div id='grid3-contents'>
-            <img id='grid3-pic-1'src='https://cfl.dropboxstatic.com/static/images/index/rebrand/product/core/core_ui_desktop@2x-vflLsWztX.jpg'/>
+        <video id="grid3-pic-1" autoPlay loop src="https://rebrand.dropboxstatic.com/videos/homepage_coredb_ui.mp4" tabIndex="-1" playsInline></video>
             <div id='grid3-text'>
                 <h3>Collaborate on presentations, designs, and any kind of file</h3>
                 <p>Dropbox is built for creative collaboration. 

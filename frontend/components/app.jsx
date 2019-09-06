@@ -10,10 +10,14 @@ import {
 
 import Splash from './splash/splash'
 import UserHome from './home/user_home'
+import ErrorPage from './error_page'
 const App = () => (
   <div id="app">
-    <Route exact path='/' component={Splash}/>
-    <Route path='/h' component={UserHome}/>
+    <Switch>
+      <Route path='/' exact component={Splash}/>
+      <Route path='/h' component={UserHome}/>
+      <Route component={ErrorPage}/>
+    </Switch>
   </div>
     
  

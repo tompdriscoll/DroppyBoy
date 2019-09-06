@@ -4,6 +4,9 @@
 }
 .splash-nav {
     display: flex;
+    background: linear-gradient(90deg, #61082b 66.666%, #b4d0e7 33.334%);
+    position: fixed;
+    width: 100%;
 }
 
 .splash-nav-content {
@@ -21,21 +24,21 @@
     background-size: contain;
     height:30px;
     width: 100px;
+    display: flex;
+    align-self: center;
 }
 
 .splash-nav-nav {
     display: inherit;
+    margin:auto;
     width: 100%;
     max-width:1440px;
+    padding-left: calc(1440px * (1 / 24));
+    padding-right: calc(1440px * (1 / 24));
 }
 
 .splash-nav-nav img:last-of-type{
-    height: 48px;
-    width: auto;
-    margin: 0px;
-    left: 71px;
-    position: absolute;
-    top: 23px;
+    
 }
 
 .splash-nav-nav-links a {
@@ -54,18 +57,24 @@
    
 }
 
+.splash-nav-nav-buttons button:hover{
+    cursor: pointer;
+   
+}
+
+
 .hero {
     width: 66.666%;
     color: #b4d1e7;
-    padding-top: 180px;
+    padding: 200px 0px;
     max-width: 1440px;
 }
 
 
 .grid {
    margin: auto;
-   width: 77%; 
-   padding-left: calc(1440px * (2 / 24));
+   width: 59%; 
+   padding-left: calc(1440px * (5 / 24));
    padding-right: calc(1440px * (2 / 24));
 }
 

@@ -169,6 +169,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _splash_splash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./splash/splash */ "./frontend/components/splash/splash.jsx");
 /* harmony import */ var _home_user_home__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./home/user_home */ "./frontend/components/home/user_home.jsx");
+/* harmony import */ var _error_page__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./error_page */ "./frontend/components/error_page.jsx");
+
 
 
 
@@ -178,17 +180,46 @@ __webpack_require__.r(__webpack_exports__);
 var App = function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "app"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
-    exact: true,
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/",
+    exact: true,
     component: _splash_splash__WEBPACK_IMPORTED_MODULE_3__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/h",
     component: _home_user_home__WEBPACK_IMPORTED_MODULE_4__["default"]
-  }));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    component: _error_page__WEBPACK_IMPORTED_MODULE_5__["default"]
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./frontend/components/error_page.jsx":
+/*!********************************************!*\
+  !*** ./frontend/components/error_page.jsx ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var ErrorPage = function ErrorPage() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "error-page"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://cfl.dropboxstatic.com/static/images/illustration_catalog/404_error-illo.png",
+    srcSet: "https://cfl.dropboxstatic.com/static/images/illustration_catalog/404_error-illo@2x.png 2x",
+    alt: "Error: 4xx"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Error (4xx)"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "We can't find the page you're looking for."));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ErrorPage);
 
 /***/ }),
 
@@ -426,9 +457,7 @@ function (_React$Component) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
           id: "session-form",
           onSubmit: this.handleSubmit
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-          className: "errors"
-        }, errorsLi), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, formType), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, this.state.linkButton), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "session-header-sub"
         }, "or", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
           onClick: this.changeLinkButton
@@ -464,7 +493,9 @@ function (_React$Component) {
           type: "checkbox"
         }), "Remember Me"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "session-form-element"
-        }, this.state.linkButton));
+        }, this.state.linkButton), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+          className: "errors"
+        }, errorsLi));
       }
     }
   }]);
@@ -695,9 +726,13 @@ var Grid3 = function Grid3() {
     id: "grid3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "grid3-contents"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
     id: "grid3-pic-1",
-    src: "https://cfl.dropboxstatic.com/static/images/index/rebrand/product/core/core_ui_desktop@2x-vflLsWztX.jpg"
+    autoPlay: true,
+    loop: true,
+    src: "https://rebrand.dropboxstatic.com/videos/homepage_coredb_ui.mp4",
+    tabIndex: "-1",
+    playsInline: true
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "grid3-text"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Collaborate on presentations, designs, and any kind of file"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Dropbox is built for creative collaboration. Share a big file\u2014PowerPoint, Photoshop, Sketch\u2014with anyone. You\u2019ve all got the right version, and everybody\u2019s on the same page. Finally."))));
@@ -727,9 +762,13 @@ var Grid4 = function Grid4() {
     id: "grid4-contents"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "grid4-text"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Create without chaos on Dropbox Paper"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Paper is your team\u2019s place to bring ideas to life. Brainstorm, collect inspiration, share rough drafts. Paper can hold everything from video and images, t o code and sound.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Create without chaos on Dropbox Paper"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Paper is your team\u2019s place to bring ideas to life. Brainstorm, collect inspiration, share rough drafts. Paper can hold everything from video and images, t o code and sound.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
     id: "grid4-pic-1",
-    src: "https://cfl.dropboxstatic.com/static/images/index/rebrand/product/paper/paper_ui_desktop@2x-vflj8awd7.jpg"
+    autoPlay: true,
+    loop: true,
+    src: "https://rebrand.dropboxstatic.com/videos/homepage_paper_ui%402x.mp4",
+    tabIndex: "-1",
+    playsInline: true
   })));
 };
 
@@ -819,7 +858,17 @@ __webpack_require__.r(__webpack_exports__);
 var DroppyboyLogo = function DroppyboyLogo(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "droppyboy-logo"
-  });
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://cfl.dropboxstatic.com/static/images/index/rebrand/logos/glyphs/glyph_aqua.svg",
+    className: "DropboxLogo--glyph",
+    alt: "",
+    role: "presentation"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://cfl.dropboxstatic.com/static/images/index/rebrand/logos/wordmarks/wordmark_white.svg",
+    className: "DropboxLogo--wordmark",
+    alt: "",
+    role: "presentation"
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (DroppyboyLogo);
@@ -1051,6 +1100,7 @@ document.addEventListener('DOMContentLoaded', function () {
     store = Object(_store_store__WEBPACK_IMPORTED_MODULE_3__["default"])();
   }
 
+  window.store = store;
   var root = document.getElementById('root');
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_2__["default"], {
     store: store
