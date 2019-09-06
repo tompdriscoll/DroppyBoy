@@ -707,6 +707,102 @@ var Grid3 = function Grid3() {
 
 /***/ }),
 
+/***/ "./frontend/components/splash/grid4/grid4.jsx":
+/*!****************************************************!*\
+  !*** ./frontend/components/splash/grid4/grid4.jsx ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Grid4 = function Grid4() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "grid4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "grid4-contents"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "grid4-text"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Create without chaos on Dropbox Paper"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Paper is your team\u2019s place to bring ideas to life. Brainstorm, collect inspiration, share rough drafts. Paper can hold everything from video and images, t o code and sound.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    id: "grid4-pic-1",
+    src: "https://cfl.dropboxstatic.com/static/images/index/rebrand/product/paper/paper_ui_desktop@2x-vflj8awd7.jpg"
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Grid4);
+
+/***/ }),
+
+/***/ "./frontend/components/splash/grid5/grid5.jsx":
+/*!****************************************************!*\
+  !*** ./frontend/components/splash/grid5/grid5.jsx ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Grid5 = function Grid5() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "grid5"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "grid5-contents"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "grid5-text"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "For freelancers and solo workers"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Get Droppyboy")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "grid5-text"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "For teams and businesses of any size"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Get Droppyboy Business"))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Grid5);
+
+/***/ }),
+
+/***/ "./frontend/components/splash/grid6/grid6.jsx":
+/*!****************************************************!*\
+  !*** ./frontend/components/splash/grid6/grid6.jsx ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Grid6 = function Grid6() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "grid6"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "grid6-contents"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    id: "top-list"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Droppyboy"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "small-list"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Desktop app"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Mobile apps"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Plans"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Security"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Features"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Products"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "small-list"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Plus"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Professional"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Business"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Enterprise"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Company"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "small-list"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "About us"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Jobs"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Press"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Investor relations"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Blog"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Support"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "small-list"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Help center"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Contact us"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Cookies"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Privacy & terms"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Sitemap"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Community"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "small-list"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Developers"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Referrals"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Forum"))))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Grid6);
+
+/***/ }),
+
 /***/ "./frontend/components/splash/nav/droppyboylogo.jsx":
 /*!**********************************************************!*\
   !*** ./frontend/components/splash/nav/droppyboylogo.jsx ***!
@@ -889,6 +985,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _drawer_drawer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./drawer/drawer */ "./frontend/components/splash/drawer/drawer.jsx");
 /* harmony import */ var _grid2_grid2__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./grid2/grid2 */ "./frontend/components/splash/grid2/grid2.jsx");
 /* harmony import */ var _grid3_grid3__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./grid3/grid3 */ "./frontend/components/splash/grid3/grid3.jsx");
+/* harmony import */ var _grid4_grid4__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./grid4/grid4 */ "./frontend/components/splash/grid4/grid4.jsx");
+/* harmony import */ var _grid5_grid5__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./grid5/grid5 */ "./frontend/components/splash/grid5/grid5.jsx");
+/* harmony import */ var _grid6_grid6__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./grid6/grid6 */ "./frontend/components/splash/grid6/grid6.jsx");
+
+
+
 
 
 
@@ -901,7 +1003,7 @@ __webpack_require__.r(__webpack_exports__);
 var Splash = function Splash() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "splash"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_nav__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid_hero_aside__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid2_grid2__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid3_grid3__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_drawer_drawer__WEBPACK_IMPORTED_MODULE_5__["default"], null));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_nav__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid_hero_aside__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid2_grid2__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid3_grid3__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid4_grid4__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid5_grid5__WEBPACK_IMPORTED_MODULE_9__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid6_grid6__WEBPACK_IMPORTED_MODULE_10__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_drawer_drawer__WEBPACK_IMPORTED_MODULE_5__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Splash);
