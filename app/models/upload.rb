@@ -1,4 +1,4 @@
-class File < ApplicationRecord
+class Upload < ApplicationRecord
     validates :name, :type, :path, :uploader_id, presence: true
 
     IMAGE_SUFFIXES = ['.gif', '.jpg', '.png']
