@@ -20,14 +20,16 @@ import Grid6 from './grid6/grid6'
 
 document.addEventListener( 'scroll', () => {
   var drawer = document.getElementById('drawer');  
-  if (window.scrollY >= 500) {
-      drawer.classList.add('closed')
-      drawer.classList.remove('drawer')
+  if (drawer) {
+    if (window.scrollY >= 500) {
+        drawer.classList.add('closed')
+        drawer.classList.remove('drawer')
+    }
+    else {
+      drawer.classList.add('drawer')
+      drawer.classList.remove('closed')
+    }    
   }
-  else {
-    drawer.classList.add('drawer')
-    drawer.classList.remove('closed')
-  }    
 })
 
 const Splash = () => (
