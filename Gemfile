@@ -26,8 +26,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'binding_of_caller'
 gem 'annotate'
 gem 'jquery-rails'
-gem 'jquery-ui-rails'
-gem 'rails_12factor'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -61,9 +60,6 @@ group :test do
   gem 'chromedriver-helper'
 end
 
-group :production do
-  
-end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
