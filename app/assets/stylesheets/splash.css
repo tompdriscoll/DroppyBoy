@@ -340,12 +340,13 @@ h6 {
     background: linear-gradient(90deg, #61082b 66.666%, #b4d0e7 33.334%);
     position: fixed;
     width: 100%;
+    justify-content: center;
 }
 
 .splash-nav {
     display: inherit;
     background: inherit;
-
+    max-width: 1440px;
     width: inherit;
 }
 
