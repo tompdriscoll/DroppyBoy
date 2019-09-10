@@ -16,10 +16,26 @@ import Grid3 from './grid3/grid3'
 import Grid4 from './grid4/grid4'
 import Grid5 from  './grid5/grid5'
 import Grid6 from './grid6/grid6'
+
+
+document.addEventListener( 'scroll', () => {
+  var drawer = document.getElementById('drawer');  
+  if (window.scrollY >= 500) {
+      drawer.classList.add('closed')
+      drawer.classList.remove('drawer')
+  }
+  else {
+    drawer.classList.add('drawer')
+    drawer.classList.remove('closed')
+  }    
+})
+
 const Splash = () => (
 
     <div id='splash'>
-        <Nav/>                          
+        <div id='nav1'>
+          <Nav/>                          
+        </div>
         <Grid/>  
         <Grid2 />
         <Grid3/>

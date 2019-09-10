@@ -1,7 +1,10 @@
 import React from 'react'
-
+import Nav2 from '../nav/nav'
 const Grid3 = () => (
     <div id='grid3'>
+        <div id='nav2'>
+            <Nav2/>
+        </div>
         <div id='grid3-contents'>
         <video id="grid3-pic-1" autoPlay loop src="https://rebrand.dropboxstatic.com/videos/homepage_coredb_ui.mp4" tabIndex="-1" playsInline></video>
             <div id='grid3-text'>

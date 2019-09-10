@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import HomeNav from './home_nav'
+import UserHome from './user_home'
 import {logout} from '../../actions/session_actions'
 
 const msp = state => ({
@@ -12,4 +12,4 @@ const mdp = dispatch => ({
     logout: () => dispatch(logout())
 })
 
-export default connect(msp,mdp)(HomeNav)
+export default connect(msp,mdp)(UserHome)

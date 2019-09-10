@@ -2,6 +2,7 @@ import React from 'react'
 
 const Grid2 = () => (
     <div id='grid2'>
+        <div id='grid-2-container'>
         <div id='grid2-contents'>
             <div id='grid2-text'>
                 <h2>Keep everything organized without breaking your flow</h2>
@@ -13,7 +14,8 @@ const Grid2 = () => (
                 </p>
             </div>
             <img id='grid2-pic-1'src='https://cfl.dropboxstatic.com/static/images/index/rebrand/co_create/desktop/dropbox_digital_desktop_01-vflTDaJ3U.jpg'/>
-            <img src='https://cfl.dropboxstatic.com/static/images/index/rebrand/co_create/desktop/dropbox_digital_desktop_02-vflq-5NiU.jpg'/>
+            <img id='grid2-pic-2'src='https://cfl.dropboxstatic.com/static/images/index/rebrand/co_create/desktop/dropbox_digital_desktop_02-vflq-5NiU.jpg'/>
+        </div>
         </div>
     </div>
  )

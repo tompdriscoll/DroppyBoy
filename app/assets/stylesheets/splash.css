@@ -2,25 +2,11 @@
     height: inherit;
     background: linear-gradient(90deg, #61082b 66.666%, #b4d0e7 33.334%);
 }
-.splash-nav {
-    display: flex;
-    background: linear-gradient(90deg, #61082b 66.666%, #b4d0e7 33.334%);
-    position: fixed;
-    width: 100%;
-}
-
-.splash-nav-content {
-    display: inherit;
-    margin: 30px;
-    margin-left: 145px;
-    font-family: sans-serif;
-    width: inherit;
-}
 
 .droppyboy-logo {
     /* margin: 29px;
     margin-left: 63px; */
-    background: image-url("pic.jpg");
+    background: image-url("droppyboy.gif");
     background-size: contain;
     height:30px;
     width: 100px;
@@ -29,8 +15,8 @@
 }
 
 .splash-nav-nav {
+    background: inherit;
     display: inherit;
-    margin:auto;
     width: 100%;
     max-width:1440px;
     padding-left: calc(1440px * (1 / 24));
@@ -45,6 +31,8 @@
     color: white;
     text-decoration: none;
     margin: 10px;
+    font-weight: 400;
+    font-family: SharpGrotesk;
 }
 
 .splash-nav-nav-buttons {
@@ -53,7 +41,9 @@
 .splash-nav-nav-buttons button{
     border: none;
     background: inherit;
-    font-size: inherit;
+    font-size: 16px;;
+    font-weight: 400;
+    font-family: SharpGrotesk;
    
 }
 
@@ -62,30 +52,55 @@
    
 }
 
+.noShow {
+    display: none;
+}
+
 
 .hero {
-    width: 66.666%;
+    background: inherit;
+    width: 100%;
     color: #b4d1e7;
-    padding: 200px 0px;
     max-width: 1440px;
+    display: flex;
+    height: inherit;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 90px;
+    margin: auto;
 }
 
 
 .grid {
-   margin: auto;
-   width: 59%; 
-   padding-left: calc(1440px * (5 / 24));
-   padding-right: calc(1440px * (2 / 24));
+    width: calc(16/24 * 100%);
+    max-width: calc(1440px / (16/24));
+}
+
+.grid header {
+    padding-left: calc(1440px * (2 / 24));
+    padding-right: calc(1440px * (2 / 24));
 }
 
 .grid header h1{
-    font-size: 72px;
+    font-size: 71px;
+    font-family: SharpGroteskWide;
+    font-weight: 500;
+    margin-bottom:50px;
 }
 
  .grid header p{
     width: 50%;
     color: white;
     line-height: 28px;
+    font-family: Atlas Grotesk Web;
+    font-weight: 300;
+}
+
+.grid header button {
+    background: url("https://cfl.dropboxstatic.com/static/images/index/rebrand/ob-arrow-aqua-vflrYQuro.svg") center center no-repeat;
+    border: none;
+    margin-top: 50px;
+
 }
         
 
@@ -99,8 +114,6 @@
 
 #grid2 {
     background: linear-gradient(90deg, #61082b 66.666%, #b4d0e7 33.334%);
-    padding-top: 200px;
-    padding-bottom: 200px;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
@@ -109,8 +122,17 @@
   
 }
 
+#grid-2-container {
+    padding: 200px 0px;
+    max-width: 1440px;
+    margin: auto;
+    background: inherit;
+}
+
 #grid2-contents {
     display: flex;
+    max-width: 1440px;
+    margin:auto;
 }
 
 #grid2-text {
@@ -125,6 +147,9 @@
     width: 75%;
     margin: auto;
     font-size: calc(25px + 7 * ((100vw - 375px) / 1065));
+    line-height: 38px;
+    font-weight: 500;
+    font-family: 'SharpGroteskWide', sans-serif;
 }
 
 #grid2-text p{
@@ -133,12 +158,22 @@
     margin: auto;
     font-size: 18px;
     line-height: 28px;
+    font-weight: 400;
+    font-family: 'Atlas Grotesk Web', 'Open Sans', sans-serif;
+    font-style: normal;
+    font-stretch: normal
+    
 }
 
 
 #grid2-pic-1 {
     width: calc(8/24 * 100%);
     max-width: calc(1440px / (8/24));
+}
+
+#grid-pic-2 {
+    width: calc(6/24 * 100%);
+    max-width: calc(1440px / (6/24));
 }
 
 #grid3 {
@@ -156,12 +191,14 @@
 }
 
 #grid3-pic-1 {
-    max-width: 50%;
-    padding-left: 7%
+        padding-left: 7%;
+    width: calc(17/24 * 100%);
+    max-width: calc(1440px / (17/24));
 }
 
 #grid3-text {
-    align-self: center;
+    width: calc(7/24 * 100%);
+    max-width: calc(1440px / (7/24));
 }
 
 #grid3-text h3{
@@ -169,6 +206,9 @@
     width: 75%;
     margin: auto;
     font-size: calc(25px + 7 * ((100vw - 375px) / 1065));
+    line-height: 38px;
+    font-weight: 500;
+    font-family: 'SharpGroteskWide', sans-serif;
 }
 
 #grid3-text p{
@@ -177,6 +217,10 @@
     margin: auto;
     font-size: 18px;
     line-height: 28px;
+    font-weight: 400;
+    font-family: 'Atlas Grotesk Web', 'Open Sans', sans-serif;
+    font-style: normal;
+    font-stretch: normal
 }
 
 #grid4 {
@@ -207,6 +251,9 @@
     width: 75%;
     margin: auto;
     font-size: calc(25px + 7 * ((100vw - 375px) / 1065));
+    line-height: 38px;
+    font-weight: 500;
+    font-family: 'SharpGroteskWide', sans-serif;
 }
 
 #grid4-text p{
@@ -215,6 +262,14 @@
     margin: auto;
     font-size: 18px;
     line-height: 28px;
+    font-weight: 400;
+    font-family: 'Atlas Grotesk Web', 'Open Sans', sans-serif;
+    font-style: normal;
+    font-stretch: normal
+}
+
+#grid5 {
+    background: white;
 }
 
 #grid5-contents{
@@ -278,4 +333,43 @@
 h6 {
     text-align: left;
     font-size: 20px;
+}
+
+#nav1 {
+    display: flex;
+    background: linear-gradient(90deg, #61082b 66.666%, #b4d0e7 33.334%);
+    position: fixed;
+    width: 100%;
+}
+
+.splash-nav {
+    display: inherit;
+    background: center;
+
+    width: inherit;
+}
+
+.splash-nav-content {
+    display: inherit;
+    margin-left: 145px;
+    margin-right: 48px;
+    font-family: sans-serif;
+    width: inherit;
+    align-items: center;
+    height:96px;
+}
+
+#nav2 {
+    display: flex;
+    background: #ffae9f;
+    position: fixed;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+    padding: 0;
+    color: black;
+    z-index: -1;
 }

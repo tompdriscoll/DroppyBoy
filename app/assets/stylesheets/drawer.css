@@ -1,12 +1,41 @@
 .drawer {
     height: 100%;
-    width: 33.333%;
+    width: calc(480px + ((100vw - 1440px) / 2));
     background: white;
     z-index: 10;
     right: 0;
     top: 0;
-    position: absolute;
-  
+    position: fixed;
+    font-size: 12px;
+    line-height: 2.28571;
+    font-family: Atlas Grotesk Web, Open Sans, sans-serif;
+    font-weight: 400;
+}
+
+.closed {
+    height: 100%;
+    width: 33.333%;
+    background: white;
+    z-index: 10;
+    right: -33.333%;
+    top: 0;
+    position: fixed;
+    font-size: 12px;
+    line-height: 2.28571;
+    font-family: Atlas Grotesk Web, Open Sans, sans-serif;
+    font-weight: 400;
+}
+
+#drawer-contents{
+    max-width: 480px;
+}
+
+#drawer-contents header h2{
+    margin: 0px;
+    font-family: SharpGrotesk;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 1.14286;
 }
 
 
@@ -23,15 +52,42 @@
 
 .drawerNav {
     display: flex;
-    justify-content: center;
-    margin: 28px;
-    margin-right: 42px;
-    font-family: sans-serif;
+    justify-content: flex-end;
+    height: 90px;
+    font-size: 16px;;
+    font-weight: 400;
+    font-family: SharpGrotesk;
+    padding-left: calc(1440px * (1 / 24));
+    padding-right: calc(1440px * (1 / 24));
    
 }
 
 .drawerNav button {
-    width: 18px;
+    font-size: 16px;;
+    font-weight: 400;
+    font-family: SharpGrotesk;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    margin-left: 30px;
+}
+
+.drawerNav a {
+    font-size: 16px;;
+    font-weight: 400;
+    font-family: SharpGrotesk;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    margin-left: 30px;
+}
+
+#drawer-form {
+
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+    padding-left: calc(1440px * (1 / 24));
+    padding-right: calc(1440px * (1 / 24));
 }
 
 #drawer-sign-in {
@@ -39,12 +95,11 @@
 }
 
 .session-header-sub {
-    margin-top: 5px;
     font-size: 12px;
 }
 
 .session-header-sub p{
-    color:blue;
+    color:#0061ff;
     display: inline;
 }
 
@@ -58,39 +113,58 @@
 }
 
 #session-form {
-
-    margin: auto;
-    padding-top: 200px;
-    width: 80%;
+    width: inherit;
+    padding-top: 10px;
 }
 
 #session-form h2 {
     margin: 0px;
+    font-family: SharpGrotesk;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 1.14286;
 }
 
 .session-form-element {
     border: 1px solid #bdc4c9;
     padding: 10px;
-    margin: 10px;
-    width: inherit;
-    margin-left: 0;
-    height: 23px;
+    margin: 10px 0px;
+    width: -webkit-fill-available;
+    height: 21.5px;
+    font-size: 12px;
+    
+    font-family: Atlas Grotesk Web, Open Sans, sans-serif;
+    font-weight: 400;
+}
+
+.session-form-element:focus {
+    border: 1px solid black;
 }
 
 #recaptcha {
     border:none;
-    font-size:12px;
-    font-family: sans-serif;
+    font-family:  Atlas Grotesk Web, Open Sans, sans-serif;
     padding: 0px;
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 150%;
+    color: #637282;
+    margin-top: 7px;
+}
+
+#recaptcha a {
+    color: #0061ff;
+    text-decoration: none;
 }
 
 #session-form button {
     background: rgb(28, 107, 255);
     color: white;
-    font-size: 18px;
-    width: 86.5%;
-    font-family: sans-serif;
+    font-size: 16px;
+
     height: inherit;
+    font-family: Atlas Grotesk Web, Open Sans, sans-serif;
+    font-weight: 400;
 }
 
 #session-form button:hover{
@@ -101,8 +175,13 @@
     border: none;
     font-family: inherit;
     font-size: 16px;
-    font-family: sans-serif;
     padding-left: 0px;
+    color: #637282;
+    display: block;
+}
+#terms-checkbox a{
+    text-decoration: none;
+    color: #0061ff;
 }
 
 .errors {
@@ -128,7 +207,7 @@
   
   .drawer {  
     /* This section calls the slideInFromLeft animation we defined above */
-    animation: 1s ease-out 0s 1 slideInFromLeft;
+    animation: .5s ease-out 0s 1 slideInFromLeft;
   }
 
   @keyframes slitherOut {
@@ -140,7 +219,9 @@
     }
   }
 
-  .drawer-close {  
+  .closed {  
     
-    animation: 1s ease-out 0s 1 slitherOut;
+    animation: .75s ease-in-out 0s 1 slitherOut;
+    transition: all .75s ease-in-out;
   }
+

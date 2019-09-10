@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { withRouter } from 'react-router'
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -9,16 +9,16 @@ class SessionForm extends React.Component {
       last_name: '',
       email: '',
       password: '',
-      linkButton: this.props.formType
+      formType: this.props.formType
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.changeLinkButton = this.changeLinkButton.bind(this)
   }
 
   handleSubmit(event) {
     event.preventDefault();
     const user = Object.assign({}, this.state);  // {user: {username, password}}
     this.props.processForm(user)
+    .then(() => {  this.props.history.push('/h')    }); 
   }
 
   update(field) {
@@ -27,28 +27,18 @@ class SessionForm extends React.Component {
     }
   }
 
-  changeLinkButton() {
-    let newLinkButton = this.state.linkButton === "Log in" ? 'Sign up' : 'Log in'
-    this.setState({linkButton: newLinkButton})
-  }
-
   render() {
     let { errors, formType } = this.props;
-    const errorsLi = errors.session.map(error => {
-      return <li>{error}</li>
-    })
-    if (this.state.linkButton === "Sign up") {
+    // const errorsLi = errors.session.map(error => {
+    //   return <li>{error}</li>
+    // })
+    if (this.state.formType === "Sign up") {
       return (
         <form id='session-form' onSubmit={this.handleSubmit}>
-          <ul className="errors">
+          {/* <ul className="errors">
             {errorsLi}
-          </ul>
-          <header>
-            <h2>{formType}</h2>
-            <div className='session-header-sub'>
-              or <p onClick={this.changeLinkButton}> sign into your account</p>
-            </div>
-          </header>
+          </ul> */}
+          
           <input className='session-form-element' type="text" id="first_name" value={this.state.first_name} placeholder='First Name' onChange={this.update('first_name')} />     
           <input className='session-form-element' type="text" id="last_name" value={this.state.last_name} placeholder='Last Name' onChange={this.update('last_name')} />
           <input className='session-form-element' type="text" id="email" value={this.state.email} placeholder="Email" onChange={this.update('email')} />
@@ -62,9 +52,9 @@ class SessionForm extends React.Component {
           <span className='session-form-element' id='terms-checkbox'>
             <input  type='checkbox'/>
             I agree to the 
-            <a href="/terms" target="_blank" rel="noreferrer noopener">Dropbox Terms</a>
+            <a href="/terms" target="_blank" rel="noreferrer noopener"> Dropbox Terms</a>
           </span> 
-          <button className='session-form-element'>{this.state.linkButton}</button>
+          <button className='session-form-element'>{this.state.formType}</button>
         </form>
       );
     }
@@ -72,13 +62,6 @@ class SessionForm extends React.Component {
       return (
         <form id='session-form' onSubmit={this.handleSubmit}>
           
-          <header>
-            <h2>{this.state.linkButton}</h2>
-            <div className='session-header-sub'>
-              or
-              <p onClick={this.changeLinkButton}> create an account</p>
-            </div>
-          </header>
           <input className='session-form-element' type="text" id="email" value={this.state.email} placeholder="Email" onChange={this.update('email')} />
           <input className='session-form-element' type="password" id="password" value={this.state.password} placeholder="Password" onChange={this.update('password')} />
 
@@ -92,15 +75,15 @@ class SessionForm extends React.Component {
             Remember Me
             
           </span> 
-          <button className='session-form-element'>{this.state.linkButton}</button>
-          <ul className="errors">
+          <button className='session-form-element'>{this.state.formType}</button>
+          {/* <ul className="errors">
             {errorsLi}
-          </ul>
+          </ul> */}
         </form>
         )
     }
   }
 }
 
-export default SessionForm;
+export default withRouter(SessionForm);
 

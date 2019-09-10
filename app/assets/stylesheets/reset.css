@@ -16,7 +16,9 @@ time, mark, audio, video {
     border: 0;
     font-size: 100%;
     font: inherit;
-  vertical-align: baseline;
+    vertical-align: baseline;
+    -webkit-font-smoothing: antialiased;
+    
 }
 
 @font-face {
@@ -26,4 +28,33 @@ time, mark, audio, video {
     font-weight: 400;
     font-style: normal;
     font-stretch: normal
+}
+
+@font-face {
+  font-family: 'Atlas Grotesk Web';
+  src: url("https://cfl.dropboxstatic.com/static/fonts/atlasgrotesk/AtlasGrotesk-Light-Web-vfl5CyyQq.woff");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal
+}
+
+@font-face {
+  font-family: 'SharpGroteskWide';
+  src: url("https://cfl.dropboxstatic.com/static/fonts/sharpgrotesk/SharpGroteskDBMedium22-vfl0G4yVF.woff");
+  font-weight: 500;
+  font-style: normal
+}
+
+@font-face {
+  font-family: 'SharpGrotesk';
+  src: url("https://cfl.dropboxstatic.com/static/fonts/sharpgrotesk/SharpGroteskDBBook20-vflay0Vof.woff");
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-family: 'SharpGrotesk';
+  src: url("https://cfl.dropboxstatic.com/static/fonts/sharpgrotesk/SharpGroteskDBMedium20-vflXS-0WC.woff");
+  font-weight: 500;
+  font-style: normal
 }

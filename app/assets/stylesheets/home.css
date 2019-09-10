@@ -1,25 +1,226 @@
 .user-home {
     height: inherit;
     background: white;
+    display: flex;
 }
 
 .user-home h1 {
     margin: 0;
 }
 
-.home-nav {
+#home-nav {
     height: inherit;
     width: 240px;
-    background: lightgrey;
+    background: #F7F9FA;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
 }
 
-.home-nav ul{
-    margin: 0;
+.home-nav-content {
+    width:inherit;
+}
+
+.home-button-logo {
+    fill:   #0070e0;
+    margin: 39px 25px;
+}
+
+#home-nav-list {
+    margin: 0 25px;
     list-style: none;
-    padding-top: 200px;
+    font-family: Atlas Grotesk Web, Open Sans, sans-serif;
+    font-weight: 400;
 }
 
-.home-nav ul li h2{
-    margin: 0;
+#home-nav-list li {
+    margin: 20px 0;
+}
 
+#logout-button {
+    position: fixed;
+}
+
+#home-main-container {
+    width: 100%;
+    padding-left: 240px;
+}
+#home-main {
+    position: relative;
+    z-index: 1;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    min-width: 420px;
+    margin-left: 40px;
+    outline: none;
+}
+
+#main-header{
+    flex: 0 0 96px;
+    height: 96px;
+}
+
+.header-end{
+    display: flex;
+    align-items: center;
+}
+
+.header-end h2 {
+    margin: 10px;
+}
+
+
+
+#main-header-content {
+    min-width: 744px;
+    background: #fff;
+    padding: 40px 0 0 40px;
+    height: 50px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 5;
+    width: calc(100% - (200px + 2 * 40px));
+}
+
+#suggested{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 24px 0;
+}
+
+.section{
+    margin: 0;
+    padding: 0 11px 0 12px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.section-header {
+    display: flex;
+    font-size: 12px;
+    color: #637282;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0 11px 0 12px;
+    font-weight: 400;
+    line-height: 40px;
+    border-bottom: solid 1px #E6E8EB;
+}
+
+.hide-button {
+    border: none;
+    color: #0070e0;
+    font-family: AtlasGrotesk,sans-serif;
+    font-size: 12px;
+}
+
+#suggested-list{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.testy-boy {
+    height: 100px;
+    width: 191.25px;
+    background: cornflowerblue;
+    margin: 20px;
+}
+
+#main-content {
+    display: flex;
+}
+
+#create-new-file{
+    background-color: #0070e0;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    line-height: 32px;
+    padding: 0 16px;
+    cursor: pointer;
+    font-family: AtlasGrotesk,sans-serif;
+    font-size: 14px;
+    height: 32px;
+    display: inline-block;
+    text-align: center; 
+    border-radius: 4px;
+    outline: none;
+    margin: 0;
+}
+
+
+#home-sidebar {
+    display: block;
+    flex: 0 0 240px;
+}
+.home-sidebar-content {
+    position: fixed;
+    right: 0;
+
+}
+
+#home-sidebar-list {
+    margin: 0 25px;
+    list-style: none;
+    font-family: Atlas Grotesk Web, Open Sans, sans-serif;
+    font-weight: 400;
+}
+
+#home-sidebar-list li {
+    margin:20px;
+}
+
+.recent-item-icon {
+    height: 50px;
+    width: 95.25px;
+    background: cornflowerblue;
+    margin: 0px 5px;
+}
+
+.recent-item-wrapper {
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px #E6E8EB;
+}
+
+.added-updated{
+    display: contents;
+    height: 20px;
+}
+
+.recent-item-wrapper:hover #when {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+.recent-item-title {
+    display: flex;
+    height: 20px;
+}
+
+.star{
+    background: none;
+    border:none;
+    fill: blue;
+    display: none;
+}
+
+.recent-item-wrapper:hover .star {
+    display: block;
+}
+
+#starred p {
+    margin: 24px 12px;
+    color: #637282;
+    font-family: AtlasGrotesk,sans-serif;
+    font-size: 14px;
+}
+
+#starred a {
+    text-decoration: none;
 }
