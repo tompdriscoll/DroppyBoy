@@ -344,7 +344,7 @@ h6 {
 
 .splash-nav {
     display: inherit;
-    background: center;
+    background: inherit;
 
     width: inherit;
 }
