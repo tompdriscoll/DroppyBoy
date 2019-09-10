@@ -6,12 +6,19 @@
 .droppyboy-logo {
     /* margin: 29px;
     margin-left: 63px; */
-    background: image-url("droppyboy.gif");
     background-size: contain;
     height:30px;
     width: 100px;
     display: flex;
     align-self: center;
+}
+
+#logo-homemade {
+    background: url(/assets/droppy-boy-white-2b45190….gif);
+    background-size: cover;
+    min-width: 167px;
+    height: auto;
+    image-rendering: auto;
 }
 
 .splash-nav-nav {

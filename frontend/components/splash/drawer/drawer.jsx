@@ -25,7 +25,7 @@ class Drawer extends React.Component {
         return (
             <div className="drawer" id='drawer'>
                 <div id='drawer-contents'>
-                    <DrawerNav />
+                    <DrawerNav form={this.state.form} changeForm={this.changeForm}/>
                     <div id='drawer-form'>
                         <header>
                             <h2>{this.state.form}</h2>

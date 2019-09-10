@@ -880,7 +880,10 @@ function (_React$Component) {
         id: "drawer"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "drawer-contents"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_drawer_nav__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_drawer_nav__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        form: this.state.form,
+        changeForm: this.changeForm
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "drawer-form"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, this.state.form), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "session-header-sub"
@@ -961,12 +964,14 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var button = this.props.form === 'Sign up' ? 'Sign in' : 'Sign up';
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
         className: "drawerNav"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         id: "drawer-sign-in",
-        className: "drawer-link"
-      }, "Sign in"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "drawer-link",
+        onClick: this.props.changeForm
+      }, button), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "/install",
         className: "drawer-link"
       }, "Download"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -1255,11 +1260,8 @@ var DroppyboyLogo = function DroppyboyLogo(props) {
     className: "DropboxLogo--glyph",
     alt: "",
     role: "presentation"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "https://cfl.dropboxstatic.com/static/images/index/rebrand/logos/wordmarks/wordmark_white.svg",
-    className: "DropboxLogo--wordmark",
-    alt: "",
-    role: "presentation"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    id: "logo-homemade"
   }));
 };
 
