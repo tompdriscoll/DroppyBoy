@@ -1,9 +1,10 @@
 import React from 'react';
 import RecentItem from './recent_item'
+import SuggestedListItem from './suggested_list_item'
 const HomeMain = props => (   
     <div id='home-main'>
         <div id='suggested' className='section'>
-            <h2 className='section-header'> suggested for you
+            <h2 className='section-header'> Suggested for you
 
                     <button className="hide-button">
                         <span className="">Hide</span>
@@ -11,14 +12,14 @@ const HomeMain = props => (
 
             </h2>
             <ul id='suggested-list'>
-                <div className='testy-boy'/>
-                <div className='testy-boy'/>
-                <div className='testy-boy'/>
-                <div className='testy-boy'/>               
+                <SuggestedListItem/>
+                <SuggestedListItem/>  
+                <SuggestedListItem/>  
+                <SuggestedListItem/>                            
             </ul>
         </div>
         <div id='starred' className='section'>
-            <h2 className='section-header'> Recent
+            <h2 className='section-header'> Starred
                 
                 <button className="hide-button">
                     <span className="">Hide</span>

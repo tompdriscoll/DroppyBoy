@@ -8,9 +8,7 @@ class DrawerNav extends React.Component {
         if (window.scrollY >= 500) {
             drawer.classList.add('closed')
             drawer.classList.remove('drawer')
-        }
-           
-        
+        }              
     }
 
     closeDrawer() {

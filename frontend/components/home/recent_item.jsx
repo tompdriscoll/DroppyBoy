@@ -10,7 +10,7 @@ const RecentItem = () => (
         </div>
         <div className='recent-item-contents'>
             <div className='recent-item-title'>
-                <p>title</p>
+                <p>TitleAsPlaceholder.txt</p>
                 <button className="star" >
                     <svg width="32" 
                     height="32" 
@@ -25,7 +25,7 @@ const RecentItem = () => (
                 </button>
             </div>
             <div>
-                <p className='added-updated'>added </p>
+                <p className='added-updated'>Added </p>
                 <p className='added-updated' id='when'>yesterday</p>
             </div>
         </div>

@@ -2,6 +2,7 @@
     height: inherit;
     background: white;
     display: flex;
+    font-family: AtlasGrotesk;
 }
 
 .user-home h1 {
@@ -32,10 +33,22 @@
     list-style: none;
     font-family: Atlas Grotesk Web, Open Sans, sans-serif;
     font-weight: 400;
+    color: #637282;
 }
 
 #home-nav-list li {
     margin: 20px 0;
+    cursor: pointer;
+}
+
+#home-nav-list li:active {
+    color: #005ff8;
+
+}
+
+#home-nav-list li:hover {
+    opacity: 0.8;
+    
 }
 
 #logout-button {
@@ -64,13 +77,37 @@
 
 .header-end{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    width: 136px;
 }
 
 .header-end h2 {
-    margin: 10px;
+    margin: 5px 20px 10px 10px;
 }
 
+#header-search{
+    border-radius: 25px;
+    border: 1px solid #c1c7cd;
+    color: #25282b;
+    display: flex;
+    height: 32px;
+    padding: 0;
+    position: fixed;
+    right: 150px;
+    top: 40px;
+    transition: .2s width ease-in-out;
+    width: 256px;
+    z-index: 200;
+}
+
+.search__input {
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    margin-left: 30px;
+    font-family: AtlasGrotesk;
+    font-weight: 400;
+}
 
 
 #main-header-content {
@@ -89,6 +126,7 @@
 #notif-bell {
     height: 32px;
     width: 32px;
+    cursor: pointer;
 }
 
 #suggested{
@@ -122,18 +160,46 @@
     color: #0070e0;
     font-family: AtlasGrotesk,sans-serif;
     font-size: 12px;
+    cursor: pointer;
 }
 
 #suggested-list{
     display: flex;
     justify-content: space-evenly;
+    list-style: none;
+}
+
+#suggested-list li{
+    max-width: 195.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: AtlasGrotesk, sans-serif;
+    font-size: 12px;
+    color: #637282;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+#suggested-list li p:hover {
+    color: #0070E0;
+}
+
+.suggested-file-name {
+    color: #1B2733;
+    font-size: 14px;
+}
+
+.suggested-folder {
+    display: flex;
 }
 
 .testy-boy {
     height: 100px;
     width: 191.25px;
     background: cornflowerblue;
-    margin: 20px;
+    margin-top: 20px;
+    margin-bottom: 8px
 }
 
 #main-content {
@@ -151,6 +217,7 @@
     font-family: AtlasGrotesk,sans-serif;
     font-size: 14px;
     height: 32px;
+    width: 200px;
     display: inline-block;
     text-align: center; 
     border-radius: 4px;
@@ -162,6 +229,7 @@
 #home-sidebar {
     display: block;
     flex: 0 0 240px;
+    padding: 0 30px;
 }
 .home-sidebar-content {
     position: fixed;
@@ -180,6 +248,16 @@
     margin:20px;
 }
 
+.new-upload-links {
+    color: #0070e0;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.new-upload-links:hover {
+    color: #0052d9;
+}
+
 .recent-item-icon {
     height: 50px;
     width: 95.25px;
@@ -191,11 +269,19 @@
     display: flex;
     align-items: center;
     border-bottom: solid 1px #E6E8EB;
+    cursor: pointer;
+}
+
+.recent-item-contents {
+   
+    font-size: 14px;
 }
 
 .added-updated{
     display: contents;
     height: 20px;
+    font-size: 12px;
+    color: #637282;
 }
 
 .recent-item-wrapper:hover #when {
@@ -213,6 +299,7 @@
     border:none;
     fill: blue;
     display: none;
+    cursor: pointer;
 }
 
 .recent-item-wrapper:hover .star {

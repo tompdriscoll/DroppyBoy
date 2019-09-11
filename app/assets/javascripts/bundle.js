@@ -301,7 +301,9 @@ var HomeMainHeader = function HomeMainHeader(props) {
     id: "main-header-content"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Home"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "header-end"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    id: "header-search"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "search-chips"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     className: "search__input",
@@ -343,7 +345,15 @@ var HomeSideBar = function HomeSideBar(props) {
     id: "home-sidebar-list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     id: "create-new-file"
-  }, "Create New File")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Upload Files")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Upload Folder")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "New Shared Folder")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Create Paper Doc")))));
+  }, "Create New File")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "new-upload-links"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Upload Files")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "new-upload-links"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Upload Folder")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "new-upload-links"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "New Shared Folder")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "new-upload-links"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Create Paper Doc")))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (HomeSideBar);
@@ -399,6 +409,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _recent_item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./recent_item */ "./frontend/components/home/recent_item.jsx");
+/* harmony import */ var _suggested_list_item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./suggested_list_item */ "./frontend/components/home/suggested_list_item.jsx");
+
 
 
 
@@ -410,26 +422,18 @@ var HomeMain = function HomeMain(props) {
     className: "section"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "section-header"
-  }, " suggested for you", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, " Suggested for you", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "hide-button"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: ""
   }, "Hide"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     id: "suggested-list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testy-boy"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testy-boy"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testy-boy"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testy-boy"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_suggested_list_item__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_suggested_list_item__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_suggested_list_item__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_suggested_list_item__WEBPACK_IMPORTED_MODULE_2__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "starred",
     className: "section"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "section-header"
-  }, " Recent", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, " Starred", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "hide-button"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: ""
@@ -517,7 +521,7 @@ var RecentItem = function RecentItem() {
     className: "recent-item-contents"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "recent-item-title"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "TitleAsPlaceholder.txt"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "star"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     width: "32",
@@ -530,13 +534,40 @@ var RecentItem = function RecentItem() {
     className: "mc-icon--mf"
   })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "added-updated"
-  }, "added "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Added "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "added-updated",
     id: "when"
   }, "yesterday"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (RecentItem);
+
+/***/ }),
+
+/***/ "./frontend/components/home/suggested_list_item.jsx":
+/*!**********************************************************!*\
+  !*** ./frontend/components/home/suggested_list_item.jsx ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var SuggestedListItem = function SuggestedListItem(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "testy-boy"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "suggested-file-name"
+  }, "file name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "suggested-folder"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "f "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " folder")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SuggestedListItem);
 
 /***/ }),
 
@@ -814,7 +845,7 @@ function (_React$Component) {
           href: "https://www.google.com/policies/terms/",
           target: "_blank",
           rel: "noopener noreferrer"
-        }, "Terms of service"), "."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        }, " Terms of service"), "."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
           className: "session-form-element",
           id: "terms-checkbox"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -31855,7 +31886,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

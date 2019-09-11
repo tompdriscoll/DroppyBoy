@@ -67,7 +67,7 @@ class SessionForm extends React.Component {
 
           <div className="session-form-element" id='recaptcha'>This page is protected by reCAPTCHA, and subject to the Google <a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a> 
             and 
-            <a href="https://www.google.com/policies/terms/" target="_blank" rel="noopener noreferrer">Terms of service</a>
+            <a href="https://www.google.com/policies/terms/" target="_blank" rel="noopener noreferrer"> Terms of service</a>
             .
           </div>
           <span className='session-form-element' id='terms-checkbox'>

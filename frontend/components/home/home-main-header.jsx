@@ -6,7 +6,7 @@ const HomeMainHeader = props => (
             <div id='main-header-content'>
                 <h1>Home</h1>
                 <div className="header-end" >
-                    <form>
+                    <form id='header-search'>
                         <span className="search-chips"></span>
                         <input className="search__input" 
                             maxLength="200" 
