@@ -1,5 +1,8 @@
 class Upload < ApplicationRecord
-    validates :name,  :type,  :path,  :uploader_id,  presence: true
+    
+    after_initialize :set_type
+    
+    validates :name, :type, :path, :uploader_id, presence: true
 
     belongs_to :uploader, 
     class_name: :User
@@ -60,8 +63,7 @@ class Upload < ApplicationRecord
         return 'link' if LINK_SUFFIXES.any? {|suf| path.end_with?(suf)}
     end
 
-    def path=(path)
-        @path = path
-        self.type = get_type(path)
+    def set_type
+        self.type = get_type(self.path)
     end
 end

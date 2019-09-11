@@ -1,1 +1,1 @@
-json.extract! file, :id, :path, :type
+json.extract! upload, :id, :path, :type

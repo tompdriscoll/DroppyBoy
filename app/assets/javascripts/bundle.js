@@ -707,8 +707,7 @@ function (_React$Component) {
       var _this2 = this;
 
       event.preventDefault();
-      var user = Object.assign({}, this.state); // {user: {username, password}}
-
+      var user = Object.assign({}, this.state);
       this.props.processForm(user).then(function () {
         _this2.props.history.push('/h');
       });

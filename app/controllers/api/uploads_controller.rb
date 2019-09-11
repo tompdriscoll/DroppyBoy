@@ -4,7 +4,7 @@ class Api::UploadsController < ApplicationController
     def create
         @upload = Upload.new(upload_params)
         @upload.uploader_id = current_user.id
-
+        
         if @upload.save
             render :show
         else
