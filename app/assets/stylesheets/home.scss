@@ -86,6 +86,11 @@
     width: calc(100% - (200px + 2 * 40px));
 }
 
+#notif-bell {
+    height: 32px;
+    width: 32px;
+}
+
 #suggested{
     display: flex;
     flex-direction: column;

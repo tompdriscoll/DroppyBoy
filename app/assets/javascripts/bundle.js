@@ -154,6 +154,62 @@ var logout = function logout() {
 
 /***/ }),
 
+/***/ "./frontend/actions/upload_actions.js":
+/*!********************************************!*\
+  !*** ./frontend/actions/upload_actions.js ***!
+  \********************************************/
+/*! exports provided: RECEIVE_UPLOADS, RECEIVE_UPLOAD, receiveUploads, receiveUpload, fetchUploads, fetchUpload, createUpload */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_UPLOADS", function() { return RECEIVE_UPLOADS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_UPLOAD", function() { return RECEIVE_UPLOAD; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveUploads", function() { return receiveUploads; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveUpload", function() { return receiveUpload; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUploads", function() { return fetchUploads; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUpload", function() { return fetchUpload; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createUpload", function() { return createUpload; });
+/* harmony import */ var _util_upload_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/upload_api_util */ "./frontend/util/upload_api_util.js");
+
+var RECEIVE_UPLOADS = 'RECEIVE_UPLOADS';
+var RECEIVE_UPLOAD = 'RECEIVE_UPLOAD';
+var receiveUploads = function receiveUploads(uploads) {
+  return {
+    type: RECEIVE_UPLOADS,
+    uploads: uploads
+  };
+};
+var receiveUpload = function receiveUpload(upload) {
+  return {
+    type: RECEIVE_UPLOAD,
+    upload: upload
+  };
+};
+var fetchUploads = function fetchUploads() {
+  return function (dispatch) {
+    return _util_upload_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchUploads"]().then(function (uploads) {
+      return dispatch(receiveUploads(uploads));
+    });
+  };
+};
+var fetchUpload = function fetchUpload(id) {
+  return function (dispatch) {
+    return _util_upload_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchUpload"](id).then(function (payload) {
+      return dispatch(receiveUpload(payload));
+    });
+  };
+};
+var createUpload = function createUpload(upload) {
+  return function (dispatch) {
+    return _util_upload_api_util__WEBPACK_IMPORTED_MODULE_0__["createUpload"](upload).then(function (upload) {
+      return dispatch(receiveUpload(upload));
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/components/app.jsx":
 /*!*************************************!*\
   !*** ./frontend/components/app.jsx ***!
@@ -252,7 +308,13 @@ var HomeMainHeader = function HomeMainHeader(props) {
     maxLength: "200",
     placeholder: "Search your content",
     type: "text"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "notifs"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "propic"))));
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    id: "notif-bell"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M7 21c0-.557.195-.778.816-1.312.106-.091.595-.5.49-.412.208-.174.366-.311.518-.45C9.607 18.107 10 17.506 10 17v-4.123l.03-.12c.154-.618.515-1.484 1.17-2.357C12.316 8.913 13.913 8 16 8c2.087 0 3.684.913 4.8 2.4.655.873 1.016 1.74 1.17 2.357l.03.12V17c0 .469.338.938 1.14 1.607.127.105.694.563.54.439.231.187.39.322.538.461.498.471.782.91.782 1.493 0 1.552-.448 2-2 2H9c-.767 0-1.354-.229-1.707-.758C7.037 21.858 7 21.581 7 21zm16.031.166A.347.347 0 0 1 23 21v.124a.49.49 0 0 1 .031.042zm-.186-.205a7.537 7.537 0 0 0-.424-.362c.168.137-.42-.339-.561-.456C20.637 19.124 20 18.24 20 17v-3.86a5.4 5.4 0 0 0-.8-1.54c-.76-1.013-1.787-1.6-3.2-1.6-1.413 0-2.44.587-3.2 1.6a5.4 5.4 0 0 0-.8 1.54V17c0 1.222-.664 2.236-1.824 3.3-.178.162-.356.317-.584.508l-.23.192h13.523a2.894 2.894 0 0 0-.04-.039zM13 23c0 .391.086.908.356 1.447C13.832 25.4 14.732 26 16 26c1.268 0 2.168-.6 2.644-1.553.27-.539.356-1.056.356-1.447h-2c0 .109-.039.342-.144.553-.15.297-.374.447-.856.447s-.707-.15-.856-.447A1.403 1.403 0 0 1 15 23h-2z"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M17 9V7a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0z"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "propic"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (HomeMainHeader);
@@ -1573,10 +1635,13 @@ document.addEventListener('DOMContentLoaded', function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _users_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./users_reducer */ "./frontend/reducers/users_reducer.js");
+/* harmony import */ var _uploads_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./uploads_reducer */ "./frontend/reducers/uploads_reducer.js");
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  users: _users_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+  users: _users_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
+  uploads: _uploads_reducer__WEBPACK_IMPORTED_MODULE_2__["default"]
 }));
 
 /***/ }),
@@ -1696,6 +1761,41 @@ var sessionReducer = function sessionReducer() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (sessionReducer);
+
+/***/ }),
+
+/***/ "./frontend/reducers/uploads_reducer.js":
+/*!**********************************************!*\
+  !*** ./frontend/reducers/uploads_reducer.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_upload_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/upload_actions */ "./frontend/actions/upload_actions.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+var uploadsReducer = function uploadsReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
+
+  switch (action.type) {
+    case _actions_upload_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_UPLOADS"]:
+      return action.uploads;
+
+    case _actions_upload_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_UPLOAD"]:
+      return Object.assign({}, state, _defineProperty({}, action.upload.id, action.upload));
+
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (uploadsReducer);
 
 /***/ }),
 
@@ -1858,6 +1958,55 @@ var logout = function logout() {
   return $.ajax({
     method: 'DELETE',
     url: '/api/session'
+  });
+};
+
+/***/ }),
+
+/***/ "./frontend/util/upload_api_util.js":
+/*!******************************************!*\
+  !*** ./frontend/util/upload_api_util.js ***!
+  \******************************************/
+/*! exports provided: fetchUploads, fetchUpload, createUpload, editUpload, deleteUpdate */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUploads", function() { return fetchUploads; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUpload", function() { return fetchUpload; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createUpload", function() { return createUpload; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editUpload", function() { return editUpload; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteUpdate", function() { return deleteUpdate; });
+var fetchUploads = function fetchUploads() {
+  return $.ajax({
+    method: 'GET',
+    url: 'api/uploads'
+  });
+};
+var fetchUpload = function fetchUpload(id) {
+  return $.ajax({
+    method: 'GET',
+    url: "api/uploads/".concat(id)
+  });
+};
+var createUpload = function createUpload(upload) {
+  return $.ajax({
+    method: 'POST',
+    url: 'api/uploads',
+    upload: upload
+  });
+};
+var editUpload = function editUpload(upload) {
+  return $.ajax({
+    method: 'PATCH',
+    url: "api/uploads/".concat(id),
+    upload: upload
+  });
+};
+var deleteUpdate = function deleteUpdate(id) {
+  return $.ajax({
+    method: 'DELETE',
+    url: "api/uploads/".concat(id)
   });
 };
 

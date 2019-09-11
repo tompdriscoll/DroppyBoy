@@ -1,0 +1,1 @@
+json.extract! file, :id, :path, :type
