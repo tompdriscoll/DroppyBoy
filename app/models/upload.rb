@@ -1,8 +1,6 @@
 class Upload < ApplicationRecord
-    
-    after_initialize :set_type
-    
-    validates :name, :type, :path, :uploader_id, presence: true
+    after_initialize :set_upload_type
+    validates :name, :upload_type, :path, :uploader_id, presence: true
 
     belongs_to :uploader, 
     class_name: :User
@@ -52,7 +50,7 @@ class Upload < ApplicationRecord
 
 
 
-    def get_type(path)
+    def get_upload_type(path)
         return 'image' if IMAGE_SUFFIXES.any? {|suf| path.end_with?(suf)}
         return 'text' if TEXT_SUFFIXES.any? {|suf| path.end_with?(suf)}
         return 'presentation' if PRES_SUFFIXES.any? {|suf| path.end_with?(suf)}
@@ -63,7 +61,7 @@ class Upload < ApplicationRecord
         return 'link' if LINK_SUFFIXES.any? {|suf| path.end_with?(suf)}
     end
 
-    def set_type
-        self.type = get_type(self.path)
+    def set_upload_type
+        self.upload_type = get_upload_type(self.name)
     end
 end

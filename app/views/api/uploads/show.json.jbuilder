@@ -1,1 +1,1 @@
-json.extract! @upload, :id, :path, :type
+json.extract! @upload, :id, :path, :upload_type

@@ -1,7 +1,17 @@
 import React from 'react';
 import RecentItem from './recent_item'
 import SuggestedListItem from './suggested_list_item'
-const HomeMain = props => (   
+
+import UploadForm from '../uploads/upload_from'
+const HomeMain = props => {  
+    const recent = props.user.uploads.reverse() 
+    const suggestedListItems = recent.map(upload => (
+        
+        <SuggestedListItem upload={upload} key={upload.id}/>
+        
+    ))
+ 
+    return (
     <div id='home-main'>
         <div id='suggested' className='section'>
             <h2 className='section-header'> Suggested for you
@@ -10,10 +20,7 @@ const HomeMain = props => (
 
             </h2>
             <ul id='suggested-list'>
-                <SuggestedListItem/>
-                <SuggestedListItem/>  
-                <SuggestedListItem/>  
-                <SuggestedListItem/>                            
+                {suggestedListItems}                          
             </ul>
         </div>
         <div id='starred' className='section'>
@@ -49,11 +56,12 @@ const HomeMain = props => (
                 <RecentItem/> 
                 <RecentItem/>
             </ul>
+            
         </div>
-    </div>
+    </div>)
    
 
-)
+}
 
 export default HomeMain;
 

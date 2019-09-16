@@ -375,9 +375,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var msp = function msp(state) {
+var msp = function msp(_ref) {
+  var session = _ref.session,
+      _ref$entities = _ref.entities,
+      users = _ref$entities.users,
+      uploads = _ref$entities.uploads;
   return {
-    test: 'hello'
+    currentUser: users[session.id]
   };
 };
 
@@ -406,11 +410,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _recent_item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./recent_item */ "./frontend/components/home/recent_item.jsx");
 /* harmony import */ var _suggested_list_item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./suggested_list_item */ "./frontend/components/home/suggested_list_item.jsx");
+/* harmony import */ var _uploads_upload_from__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../uploads/upload_from */ "./frontend/components/uploads/upload_from.jsx");
+
 
 
 
 
 var HomeMain = function HomeMain(props) {
+  var recent = props.user.uploads.reverse();
+  var suggestedListItems = recent.map(function (upload) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_suggested_list_item__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      upload: upload,
+      key: upload.id
+    });
+  });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "home-main"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -420,7 +433,7 @@ var HomeMain = function HomeMain(props) {
     className: "section-header"
   }, " Suggested for you"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     id: "suggested-list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_suggested_list_item__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_suggested_list_item__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_suggested_list_item__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_suggested_list_item__WEBPACK_IMPORTED_MODULE_2__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, suggestedListItems)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "starred",
     className: "section"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
@@ -538,11 +551,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var SuggestedListItem = function SuggestedListItem(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testy-boy"
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "testy-boy",
+    src: props.upload.path
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "suggested-file-name"
-  }, "file name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, props.upload.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "suggested-folder"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " folder")));
 };
@@ -579,7 +593,9 @@ var UserHome = function UserHome(props) {
     id: "home-main-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_main_header__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "main-content"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_main__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_sidebar__WEBPACK_IMPORTED_MODULE_4__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_main__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    user: props.currentUser
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_sidebar__WEBPACK_IMPORTED_MODULE_4__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "logout-button"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: props.logout

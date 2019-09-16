@@ -10,6 +10,7 @@ class User < ApplicationRecord
   
     has_many :uploads,
     foreign_key: :uploader_id
+    
       
   
     def self.find_by_credentials(email, password)

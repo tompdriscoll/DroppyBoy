@@ -206,10 +206,11 @@
 
 .testy-boy {
     height: 100px;
-    width: 191.25px;
-    background: cornflowerblue;
+    max-width: 150px;
+   
     margin-top: 20px;
-    margin-bottom: 8px
+    margin-bottom: 8px;
+    padding: 0 10px;
 }
 
 #main-content {
