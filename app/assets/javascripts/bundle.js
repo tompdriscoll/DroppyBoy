@@ -721,9 +721,9 @@ function (_React$Component) {
       first_name: '',
       last_name: '',
       email: '',
-      password: '',
-      formType: _this.props.formType
+      password: ''
     };
+    _this.formType = _this.props.formType;
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     _this.demoLogin = _this.demoLogin.bind(_assertThisInitialized(_this));
     _this.demoSignUp = _this.demoSignUp.bind(_assertThisInitialized(_this));
@@ -783,6 +783,43 @@ function (_React$Component) {
       this.props.processForm(guest);
     }
   }, {
+    key: "demoLogin",
+    value: function demoLogin() {
+      var email = document.getElementById('email');
+      var pw = document.getElementById('password');
+      email.value = 'DemoUser@demo.co';
+      password.value = 'derpderp';
+      this.setState(_defineProperty({}, 'email', email.value));
+      this.setState(_defineProperty({}, 'password', password.value));
+    }
+  }, {
+    key: "demoSignup",
+    value: function demoSignup() {
+      var alphaNum = '1234567890qwertyuiopasdfghjklzxcvbnm';
+      var hash = '';
+      var i = 0;
+      var j = 0;
+
+      while (i < 5) {
+        j = Math.floor(Math.random() * 34);
+        hash += alphaNum[j];
+        i += 1;
+      }
+
+      var first = document.getElementById('first_name');
+      var last = document.getElementById('last_name');
+      var email = document.getElementById('email');
+      var pw = document.getElementById('password');
+      first.value = 'Johnny';
+      last.value = 'Demo';
+      email.value = 'JohnnyDemo' + hash + '@demo.co';
+      password.value = 'derpderp' + hash;
+      this.setState(_defineProperty({}, 'first_name', 'Johnny'));
+      this.setState(_defineProperty({}, 'last_name', 'Demo'));
+      this.setState(_defineProperty({}, 'email', email.value));
+      this.setState(_defineProperty({}, 'password', password.value));
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this$props = this.props,
@@ -791,7 +828,7 @@ function (_React$Component) {
       //   return <li>{error}</li>
       // })
 
-      if (this.state.formType === "Sign up") {
+      if (this.formType === "Sign up") {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
           id: "session-form",
           onSubmit: this.handleSubmit
@@ -1759,6 +1796,8 @@ function (_React$Component) {
       var fileReader = new FileReader();
 
       fileReader.onloadend = function () {
+        debugger;
+
         _this2.setState({
           name: file.name,
           url: fileReader.result,
@@ -1775,6 +1814,7 @@ function (_React$Component) {
 
       if (this.state.file) {
         formData.append('upload[file]', this.state.file);
+        debugger;
         $.ajax({
           url: '/api/uploads',
           method: 'POST',

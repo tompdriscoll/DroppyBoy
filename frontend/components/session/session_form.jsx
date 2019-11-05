@@ -8,9 +8,9 @@ class SessionForm extends React.Component {
       first_name: '',
       last_name: '',
       email: '',
-      password: '',
-      formType: this.props.formType
+      password: ''
     };
+    this.formType = this.props.formType
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoLogin = this.demoLogin.bind(this)
     this.demoSignUp = this.demoSignUp.bind(this)
@@ -54,7 +54,7 @@ class SessionForm extends React.Component {
     // const errorsLi = errors.session.map(error => {
     //   return <li>{error}</li>
     // })
-    if (this.state.formType === "Sign up") {
+    if (this.formType === "Sign up") {
       return (
         <form id='session-form' onSubmit={this.handleSubmit}>
           {/* <ul className="errors">
@@ -102,7 +102,7 @@ class SessionForm extends React.Component {
             Remember Me
             
           </span> 
-          <button className='session-form-element'>{this.state.formType}</button>
+          <button className='session-form-element'>{this.formType}</button>
           {/* <ul className="errors">
             {errorsLi}
           </ul> */}

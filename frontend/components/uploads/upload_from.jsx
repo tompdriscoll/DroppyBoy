@@ -20,6 +20,7 @@ class UploadForm extends React.Component {
     const file = e.currentTarget.files[0];
     const fileReader = new FileReader();
     fileReader.onloadend = () => {
+      debugger
         this.setState({name: file.name, url: fileReader.result, file: file});
 
     };
@@ -30,7 +31,7 @@ class UploadForm extends React.Component {
     formData.append('upload[name]', this.state.name);
     if (this.state.file) {
         formData.append('upload[file]', this.state.file) 
-        
+        debugger
     
     $.ajax({
       url: '/api/uploads',
