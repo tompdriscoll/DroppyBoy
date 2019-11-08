@@ -8,7 +8,7 @@ class User < ApplicationRecord
   
     after_initialize :ensure_session_token
   
-    has_many_attached :uploads,
+    has_many :uploads,
     foreign_key: :uploader_id
     
       
