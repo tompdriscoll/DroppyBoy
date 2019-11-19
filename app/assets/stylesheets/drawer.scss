@@ -1,15 +1,15 @@
 .drawer {
     height: 100%;
-    width: calc(480px + ((100vw - 1440px) / 2));
     background: white;
     z-index: 10;
-    right: 0;
     top: 0;
+    left: calc(16/24 * 100%);
     position: fixed;
     font-size: 12px;
     line-height: 2.28571;
     font-family: Atlas Grotesk Web, Open Sans, sans-serif;
     font-weight: 400;
+    
 }
 
 .closed {
@@ -225,3 +225,9 @@
     transition: all .75s ease-in-out;
   }
 
+@media screen and (min-width: 1470px){
+    .drawer{
+        left: calc((100% - 1440px)/2 + 960px);
+        width: -webkit-fill-available;
+    }
+}
