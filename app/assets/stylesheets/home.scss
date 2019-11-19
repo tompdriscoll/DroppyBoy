@@ -165,8 +165,11 @@
 
 #suggested-list{
     display: flex;
-    justify-content: space-evenly;
     list-style: none;
+    overflow: hidden;
+    flex-wrap: wrap;
+    max-height: 168px;
+    justify-content: center;
 }
 
 #suggested-list li{
@@ -179,6 +182,7 @@
     color: #637282;
     line-height: 20px;
     cursor: pointer;
+    margin: 0 10px;
 }
 
 #suggested-list li p:hover {

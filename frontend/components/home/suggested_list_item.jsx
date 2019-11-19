@@ -6,7 +6,7 @@ const SuggestedListItem = props => (
         <div className='testy-boy'/>
         <p className='suggested-file-name'>file name</p>
         <div className='suggested-folder'>
-            <p>f </p>
+            <p> </p>
             <p> folder</p>
         
         </div>

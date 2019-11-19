@@ -564,7 +564,7 @@ var SuggestedListItem = function SuggestedListItem(props) {
     className: "suggested-file-name"
   }, "file name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "suggested-folder"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "f "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " folder")));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " folder")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SuggestedListItem);
