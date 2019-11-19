@@ -112,7 +112,7 @@
     width: 24px;
     height: 35px;
     padding: 0;
-    
+    cursor: pointer;
     background-size: contain;
 }
 
@@ -175,7 +175,7 @@
     max-width: calc(1440px / (8/24));
 }
 
-#grid-pic-2 {
+#grid2-pic-2 {
     width: calc(6/24 * 100%);
     max-width: calc(1440px / (6/24));
 }
@@ -290,9 +290,12 @@
 }
 .grid5-text h5{
     margin: auto;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-size: calc(32px + 8 * ((100vw - 375px) / 1065));
     line-height: 46px;
+    font-family: 'SharpGroteskWide', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
 }
 
 .grid5-text button{
@@ -306,6 +309,7 @@
     width: auto;
     padding: 8px 50px;
     cursor: pointer;
+    font-family: 'Atlas Grotesk Web', 'Open Sans', sans-serif;
 }
 
 #grid6 {
@@ -330,13 +334,16 @@
 }
 
 .small-list li{
+    font-size: 14px;
     margin-top: 14px;
     font-family: sans-serif;
 }
 
 h6 {
+    font-family: 'SharpGroteskWide', sans-serif;
+    font-weight: 500;
     text-align: left;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 #nav1 {
