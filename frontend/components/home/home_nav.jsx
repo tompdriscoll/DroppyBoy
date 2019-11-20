@@ -3,7 +3,7 @@ import React from 'react';
 const HomeNav = props => (
     <div id='home-nav'>
         <div className="home-nav-content">
-            <a className="home-button" href="https://www.dropbox.com/">
+            <a className="home-button" href="">
                 <svg className="home-button-logo" 
                 aria-label="Home" 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -21,9 +21,7 @@ const HomeNav = props => (
             <ul id='home-nav-list'>
                 <li><h2>Home</h2></li>
                 <li><h2>Files</h2></li>
-                <li><h2>Paper</h2></li>
-                <li><h2>Showcase</h2></li>
-                <li><h2>Admin Console</h2></li>
+               
             </ul>
             
         </div>
