@@ -6,9 +6,7 @@ const HomeMain = props => (
         <div id='suggested' className='section'>
             <h2 className='section-header'> Suggested for you
 
-                    <button className="hide-button">
-                        <span className="">Hide</span>
-                    </button>
+                    
 
             </h2>
             <ul id='suggested-list'>
@@ -21,22 +19,20 @@ const HomeMain = props => (
         <div id='starred' className='section'>
             <h2 className='section-header'> Starred
                 
-                <button className="hide-button">
-                    <span className="">Hide</span>
-                </button>
+             
                 
             </h2>
             <p>
                 When you star items, they’ll show up here for easy access. 
-                <a href="/#/help/desktop-web/star-doc-file-folder" target="_blank" rel="noopener noreferrer"> Learn more</a>
+                {/* <a href="/#/help/desktop-web/star-doc-file-folder" target="_blank" rel="noopener noreferrer"> Learn more</a> */}
             </p>
         </div>
         <div id='recent' className='section'>
             <h2 className='section-header'> Recent
 
-                    <button className="hide-button">
+                    {/* <button className="hide-button">
                         <span className="">Hide</span>
-                    </button>
+                    </button> */}
 
             </h2>
             <ul id='recent-list'>

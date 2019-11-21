@@ -349,17 +349,7 @@ var HomeSideBar = function HomeSideBar(props) {
     className: "home-sidebar-content"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     id: "home-sidebar-list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    id: "create-new-file"
-  }, "Create New File")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "new-upload-links"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Upload Files")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "new-upload-links"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Upload Folder")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "new-upload-links"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "New Shared Folder")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "new-upload-links"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Create Paper Doc")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_uploads_upload_from__WEBPACK_IMPORTED_MODULE_1__["default"], null))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_uploads_upload_from__WEBPACK_IMPORTED_MODULE_1__["default"], null))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (HomeSideBar);
@@ -428,35 +418,19 @@ var HomeMain = function HomeMain(props) {
     className: "section"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "section-header"
-  }, " Suggested for you", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "hide-button"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: ""
-  }, "Hide"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+  }, " Suggested for you"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     id: "suggested-list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_suggested_list_item__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_suggested_list_item__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_suggested_list_item__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_suggested_list_item__WEBPACK_IMPORTED_MODULE_2__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "starred",
     className: "section"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "section-header"
-  }, " Starred", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "hide-button"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: ""
-  }, "Hide"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "When you star items, they\u2019ll show up here for easy access.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/#/help/desktop-web/star-doc-file-folder",
-    target: "_blank",
-    rel: "noopener noreferrer"
-  }, " Learn more"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, " Starred"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "When you star items, they\u2019ll show up here for easy access.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "recent",
     className: "section"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "section-header"
-  }, " Recent", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "hide-button"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: ""
-  }, "Hide"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+  }, " Recent"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     id: "recent-list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null))));
 };
@@ -1830,12 +1804,16 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         id: "upload-form",
         onSubmit: this.handleSubmit.bind(this)
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        id: "create-new-file"
+      }, "Upload File", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        id: "file-select",
         type: "file",
         onChange: this.handleFile.bind(this)
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        id: "file-submit",
         type: "submit"
-      }));
+      })));
     }
   }]);
 

@@ -75,9 +75,11 @@ class UploadForm extends React.Component {
     const preview = this.state.url ? <img src={this.state.url} /> : null;
     return (
       <form id='upload-form' onSubmit={this.handleSubmit.bind(this)}>   
-        <input type="file"
+        <button id='create-new-file'>Upload File
+        <input id='file-select' type="file"
           onChange={this.handleFile.bind(this)}/>
-          <input type='submit'/>
+          <input id='file-submit' type='submit'/>
+          </button>
       </form>
     );
   }

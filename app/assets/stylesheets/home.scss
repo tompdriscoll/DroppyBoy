@@ -258,6 +258,20 @@
     margin:20px;
 }
 
+#file-select{
+    position: absolute;
+    top: 0;
+    left: 25px;
+    height: 32px;
+    width: 200px;
+    opacity: 0;
+}
+
+#file-submit{
+    position: absolute;
+    bottom: -30px;
+}
+
 .new-upload-links {
     color: #0070e0;
     font-size: 14px;
