@@ -116,7 +116,11 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.13.0)
     msgpack (1.3.1)
+<<<<<<< HEAD
     nio4r (2.5.2)
+=======
+    nio4r (2.5.1)
+>>>>>>> 0818497c6ecdb47785ab60e2a8c4c2432b4c47f9
     nokogiri (1.10.5)
       mini_portile2 (~> 2.4.0)
     pg (1.1.4)
