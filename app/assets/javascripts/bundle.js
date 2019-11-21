@@ -138,7 +138,9 @@ var signup = function signup(user) {
 var login = function login(user) {
   return function (dispatch) {
     return _util_session_api_util__WEBPACK_IMPORTED_MODULE_0__["login"](user).then(function (user) {
-      return dispatch(receiveCurrentUser(user));
+      console.log(user);
+      dispatch(receiveCurrentUser(user));
+      return user;
     }, function (err) {
       return dispatch(receiveErrors(err.responseJSON));
     });
@@ -733,28 +735,62 @@ function (_React$Component) {
       formType: _this.props.formType
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.demoLogin = _this.demoLogin.bind(_assertThisInitialized(_this));
+    _this.demoSignUp = _this.demoSignUp.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(SessionForm, [{
     key: "handleSubmit",
     value: function handleSubmit(event) {
-      var _this2 = this;
-
       event.preventDefault();
+      var form = this;
       var user = Object.assign({}, this.state);
-      this.props.processForm(user).then(function () {
-        _this2.props.history.push('/h');
+      this.props.processForm(this.state).then(function (response) {
+        form.props.history.push('/h');
       });
     }
   }, {
     key: "update",
     value: function update(field) {
-      var _this3 = this;
+      var _this2 = this;
 
       return function (event) {
-        _this3.setState(_defineProperty({}, field, event.target.value));
+        _this2.setState(_defineProperty({}, field, event.target.value));
       };
+    }
+  }, {
+    key: "demoSignUp",
+    value: function demoSignUp(e) {
+      e.preventDefault();
+      var alphaNumeric = 'abcdefghijklmnopqrstuvwxyz1234567890';
+      var digest = '';
+
+      while (digest.length < 5) {
+        digest += alphaNumeric[Math.floor(Math.random() * 36)];
+      }
+
+      var email = 'test' + digest + '@user.com';
+      console.log(email);
+      var guest = {
+        first_name: "test",
+        last_name: 'user',
+        email: email,
+        password: "hunter12"
+      };
+      this.props.processForm(guest);
+    }
+  }, {
+    key: "demoLogin",
+    value: function demoLogin(e) {
+      e.preventDefault();
+      var guest = {
+        first_name: "test",
+        last_name: 'user',
+        email: "test@user.com",
+        password: "hunter12"
+      };
+      this.props.processForm(guest);
     }
   }, {
     key: "render",
@@ -819,7 +855,13 @@ function (_React$Component) {
           rel: "noreferrer noopener"
         }, " Dropbox Terms")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "session-form-element"
-        }, this.state.formType));
+        }, this.state.formType), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          id: "demo-user",
+          className: "session-form-element",
+          type: "submit",
+          onClick: this.demoSignUp,
+          value: "Demo User"
+        }, "Demo User"));
       } else {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
           id: "session-form",
@@ -856,7 +898,13 @@ function (_React$Component) {
           type: "checkbox"
         }), "Remember Me"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "session-form-element"
-        }, this.state.formType));
+        }, this.state.formType), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          id: "demo-user",
+          className: "session-form-element",
+          type: "submit",
+          onClick: this.demoLogin,
+          value: "Demo User"
+        }, "Demo Signup"));
       }
     }
   }]);
@@ -1935,6 +1983,7 @@ var sessionErrorsReducer = function sessionErrorsReducer() {
 
   switch (action.type) {
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_SESSION_ERRORS"]:
+      if (!action.errors) return null;
       return action.errors;
 
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CURRENT_USER"]:

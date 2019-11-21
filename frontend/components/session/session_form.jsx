@@ -12,19 +12,41 @@ class SessionForm extends React.Component {
       formType: this.props.formType
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLogin = this.demoLogin.bind(this)
+    this.demoSignUp = this.demoSignUp.bind(this)
   }
 
-  handleSubmit(event) {
+  handleSubmit(event) { 
     event.preventDefault();
+    let form = this
     const user = Object.assign({}, this.state);  
-    this.props.processForm(user)
-    .then(() => {  this.props.history.push('/h')    }); 
+    this.props.processForm(this.state)  
+    .then(response => {  
+      form.props.history.push('/h')    
+    }); 
   }
 
   update(field) {
     return (event) => {
       this.setState({ [field]: event.target.value });
     }
+  }
+
+  demoSignUp(e){
+    e.preventDefault();
+    let alphaNumeric = 'abcdefghijklmnopqrstuvwxyz1234567890'
+    let digest = ''
+    while (digest.length < 5) digest += alphaNumeric[Math.floor((Math.random() * 36))];
+    let email = 'test' + digest + '@user.com'
+    console.log(email)
+    const guest = {first_name: "test", last_name: 'user', email: email, password: "hunter12"}
+    this.props.processForm(guest)
+  }
+
+  demoLogin(e){
+    e.preventDefault();
+    const guest = {first_name: "test", last_name: 'user', email: "test@user.com", password: "hunter12"}
+    this.props.processForm(guest)
   }
 
   render() {
@@ -55,6 +77,11 @@ class SessionForm extends React.Component {
             <a href="/terms" target="_blank" rel="noreferrer noopener"> Dropbox Terms</a>
           </span> 
           <button className='session-form-element'>{this.state.formType}</button>
+          <button id="demo-user"
+          className='session-form-element'
+          type="submit" 
+          onClick={this.demoSignUp}
+          value="Demo User">Demo User</button> 
         </form>
       );
     }
@@ -79,6 +106,11 @@ class SessionForm extends React.Component {
           {/* <ul className="errors">
             {errorsLi}
           </ul> */}
+          <button id="demo-user"
+          className='session-form-element'
+          type="submit" 
+          onClick={this.demoLogin}
+          value="Demo User">Demo Signup</button> 
         </form>
         )
     }
