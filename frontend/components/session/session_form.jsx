@@ -57,9 +57,7 @@ class SessionForm extends React.Component {
     if (this.formType === "Sign up") {
       return (
         <form id='session-form' onSubmit={this.handleSubmit}>
-          {/* <ul className="errors">
-            {errorsLi}
-          </ul> */}
+         
           
           <input className='session-form-element' type="text" id="first_name" value={this.state.first_name} placeholder='First Name' onChange={this.update('first_name')} />     
           <input className='session-form-element' type="text" id="last_name" value={this.state.last_name} placeholder='Last Name' onChange={this.update('last_name')} />
@@ -76,7 +74,7 @@ class SessionForm extends React.Component {
             I agree to the 
             <a href="/terms" target="_blank" rel="noreferrer noopener"> Dropbox Terms</a>
           </span> 
-          <button className='session-form-element'>{this.state.formType}</button>
+          <button className='session-form-element'>{this.formType}</button>
           <button id="demo-user"
           className='session-form-element'
           type="submit" 
@@ -103,10 +101,12 @@ class SessionForm extends React.Component {
             
           </span> 
           <button className='session-form-element'>{this.formType}</button>
-          {/* <ul className="errors">
-            {errorsLi}
-          </ul> */}
-          <button className='session-form-element' onClick={this.demoLogin}>Demo User</button>
+          
+          <button id="demo-user"
+          className='session-form-element'
+          type="submit" 
+          onClick={this.demoLogin}
+          value="Demo User">Demo Signup</button> 
         </form>
         )
     }

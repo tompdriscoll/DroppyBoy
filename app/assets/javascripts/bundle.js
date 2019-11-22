@@ -783,43 +783,6 @@ function (_React$Component) {
       this.props.processForm(guest);
     }
   }, {
-    key: "demoLogin",
-    value: function demoLogin() {
-      var email = document.getElementById('email');
-      var pw = document.getElementById('password');
-      email.value = 'DemoUser@demo.co';
-      password.value = 'derpderp';
-      this.setState(_defineProperty({}, 'email', email.value));
-      this.setState(_defineProperty({}, 'password', password.value));
-    }
-  }, {
-    key: "demoSignup",
-    value: function demoSignup() {
-      var alphaNum = '1234567890qwertyuiopasdfghjklzxcvbnm';
-      var hash = '';
-      var i = 0;
-      var j = 0;
-
-      while (i < 5) {
-        j = Math.floor(Math.random() * 34);
-        hash += alphaNum[j];
-        i += 1;
-      }
-
-      var first = document.getElementById('first_name');
-      var last = document.getElementById('last_name');
-      var email = document.getElementById('email');
-      var pw = document.getElementById('password');
-      first.value = 'Johnny';
-      last.value = 'Demo';
-      email.value = 'JohnnyDemo' + hash + '@demo.co';
-      password.value = 'derpderp' + hash;
-      this.setState(_defineProperty({}, 'first_name', 'Johnny'));
-      this.setState(_defineProperty({}, 'last_name', 'Demo'));
-      this.setState(_defineProperty({}, 'email', email.value));
-      this.setState(_defineProperty({}, 'password', password.value));
-    }
-  }, {
     key: "render",
     value: function render() {
       var _this$props = this.props,
@@ -882,7 +845,7 @@ function (_React$Component) {
           rel: "noreferrer noopener"
         }, " Dropbox Terms")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "session-form-element"
-        }, this.state.formType), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        }, this.formType), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           id: "demo-user",
           className: "session-form-element",
           type: "submit",
@@ -926,6 +889,7 @@ function (_React$Component) {
         }), "Remember Me"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "session-form-element"
         }, this.formType), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          id: "demo-user",
           className: "session-form-element",
           type: "submit",
           onClick: this.demoLogin,
@@ -1440,9 +1404,7 @@ var Grid6 = function Grid6() {
     id: "top-list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Droppyboy"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "small-list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Was made"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "By Tom Driscoll"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Based On"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Dropbox"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Technologies"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "small-list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "React"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Ruby-on-Rails"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "AWS Storage"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "PostgreSQL"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Company"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "A React app"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Built by"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Tom Driscoll"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Based on"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Dropbox"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Features"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "small-list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "User Auth"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "File Upload"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "File Download"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "File Preview"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Technologies"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "small-list"
@@ -32164,7 +32126,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

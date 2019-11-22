@@ -7,31 +7,21 @@ const Grid6 = () => (
                 <li>
                     <h6>Droppyboy</h6>
                     <ul className='small-list'>
-                        <li>Was made</li>
-                        <li>By Tom Driscoll</li>
-                        <li>Based On</li>
+                        <li>A React app</li>
+                        <li>Built by</li>
+                        <li>Tom Driscoll</li>
+                        <li>Based on</li>
                         <li>Dropbox</li>
+                    </ul>
+                </li>
+                <li>
+                    <h6>Features</h6>
+                    <ul className='small-list'>
+                        <li>User Auth</li>
+                        <li>File Upload</li>
+                        <li>File Download</li>
+                        <li>File Preview</li>
                         
-                    </ul>
-                </li>
-                <li>
-                    <h6>Technologies</h6>
-                    <ul className='small-list'>
-                        <li>React</li>
-                        <li>Ruby-on-Rails</li>
-                        <li>AWS Storage</li>
-                        <li>PostgreSQL</li>
-                    </ul>
-                </li>
-                
-                <li>
-                    <h6>Company</h6>
-                    <ul className='small-list'>
-                        <li>About us</li>
-                        <li>Jobs</li>
-                        <li>Press</li>
-                        <li>Investor relations</li>
-                        <li>Blog</li>
                     </ul>
                 </li>
                 <li>
