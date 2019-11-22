@@ -69,7 +69,6 @@
     display: flex;
     height: inherit;
     flex-direction: row;
-    
     padding-top: 90px;
     margin: auto;
 }
@@ -81,6 +80,7 @@
 }
 
 .grid header {
+    padding-top: 96px;
     padding-left: calc(1440px * (2 / 24));
     padding-right: calc(1440px * (2 / 24));
 }

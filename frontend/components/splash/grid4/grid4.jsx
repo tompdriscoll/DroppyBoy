@@ -4,7 +4,7 @@ const Grid4 = () => (
     <div id='grid4'>
         <div id='grid4-contents'>
             <div id='grid4-text'>
-                <h4>Create without chaos on Dropbox Paper</h4>
+                <h4>Create without chaos on Droppyboy Paper</h4>
                 <p>Paper is your team’s place to bring ideas to life. 
                     Brainstorm, collect inspiration, share rough drafts. 
                     Paper can hold everything from video and images, t

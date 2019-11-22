@@ -925,8 +925,7 @@ function (_React$Component) {
           type: "checkbox"
         }), "Remember Me"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "session-form-element"
-        }, this.state.formType), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-          id: "demo-user",
+        }, this.formType), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "session-form-element",
           type: "submit",
           onClick: this.demoLogin,
@@ -1305,7 +1304,7 @@ var Grid2 = function Grid2() {
     id: "grid2-contents"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "grid2-text"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Keep everything organized without breaking your flow"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Dropbox brings your files together, in one central place. They\u2019re easy to find and safely synced across all your devices\u2014so you can access them anytime, anywhere. No more wasting the day tracking down work.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Keep everything organized without breaking your flow"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Droppyboy brings your files together, in one central place. They\u2019re easy to find and safely synced across all your devices\u2014so you can access them anytime, anywhere. No more wasting the day tracking down work.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "grid2-pic-1",
     src: "https://cfl.dropboxstatic.com/static/images/index/rebrand/co_create/desktop/dropbox_digital_desktop_01-vflTDaJ3U.jpg"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -1349,7 +1348,7 @@ var Grid3 = function Grid3() {
     playsInline: true
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "grid3-text"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Collaborate on presentations, designs, and any kind of file"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Dropbox is built for creative collaboration. Share a big file\u2014PowerPoint, Photoshop, Sketch\u2014with anyone. You\u2019ve all got the right version, and everybody\u2019s on the same page. Finally."))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Collaborate on presentations, designs, and any kind of file"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Droppyboy is built for creative collaboration. Share a big file\u2014PowerPoint, Photoshop, Sketch\u2014with anyone. You\u2019ve all got the right version, and everybody\u2019s on the same page. Finally."))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Grid3);
@@ -1376,7 +1375,7 @@ var Grid4 = function Grid4() {
     id: "grid4-contents"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "grid4-text"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Create without chaos on Dropbox Paper"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Paper is your team\u2019s place to bring ideas to life. Brainstorm, collect inspiration, share rough drafts. Paper can hold everything from video and images, t o code and sound.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Create without chaos on Droppyboy Paper"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Paper is your team\u2019s place to bring ideas to life. Brainstorm, collect inspiration, share rough drafts. Paper can hold everything from video and images, t o code and sound.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
     id: "grid4-pic-1",
     autoPlay: true,
     loop: true,
@@ -1441,7 +1440,9 @@ var Grid6 = function Grid6() {
     id: "top-list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Droppyboy"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "small-list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "A React app"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Built by"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Tom Driscoll"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Based on"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Dropbox"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Features"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Was made"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "By Tom Driscoll"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Based On"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Dropbox"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Technologies"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "small-list"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "React"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Ruby-on-Rails"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "AWS Storage"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "PostgreSQL"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Company"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "small-list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "User Auth"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "File Upload"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "File Download"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "File Preview"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Technologies"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "small-list"

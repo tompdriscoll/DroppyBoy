@@ -6,7 +6,7 @@ const Grid2 = () => (
         <div id='grid2-contents'>
             <div id='grid2-text'>
                 <h2>Keep everything organized without breaking your flow</h2>
-                <p>Dropbox brings your files together, 
+                <p>Droppyboy brings your files together, 
                 in one central place. They’re easy 
                 to find and safely synced across all your 
                 devices—so you can access them anytime, 

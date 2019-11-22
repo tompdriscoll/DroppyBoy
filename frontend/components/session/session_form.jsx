@@ -106,11 +106,7 @@ class SessionForm extends React.Component {
           {/* <ul className="errors">
             {errorsLi}
           </ul> */}
-          <button id="demo-user"
-          className='session-form-element'
-          type="submit" 
-          onClick={this.demoLogin}
-          value="Demo User">Demo Signup</button> 
+          <button className='session-form-element' onClick={this.demoLogin}>Demo User</button>
         </form>
         )
     }
