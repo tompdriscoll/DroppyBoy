@@ -894,7 +894,7 @@ function (_React$Component) {
           type: "submit",
           onClick: this.demoLogin,
           value: "Demo User"
-        }, "Demo Signup"));
+        }, "Demo Login"));
       }
     }
   }]);
