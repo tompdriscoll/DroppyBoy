@@ -8,9 +8,8 @@ class User < ApplicationRecord
   
     after_initialize :ensure_session_token
   
-    has_many :uploads,
-    foreign_key: :uploader_id
     
+    has_many_attached :uploaded_files
       
   
     def self.find_by_credentials(email, password)

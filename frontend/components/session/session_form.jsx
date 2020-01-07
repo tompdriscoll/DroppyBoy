@@ -86,7 +86,6 @@ class SessionForm extends React.Component {
     else {
       return (
         <form id='session-form' onSubmit={this.handleSubmit}>
-          
           <input className='session-form-element' type="text" id="email" value={this.state.email} placeholder="Email" onChange={this.update('email')} />
           <input className='session-form-element' type="password" id="password" value={this.state.password} placeholder="Password" onChange={this.update('password')} />
 
@@ -102,13 +101,9 @@ class SessionForm extends React.Component {
           </span> 
           <button className='session-form-element'>{this.formType}</button>
           
-          <button id="demo-user"
-          className='session-form-element'
-          type="submit" 
-          onClick={this.demoLogin}
-          value="Demo User">Demo Login</button> 
+          <button id="demo-user" className='session-form-element' type="submit"  onClick={this.demoLogin} value="Demo User">Demo Login</button> 
         </form>
-        )
+      )
     }
   }
 }

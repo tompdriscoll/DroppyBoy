@@ -5,8 +5,7 @@ class UploadForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
-      url: ''    
+     file:   
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -53,11 +52,11 @@ class UploadForm extends React.Component {
     const formData = new FormData();
     formData.append('upload[name]', this.state.name);
     if (this.state.file) {
-        formData.append('upload[file]', this.state.file) 
+        formData.append('user[uploaded_files]', this.state.file) 
         
     
     $.ajax({
-      url: '/api/uploads',
+      url: '/api/users',
       method: 'POST',
       data: formData,
       contentType: false,

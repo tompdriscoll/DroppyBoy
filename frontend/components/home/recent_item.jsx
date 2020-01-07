@@ -2,12 +2,12 @@ import React from 'react'
 
 
 
-const RecentItem = () => (
+const RecentItem = props => (
 
     <div className='recent-item-wrapper'>
-        <div className='recent-item-icon'>
-
-        </div>
+        <img className='recent-item-icon' src={props.src}>
+           
+        </img>
         <div className='recent-item-contents'>
             <div className='recent-item-title'>
                 <p>TitleAsPlaceholder.txt</p>

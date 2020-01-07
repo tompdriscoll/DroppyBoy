@@ -4,10 +4,12 @@ import SuggestedListItem from './suggested_list_item'
 
 import UploadForm from '../uploads/upload_from'
 const HomeMain = props => {  
-    const recent = props.user.uploads.reverse() 
-    const suggestedListItems = recent.map(upload => (
+    
+    const recent = props.user.photoUrls
+ 
+    const recentItems = recent.map(upload => (
         
-        <SuggestedListItem upload={upload} key={upload.id}/>
+        <RecentItem src={upload}/>
         
     ))
  
@@ -20,7 +22,7 @@ const HomeMain = props => {
 
             </h2>
             <ul id='suggested-list'>
-                {suggestedListItems}                          
+                                         
             </ul>
         </div>
         <div id='starred' className='section'>
@@ -43,18 +45,7 @@ const HomeMain = props => {
 
             </h2>
             <ul id='recent-list'>
-                <RecentItem/>           
-                <RecentItem/>     
-                <RecentItem/> 
-                <RecentItem/> 
-                <RecentItem/> 
-                <RecentItem/> 
-                <RecentItem/>           
-                <RecentItem/>     
-                <RecentItem/> 
-                <RecentItem/> 
-                <RecentItem/> 
-                <RecentItem/>
+                {recentItems}       
             </ul>
             
         </div>

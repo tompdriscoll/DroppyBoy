@@ -417,11 +417,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var HomeMain = function HomeMain(props) {
-  var recent = props.user.uploads.reverse();
-  var suggestedListItems = recent.map(function (upload) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_suggested_list_item__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      upload: upload,
-      key: upload.id
+  var recent = props.user.photoUrls;
+  var recentItems = recent.map(function (upload) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      src: upload
     });
   });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -433,7 +432,7 @@ var HomeMain = function HomeMain(props) {
     className: "section-header"
   }, " Suggested for you"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     id: "suggested-list"
-  }, suggestedListItems)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "starred",
     className: "section"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
@@ -445,7 +444,7 @@ var HomeMain = function HomeMain(props) {
     className: "section-header"
   }, " Recent"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     id: "recent-list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], null))));
+  }, recentItems)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (HomeMain);
@@ -505,11 +504,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 
-var RecentItem = function RecentItem() {
+var RecentItem = function RecentItem(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "recent-item-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "recent-item-icon"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "recent-item-icon",
+    src: props.src
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "recent-item-contents"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1695,151 +1695,9 @@ var Splash = function Splash() {
   !*** ./frontend/components/uploads/upload_from.jsx ***!
   \*****************************************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-var UploadForm =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(UploadForm, _React$Component);
-
-  function UploadForm(props) {
-    var _this;
-
-    _classCallCheck(this, UploadForm);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(UploadForm).call(this, props));
-    _this.state = {
-      name: '',
-      url: ''
-    };
-    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
-    return _this;
-  }
-
-  _createClass(UploadForm, [{
-    key: "handleInput",
-    value: function handleInput(e) {
-      this.setState({
-        name: e.currentTarget.value
-      });
-    }
-  }, {
-    key: "handleFile",
-    value: function handleFile(e) {
-      var _this2 = this;
-
-      e.preventDefault();
-      var file = e.currentTarget.files[0];
-      var fileReader = new FileReader();
-
-      fileReader.onloadend = function () {
-        debugger;
-
-        _this2.setState({
-          name: file.name,
-          url: fileReader.result,
-          file: file
-        });
-      };
-
-      if (file) {
-        fileReader.readAsDataURL(file);
-      }
-
-      var formData = new FormData();
-      formData.append('upload[name]', this.state.name);
-
-      if (this.state.file) {
-        formData.append('upload[file]', this.state.file);
-        debugger;
-        $.ajax({
-          url: '/api/uploads',
-          method: 'POST',
-          data: formData,
-          contentType: false,
-          processData: false
-        }).then(function (response) {
-          return console.log(response.message);
-        }, function (response) {
-          console.log(response.responseJSON);
-        });
-      }
-    }
-  }, {
-    key: "handleSubmit",
-    value: function handleSubmit(e) {
-      e.preventDefault();
-      var formData = new FormData();
-      formData.append('upload[name]', this.state.name);
-
-      if (this.state.file) {
-        formData.append('upload[file]', this.state.file);
-        $.ajax({
-          url: '/api/uploads',
-          method: 'POST',
-          data: formData,
-          contentType: false,
-          processData: false
-        }).then(function (response) {
-          return console.log(response.message);
-        }, function (response) {
-          console.log(response.responseJSON);
-        });
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      console.log(this.state);
-      var preview = this.state.url ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: this.state.url
-      }) : null;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        id: "upload-form",
-        onSubmit: this.handleSubmit.bind(this)
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        id: "create-new-file"
-      }, "Upload File", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        id: "file-select",
-        type: "file",
-        onChange: this.handleFile.bind(this)
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        id: "file-submit",
-        type: "submit"
-      })));
-    }
-  }]);
-
-  return UploadForm;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_router__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(UploadForm)); // ,this.handleSubmit.bind(this)
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/frontend/components/uploads/upload_from.jsx: Unexpected token (9:4)\n\n\u001b[0m \u001b[90m  7 | \u001b[39m    \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mstate \u001b[33m=\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m  8 | \u001b[39m     file\u001b[33m:\u001b[39m   \u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 | \u001b[39m    }\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 10 | \u001b[39m    \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mhandleSubmit \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mhandleSubmit\u001b[33m.\u001b[39mbind(\u001b[36mthis\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 11 | \u001b[39m  }\u001b[0m\n\u001b[0m \u001b[90m 12 | \u001b[39m\u001b[0m\n    at Object.raise (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:6325:17)\n    at Object.unexpected (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:7642:16)\n    at Object.parseExprAtom (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8841:20)\n    at Object.parseExprAtom (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:3601:20)\n    at Object.parseExprSubscripts (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8412:23)\n    at Object.parseMaybeUnary (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8392:21)\n    at Object.parseExprOps (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8267:23)\n    at Object.parseMaybeConditional (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8240:23)\n    at Object.parseMaybeAssign (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8187:21)\n    at Object.parseObjectProperty (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:9281:101)\n    at Object.parseObjPropValue (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:9306:101)\n    at Object.parseObjectMember (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:9230:10)\n    at Object.parseObj (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:9154:25)\n    at Object.parseExprAtom (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8784:28)\n    at Object.parseExprAtom (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:3601:20)\n    at Object.parseExprSubscripts (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8412:23)\n    at Object.parseMaybeUnary (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8392:21)\n    at Object.parseExprOps (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8267:23)\n    at Object.parseMaybeConditional (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8240:23)\n    at Object.parseMaybeAssign (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8187:21)\n    at Object.parseMaybeAssign (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8226:25)\n    at Object.parseExpression (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8135:23)\n    at Object.parseStatementContent (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:9958:23)\n    at Object.parseStatement (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:9829:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:10405:25)\n    at Object.parseBlockBody (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:10392:10)\n    at Object.parseBlock (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:10376:10)\n    at Object.parseFunctionBody (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:9424:24)\n    at Object.parseFunctionBodyAndFinish (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:9394:10)\n    at Object.parseMethod (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:9348:10)");
 
 /***/ }),
 
