@@ -160,55 +160,35 @@ var logout = function logout() {
 /*!********************************************!*\
   !*** ./frontend/actions/upload_actions.js ***!
   \********************************************/
-/*! exports provided: RECEIVE_UPLOADS, RECEIVE_UPLOAD, receiveUploads, receiveUpload, fetchUploads, fetchUpload, createUpload */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_UPLOADS", function() { return RECEIVE_UPLOADS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_UPLOAD", function() { return RECEIVE_UPLOAD; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveUploads", function() { return receiveUploads; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveUpload", function() { return receiveUpload; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUploads", function() { return fetchUploads; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUpload", function() { return fetchUpload; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createUpload", function() { return createUpload; });
-/* harmony import */ var _util_upload_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/upload_api_util */ "./frontend/util/upload_api_util.js");
-
-var RECEIVE_UPLOADS = 'RECEIVE_UPLOADS';
-var RECEIVE_UPLOAD = 'RECEIVE_UPLOAD';
-var receiveUploads = function receiveUploads(uploads) {
-  return {
-    type: RECEIVE_UPLOADS,
-    uploads: uploads
-  };
-};
-var receiveUpload = function receiveUpload(upload) {
-  return {
-    type: RECEIVE_UPLOAD,
-    upload: upload
-  };
-};
-var fetchUploads = function fetchUploads() {
-  return function (dispatch) {
-    return _util_upload_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchUploads"]().then(function (uploads) {
-      return dispatch(receiveUploads(uploads));
-    });
-  };
-};
-var fetchUpload = function fetchUpload(id) {
-  return function (dispatch) {
-    return _util_upload_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchUpload"](id).then(function (payload) {
-      return dispatch(receiveUpload(payload));
-    });
-  };
-};
-var createUpload = function createUpload(upload) {
-  return function (dispatch) {
-    return _util_upload_api_util__WEBPACK_IMPORTED_MODULE_0__["createUpload"](upload).then(function (upload) {
-      return dispatch(receiveUpload(upload));
-    });
-  };
-};
+// import * as APIUtil from '../util/upload_api_util';
+// export const RECEIVE_UPLOADS = 'RECEIVE_UPLOADS';
+// export const RECEIVE_UPLOAD = 'RECEIVE_UPLOAD';
+// export const receiveUploads = uploads => ({
+//   type: RECEIVE_UPLOADS,
+//   uploads
+// });
+// export const receiveUpload = upload => ({
+//   type: RECEIVE_UPLOAD,
+//   upload
+// });
+// export const fetchUploads = () => dispatch => (
+//   APIUtil.fetchUploads().then(uploads => (
+//     dispatch(receiveUploads(uploads))
+//   ))
+// );
+// export const fetchUpload = id => dispatch => (
+//   APIUtil.fetchUpload(id).then(payload => (
+//     dispatch(receiveUpload(payload))
+//   ))
+// );
+// export const createUpload = upload => dispatch => (
+//   APIUtil.createUpload(upload).then(upload => (
+//     dispatch(receiveUpload(upload))
+//   ))
+// );
 
 /***/ }),
 
@@ -1695,9 +1675,130 @@ var Splash = function Splash() {
   !*** ./frontend/components/uploads/upload_from.jsx ***!
   \*****************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/frontend/components/uploads/upload_from.jsx: Unexpected token (9:4)\n\n\u001b[0m \u001b[90m  7 | \u001b[39m    \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mstate \u001b[33m=\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m  8 | \u001b[39m     file\u001b[33m:\u001b[39m   \u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 | \u001b[39m    }\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 10 | \u001b[39m    \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mhandleSubmit \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mhandleSubmit\u001b[33m.\u001b[39mbind(\u001b[36mthis\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 11 | \u001b[39m  }\u001b[0m\n\u001b[0m \u001b[90m 12 | \u001b[39m\u001b[0m\n    at Object.raise (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:6325:17)\n    at Object.unexpected (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:7642:16)\n    at Object.parseExprAtom (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8841:20)\n    at Object.parseExprAtom (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:3601:20)\n    at Object.parseExprSubscripts (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8412:23)\n    at Object.parseMaybeUnary (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8392:21)\n    at Object.parseExprOps (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8267:23)\n    at Object.parseMaybeConditional (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8240:23)\n    at Object.parseMaybeAssign (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8187:21)\n    at Object.parseObjectProperty (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:9281:101)\n    at Object.parseObjPropValue (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:9306:101)\n    at Object.parseObjectMember (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:9230:10)\n    at Object.parseObj (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:9154:25)\n    at Object.parseExprAtom (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8784:28)\n    at Object.parseExprAtom (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:3601:20)\n    at Object.parseExprSubscripts (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8412:23)\n    at Object.parseMaybeUnary (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8392:21)\n    at Object.parseExprOps (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8267:23)\n    at Object.parseMaybeConditional (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8240:23)\n    at Object.parseMaybeAssign (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8187:21)\n    at Object.parseMaybeAssign (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8226:25)\n    at Object.parseExpression (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:8135:23)\n    at Object.parseStatementContent (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:9958:23)\n    at Object.parseStatement (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:9829:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:10405:25)\n    at Object.parseBlockBody (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:10392:10)\n    at Object.parseBlock (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:10376:10)\n    at Object.parseFunctionBody (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:9424:24)\n    at Object.parseFunctionBodyAndFinish (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:9394:10)\n    at Object.parseMethod (/Users/tomdriscoll/Desktop/dropbox clone/DroppyBoy/node_modules/@babel/parser/lib/index.js:9348:10)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+var UploadForm =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(UploadForm, _React$Component);
+
+  function UploadForm(props) {
+    var _this;
+
+    _classCallCheck(this, UploadForm);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(UploadForm).call(this, props));
+    _this.state = {
+      name: "",
+      file: ""
+    };
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(UploadForm, [{
+    key: "handleInput",
+    value: function handleInput(e) {
+      this.setState({
+        name: e.currentTarget.value
+      });
+    } // handleFile(e) {
+    //   e.preventDefault();
+    //   const file = e.currentTarget.files[0];
+    //   const fileReader = new FileReader();
+    //   fileReader.onloadend = () => {
+    //     debugger
+    //       this.setState({file: file.name, url: fileReader.result, file: file});
+    //   };
+    //   if (file) {
+    //     fileReader.readAsDataURL(file);
+    //   }
+    //  }
+
+  }, {
+    key: "handleFile",
+    value: function handleFile(e) {
+      e.preventDefault();
+      var file = e.currentTarget.files[0];
+      this.setState({
+        name: file.name,
+        file: file
+      });
+    }
+  }, {
+    key: "handleSubmit",
+    value: function handleSubmit(e) {
+      e.preventDefault();
+      var formData = new FormData();
+
+      if (this.state.file) {
+        formData.append('user[uploaded_files][]', this.state.file);
+        $.ajax({
+          url: '/api/user',
+          method: 'PATCH',
+          data: formData,
+          contentType: false,
+          processData: false
+        }).then(function (response) {
+          return console.log(response.message);
+        }, function (response) {
+          console.log(response.responseJSON);
+        });
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      console.log(this.state);
+      var preview = this.state.url ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: this.state.url
+      }) : null;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        id: "upload-form",
+        onSubmit: this.handleSubmit.bind(this)
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        id: "create-new-file"
+      }, "Upload File", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        id: "file-select",
+        type: "file",
+        onChange: this.handleFile.bind(this)
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        id: "file-submit",
+        type: "submit"
+      })));
+    }
+  }]);
+
+  return UploadForm;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(UploadForm)); // ,this.handleSubmit.bind(this)
 
 /***/ }),
 
@@ -1902,6 +2003,7 @@ var sessionReducer = function sessionReducer() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_upload_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/upload_actions */ "./frontend/actions/upload_actions.js");
+/* harmony import */ var _actions_upload_actions__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_actions_upload_actions__WEBPACK_IMPORTED_MODULE_0__);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -2086,55 +2188,6 @@ var logout = function logout() {
   return $.ajax({
     method: 'DELETE',
     url: '/api/session'
-  });
-};
-
-/***/ }),
-
-/***/ "./frontend/util/upload_api_util.js":
-/*!******************************************!*\
-  !*** ./frontend/util/upload_api_util.js ***!
-  \******************************************/
-/*! exports provided: fetchUploads, fetchUpload, createUpload, editUpload, deleteUpdate */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUploads", function() { return fetchUploads; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUpload", function() { return fetchUpload; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createUpload", function() { return createUpload; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editUpload", function() { return editUpload; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteUpdate", function() { return deleteUpdate; });
-var fetchUploads = function fetchUploads() {
-  return $.ajax({
-    method: 'GET',
-    url: 'api/uploads'
-  });
-};
-var fetchUpload = function fetchUpload(id) {
-  return $.ajax({
-    method: 'GET',
-    url: "api/uploads/".concat(id)
-  });
-};
-var createUpload = function createUpload(upload) {
-  return $.ajax({
-    method: 'POST',
-    url: 'api/uploads',
-    upload: upload
-  });
-};
-var editUpload = function editUpload(upload) {
-  return $.ajax({
-    method: 'PATCH',
-    url: "api/uploads/".concat(id),
-    upload: upload
-  });
-};
-var deleteUpdate = function deleteUpdate(id) {
-  return $.ajax({
-    method: 'DELETE',
-    url: "api/uploads/".concat(id)
   });
 };
 

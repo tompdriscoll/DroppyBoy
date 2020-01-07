@@ -8,7 +8,6 @@ class User < ApplicationRecord
   
     after_initialize :ensure_session_token
   
-    
     has_many_attached :uploaded_files
       
   

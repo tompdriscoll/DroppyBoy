@@ -5,7 +5,8 @@ class UploadForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-     file:   
+      name: "",
+      file: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -14,50 +15,36 @@ class UploadForm extends React.Component {
     this.setState({name: e.currentTarget.value});
   }
 
-  handleFile(e) {
+  // handleFile(e) {
+  //   e.preventDefault();
+  //   const file = e.currentTarget.files[0];
+  //   const fileReader = new FileReader();
+  //   fileReader.onloadend = () => {
+  //     debugger
+  //       this.setState({file: file.name, url: fileReader.result, file: file});
+
+  //   };
+  //   if (file) {
+  //     fileReader.readAsDataURL(file);
+  //   }
+  //  }
+  
+  handleFile(e){
     e.preventDefault();
     const file = e.currentTarget.files[0];
-    const fileReader = new FileReader();
-    fileReader.onloadend = () => {
-      debugger
-        this.setState({name: file.name, url: fileReader.result, file: file});
-
-    };
-    if (file) {
-      fileReader.readAsDataURL(file);
-    }
-    const formData = new FormData();
-    formData.append('upload[name]', this.state.name);
-    if (this.state.file) {
-        formData.append('upload[file]', this.state.file) 
-        debugger
-    
-    $.ajax({
-      url: '/api/uploads',
-      method: 'POST',
-      data: formData,
-      contentType: false,
-      processData: false
-    }).then(
-      (response) => console.log(response.message),
-      (response) => {
-        console.log(response.responseJSON)
-      }
-    );
-    }
+    this.setState({name: file.name, file: file})
   }
 
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
-    formData.append('upload[name]', this.state.name);
     if (this.state.file) {
-        formData.append('user[uploaded_files]', this.state.file) 
+        formData.append('user[uploaded_files][]', this.state.file) 
         
     
     $.ajax({
-      url: '/api/users',
-      method: 'POST',
+      url: '/api/user',
+      method: 'PATCH',
       data: formData,
       contentType: false,
       processData: false
