@@ -11,7 +11,7 @@ const HomeMain = props => {
         
         <RecentItem src={upload}/>
         
-    ))
+    )).reverse()
  
     return (
     <div id='home-main'>

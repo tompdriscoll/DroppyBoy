@@ -138,9 +138,7 @@ var signup = function signup(user) {
 var login = function login(user) {
   return function (dispatch) {
     return _util_session_api_util__WEBPACK_IMPORTED_MODULE_0__["login"](user).then(function (user) {
-      console.log(user);
       dispatch(receiveCurrentUser(user));
-      return user;
     }, function (err) {
       return dispatch(receiveErrors(err.responseJSON));
     });
@@ -402,7 +400,7 @@ var HomeMain = function HomeMain(props) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
       src: upload
     });
-  });
+  }).reverse();
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "home-main"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1418,7 +1416,7 @@ var DroppyboyLogo = function DroppyboyLogo(props) {
     className: "DropboxLogo--glyph",
     alt: "",
     role: "presentation"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "logo-homemade"
   }));
 };

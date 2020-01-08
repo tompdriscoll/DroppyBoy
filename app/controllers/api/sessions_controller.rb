@@ -10,7 +10,7 @@ class Api::SessionsController < ApplicationController
         else
         # Log them in and redirect them if we find them
           login(@user)
-          render json: '/api/users/show'
+          render 'api/users/show'
           
         end
     

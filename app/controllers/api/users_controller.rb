@@ -11,6 +11,11 @@ class Api::UsersController < ApplicationController
         end
     end
 
+    def show
+        @user = User.with_attached_uploaded_files.find(params[:id])
+        render :show
+    end
+
     def edit
         @user = User.find(params[:id])
         render :edit

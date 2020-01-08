@@ -3,7 +3,6 @@ import React from 'react'
 
 
 const RecentItem = props => (
-
     <div className='recent-item-wrapper'>
         <img className='recent-item-icon' src={props.src}>
            
