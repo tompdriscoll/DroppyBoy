@@ -3,15 +3,15 @@ import React from 'react'
 
 
 const RecentItem = props => {
-
-    
+    let time = new Date(props.file['time'])
+    let date = time.getMonth() + 1 + '/' + time.getDate() 
    return( <div className='recent-item-wrapper'>
-        <img className='recent-item-icon' src={props.src}>
+        <img className='recent-item-icon' src={props.file['file']}>
            
         </img>
         <div className='recent-item-contents'>
             <div className='recent-item-title'>
-                <p>{props.name}</p>
+                <p>{props.file['name']}</p>
                 <button className="star" >
                     <svg width="32" 
                     height="32" 
@@ -27,7 +27,7 @@ const RecentItem = props => {
             </div>
             <div>
                 <p className='added-updated'>Added </p>
-                <p className='added-updated' id='when'>yesterday</p>
+                <p className='added-updated' id='when'>{date}</p>
             </div>
         </div>
     </div>)

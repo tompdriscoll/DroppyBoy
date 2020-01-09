@@ -395,13 +395,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var HomeMain = function HomeMain(props) {
-  var recent = props.user.photoUrls;
-  debugger;
-  var recentItems = recent.map(function (upload) {
-    var name = upload.split('/')[5];
+  var recentItems = props.user.files.map(function (file) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      src: upload,
-      name: name
+      file: file
     });
   }).reverse();
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -486,16 +482,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var RecentItem = function RecentItem(props) {
+  var time = new Date(props.file['time']);
+  var date = time.getMonth() + 1 + '/' + time.getDate();
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "recent-item-wrapper"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "recent-item-icon",
-    src: props.src
+    src: props.file['file']
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "recent-item-contents"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "recent-item-title"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.file['name']), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "star"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     width: "32",
@@ -511,7 +509,7 @@ var RecentItem = function RecentItem(props) {
   }, "Added "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "added-updated",
     id: "when"
-  }, "yesterday"))));
+  }, date))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (RecentItem);

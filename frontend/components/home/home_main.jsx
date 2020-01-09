@@ -4,15 +4,11 @@ import SuggestedListItem from './suggested_list_item'
 
 import UploadForm from '../uploads/upload_from'
 const HomeMain = props => {  
-    const recent = props.user.photoUrls
-    debugger
-    const recentItems = recent.map(upload => {
-        let name = upload.split('/')[5]
-        return(
+    const recentItems = props.user.files.map(file => (     
+       
+        <RecentItem file={file} />
         
-        <RecentItem src={upload} name={name}/>
-        
-    )}).reverse()
+    )).reverse()
  
     return (
     <div id='home-main'>
