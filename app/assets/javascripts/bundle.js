@@ -396,6 +396,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var HomeMain = function HomeMain(props) {
   var recent = props.user.photoUrls;
+  debugger;
   var recentItems = recent.map(function (upload) {
     var name = upload.split('/')[5];
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], {

@@ -4,9 +4,8 @@ import SuggestedListItem from './suggested_list_item'
 
 import UploadForm from '../uploads/upload_from'
 const HomeMain = props => {  
-    
     const recent = props.user.photoUrls
- 
+    debugger
     const recentItems = recent.map(upload => {
         let name = upload.split('/')[5]
         return(
