@@ -273,6 +273,10 @@
     bottom: -30px;
 }
 
+#file-select, #file-submit:hover {
+    cursor: pointer;
+}
+
 .new-upload-links {
     color: #0070e0;
     font-size: 14px;
