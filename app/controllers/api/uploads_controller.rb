@@ -1,5 +1,3 @@
-require 'byebug'
-
 class Api::UploadsController < ApplicationController
     def create
         @upload = Upload.new(upload_params)
