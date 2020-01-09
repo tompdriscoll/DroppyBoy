@@ -2,14 +2,16 @@ import React from 'react'
 
 
 
-const RecentItem = props => (
-    <div className='recent-item-wrapper'>
+const RecentItem = props => {
+
+    
+   return( <div className='recent-item-wrapper'>
         <img className='recent-item-icon' src={props.src}>
            
         </img>
         <div className='recent-item-contents'>
             <div className='recent-item-title'>
-                <p>TitleAsPlaceholder.txt</p>
+                <p>{props.name}</p>
                 <button className="star" >
                     <svg width="32" 
                     height="32" 
@@ -28,7 +30,7 @@ const RecentItem = props => (
                 <p className='added-updated' id='when'>yesterday</p>
             </div>
         </div>
-    </div>
-)
+    </div>)
+}
 
 export default RecentItem;

@@ -397,8 +397,10 @@ __webpack_require__.r(__webpack_exports__);
 var HomeMain = function HomeMain(props) {
   var recent = props.user.photoUrls;
   var recentItems = recent.map(function (upload) {
+    var name = upload.split('/')[5];
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      src: upload
+      src: upload,
+      name: name
     });
   }).reverse();
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -492,7 +494,7 @@ var RecentItem = function RecentItem(props) {
     className: "recent-item-contents"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "recent-item-title"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "TitleAsPlaceholder.txt"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "star"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     width: "32",

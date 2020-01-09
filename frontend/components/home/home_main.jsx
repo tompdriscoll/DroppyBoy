@@ -7,11 +7,13 @@ const HomeMain = props => {
     
     const recent = props.user.photoUrls
  
-    const recentItems = recent.map(upload => (
+    const recentItems = recent.map(upload => {
+        let name = upload.split('/')[5]
+        return(
         
-        <RecentItem src={upload}/>
+        <RecentItem src={upload} name={name}/>
         
-    )).reverse()
+    )}).reverse()
  
     return (
     <div id='home-main'>
