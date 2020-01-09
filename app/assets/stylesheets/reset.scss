@@ -23,6 +23,10 @@ time, mark, audio, video {
 :focus {
   outline: none;
 }
+
+button:hover{
+  cursor: pointer;
+}
 @font-face {
     font-family: 'Atlas Grotesk Web';
     src: url("https://cfl.dropboxstatic.com/static/fonts/atlasgrotesk/AtlasGrotesk-Regular-Web-vflg7ta4-.woff");

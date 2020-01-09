@@ -14,7 +14,7 @@
 }
 
 #logo-homemade {
-    background: url(droppy-boy-white.gif);
+    background: url(./droppy-boy-white.gif);
     background-size: cover;
     min-width: 167px;
     height: auto;
@@ -335,10 +335,16 @@
     
 }
 
-.small-list li{
+.small-list a, li{
     font-size: 14px;
     margin-top: 14px;
     font-family: sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+.small-list a:hover{
+    text-decoration: underline;
 }
 
 h6 {

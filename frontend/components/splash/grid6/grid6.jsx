@@ -38,9 +38,15 @@ const Grid6 = () => (
                 <li>
                     <h6>Toms Links</h6>
                     <ul className='small-list'>
-                        <li>Toms GitHub</li>
-                        <li>Toms LinkedIn</li>
-                        <li>Toms AngelList</li>
+                        <a href='https://www.github.com/tompdriscoll'>
+                            <li >Toms GitHub</li>
+                        </a>
+                        <a href='https://www.linkedin.com/in/tompdriscoll/'>
+                            <li >Toms LinkedIn</li>
+                        </a>
+                        <a href='https://angel.co/tompdriscoll'>
+                            <li >Toms AngelList</li>
+                        </a>
                     </ul>
                 </li>
             </ul>

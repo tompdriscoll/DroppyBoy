@@ -1388,7 +1388,13 @@ var Grid6 = function Grid6() {
     className: "small-list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "React"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Ruby on Rails"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "AWS Storage"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Node.js"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "PostgreSQL"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Toms Links"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "small-list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Toms GitHub"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Toms LinkedIn"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Toms AngelList"))))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.github.com/tompdriscoll"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Toms GitHub")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.linkedin.com/in/tompdriscoll/"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Toms LinkedIn")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://angel.co/tompdriscoll"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Toms AngelList")))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Grid6);
