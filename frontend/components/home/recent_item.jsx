@@ -5,11 +5,12 @@ import React from 'react'
 const RecentItem = props => {
     let time = new Date(props.file['time'])
     let date = time.getMonth() + 1 + '/' + time.getDate() 
-   return( <div className='recent-item-wrapper'>
-        <img className='recent-item-icon' src={props.file['file']}>
-           
-        </img>
+   return( 
+   <div className='recent-item-wrapper'>
         <div className='recent-item-contents'>
+        <img className='recent-item-icon' src={props.file['file']}></img>
+        <div class name='recent-title-date'>
+
             <div className='recent-item-title'>
                 <p>{props.file['name']}</p>
                 <button className="star" >
@@ -30,6 +31,18 @@ const RecentItem = props => {
                 <p className='added-updated' id='when'>{date}</p>
             </div>
         </div>
+        </div>
+            <span class="mc-button-content">
+                <svg width="32" height="32" class="" >
+                    <g fill="none" fill-rule="evenodd">
+                        <g fill="#637282">
+                            <circle cx="10.5" cy="16.5" r="1.5"></circle>
+                            <circle cx="15.5" cy="16.5" r="1.5"></circle>
+                            <circle cx="20.5" cy="16.5" r="1.5"></circle>
+                        </g>
+                    </g>
+                </svg>
+            </span>
     </div>)
 }
 

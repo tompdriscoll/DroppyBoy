@@ -10,6 +10,8 @@ class UploadForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+ 
+  
 
   handleInput(e) {
     this.setState({name: e.currentTarget.value});
@@ -54,6 +56,7 @@ class UploadForm extends React.Component {
       }
     );
     }
+    this.props.history.push('/');
   }
 
   render() {

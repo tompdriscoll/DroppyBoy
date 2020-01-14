@@ -297,12 +297,13 @@
 .recent-item-wrapper {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border-bottom: solid 1px #E6E8EB;
     cursor: pointer;
 }
 
 .recent-item-contents {
-   
+    display: flex;
     font-size: 14px;
 }
 
@@ -323,6 +324,10 @@
     height: 20px;
 }
 
+.recent-title-date{
+    display: flex;
+    flex-direction: column;
+}
 .star{
     background: none;
     border:none;
