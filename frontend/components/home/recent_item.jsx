@@ -8,7 +8,9 @@ const RecentItem = props => {
    return( 
    <div className='recent-item-wrapper'>
         <div className='recent-item-contents'>
-        <img className='recent-item-icon' src={props.file['file']}></img>
+            <div className='recent-item-icon-wrapper'>
+                <img className='recent-item-icon' src={props.file['file']}></img>
+            </div>
         <div class name='recent-title-date'>
 
             <div className='recent-item-title'>

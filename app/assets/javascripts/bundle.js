@@ -488,10 +488,12 @@ var RecentItem = function RecentItem(props) {
     className: "recent-item-wrapper"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "recent-item-contents"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "recent-item-icon-wrapper"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "recent-item-icon",
     src: props.file['file']
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     "class": true,
     name: "recent-title-date"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

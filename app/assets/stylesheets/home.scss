@@ -287,9 +287,14 @@
     color: #0052d9;
 }
 
+.recent-item-icon-wrapper{
+    height: 40px;
+    width: 40px;
+    margin: 12px;
+}
 .recent-item-icon {
-    height: 50px;
-    width: 95.25px;
+    max-height: 40px;
+    max-width: 40px;
     background: cornflowerblue;
     margin: 0px 5px;
 }
