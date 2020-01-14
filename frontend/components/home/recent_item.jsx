@@ -11,10 +11,10 @@ const RecentItem = props => {
             <div className='recent-item-icon-wrapper'>
                 <img className='recent-item-icon' src={props.file['file']}></img>
             </div>
-        <div class name='recent-title-date'>
+        <div className='recent-title-date'>
 
             <div className='recent-item-title'>
-                <p>{props.file['name']}</p>
+                <p className='recent-filename'>{props.file['name']}</p>
                 <button className="star" >
                     <svg width="32" 
                     height="32" 
@@ -28,13 +28,13 @@ const RecentItem = props => {
                     </svg>
                 </button>
             </div>
-            <div>
+            <div className='added-updated-div'>
                 <p className='added-updated'>Added </p>
                 <p className='added-updated' id='when'>{date}</p>
             </div>
         </div>
         </div>
-        <div id='recent-buttons-div'>
+        <div className='recent-buttons-div'>
             <div class='recent-button'>Preview</div>
             <svg className='recent-ellipsis'>
                     <g fill="none" fill-rule="evenodd">

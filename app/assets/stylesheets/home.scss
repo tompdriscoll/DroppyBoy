@@ -324,25 +324,43 @@
     text-decoration-style: dotted;
 }
 
+.recent-item-wrapper:hover .recent-filename{
+    color: #0070e0;
+}
+
 .recent-item-title {
     display: flex;
     height: 20px;
+    max-width: 200px;
+    line-height: 24px;
+}
+
+.recent-item-title p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .recent-title-date{
     display: flex;
     flex-direction: column;
+    align-self: center;
+}
+
+.added-updated-div{
+    line-height: normal;
 }
 .star{
     background: none;
     border:none;
+    align-self: center;
     fill: blue;
-    display: none;
+    opacity: 0;
     cursor: pointer;
 }
 
 .recent-item-wrapper:hover .star {
-    display: block;
+   opacity: 1;
 }
 
 #starred p {
@@ -356,6 +374,11 @@
     text-decoration: none;
 }
 
+.recent-buttons-div{
+    display: flex;
+    align-items: center;
+}
+
 .recent-button{
     min-height: 34px;
     font-size: 14px;
@@ -363,6 +386,11 @@
     border: 1px solid #637282;
     border-radius: 3px;
     padding: 0 16px;
+}
+
+.recent-button:hover{
+    border: 1px solid #0070e0;
+    color: #0070e0;
 }
 
 .recent-ellipsis{

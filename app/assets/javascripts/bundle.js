@@ -494,11 +494,12 @@ var RecentItem = function RecentItem(props) {
     className: "recent-item-icon",
     src: props.file['file']
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": true,
-    name: "recent-title-date"
+    className: "recent-title-date"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "recent-item-title"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.file['name']), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "recent-filename"
+  }, props.file['name']), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "star"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     width: "32",
@@ -509,13 +510,15 @@ var RecentItem = function RecentItem(props) {
     clipRule: "evenodd",
     d: "M16 18.657l2.138 1.197-.478-2.403 1.799-1.663-2.433-.289L16  13.275l-1.026 2.224-2.433.289 1.799 1.663-.478 2.403L16 18.657zm-4.944  5.06l1.104-5.558L8 14.312l5.627-.667L16 8.5l2.373 5.145 5.627.667-4.16  3.847 1.104 5.558L16 20.949l-4.944 2.768z",
     className: "mc-icon--mf"
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "added-updated-div"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "added-updated"
   }, "Added "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "added-updated",
     id: "when"
   }, date)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "recent-buttons-div"
+    className: "recent-buttons-div"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     "class": "recent-button"
   }, "Preview"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
