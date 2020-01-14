@@ -512,12 +512,12 @@ var RecentItem = function RecentItem(props) {
   }, "Added "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "added-updated",
     id: "when"
-  }, date)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    "class": "mc-button-content"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-    width: "32",
-    height: "32",
-    "class": ""
+  }, date)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "recent-buttons-div"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "recent-button"
+  }, "Preview"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    className: "recent-ellipsis"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     fill: "none",
     "fill-rule": "evenodd"

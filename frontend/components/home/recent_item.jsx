@@ -32,8 +32,9 @@ const RecentItem = props => {
             </div>
         </div>
         </div>
-            <span class="mc-button-content">
-                <svg width="32" height="32" class="" >
+        <div id='recent-buttons-div'>
+            <div class='recent-button'>Preview</div>
+            <svg className='recent-ellipsis'>
                     <g fill="none" fill-rule="evenodd">
                         <g fill="#637282">
                             <circle cx="10.5" cy="16.5" r="1.5"></circle>
@@ -41,8 +42,10 @@ const RecentItem = props => {
                             <circle cx="20.5" cy="16.5" r="1.5"></circle>
                         </g>
                     </g>
-                </svg>
-            </span>
+            </svg>
+        </div>
+
+       
     </div>)
 }
 

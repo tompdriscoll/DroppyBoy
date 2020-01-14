@@ -350,3 +350,23 @@
 #starred a {
     text-decoration: none;
 }
+
+.recent-button{
+    min-height: 34px;
+    font-size: 14px;
+    margin-right: 16px;
+    border: 1px solid #637282;
+    border-radius: 3px;
+    padding: 0 16px;
+}
+
+.recent-ellipsis{
+    height: 32px;
+    width: 32px;
+    
+}
+
+.recent-ellipsis:hover{
+    border: 1px solid #637282;
+    border-radius: 10px;
+}
