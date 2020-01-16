@@ -5,6 +5,8 @@ import React from 'react'
 const RecentItem = props => {
     let time = new Date(props.file['time'])
     let date = time.getMonth() + 1 + '/' + time.getDate() 
+
+    
    return( 
    <div className='recent-item-wrapper'>
         <div className='recent-item-contents'>
