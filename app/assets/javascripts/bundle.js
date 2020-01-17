@@ -520,12 +520,12 @@ var RecentItem = function RecentItem(props) {
   }, date)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "recent-buttons-div"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "recent-button"
+    className: "recent-button"
   }, "Preview"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     className: "recent-ellipsis"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     fill: "none",
-    "fill-rule": "evenodd"
+    fillRule: "evenodd"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     fill: "#637282"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("circle", {

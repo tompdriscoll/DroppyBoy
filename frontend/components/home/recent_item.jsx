@@ -6,7 +6,7 @@ const RecentItem = props => {
     let time = new Date(props.file['time'])
     let date = time.getMonth() + 1 + '/' + time.getDate() 
 
-    
+
    return( 
    <div className='recent-item-wrapper'>
         <div className='recent-item-contents'>
@@ -37,9 +37,9 @@ const RecentItem = props => {
         </div>
         </div>
         <div className='recent-buttons-div'>
-            <div class='recent-button'>Preview</div>
+            <div className='recent-button'>Preview</div>
             <svg className='recent-ellipsis'>
-                    <g fill="none" fill-rule="evenodd">
+                    <g fill="none" fillRule="evenodd">
                         <g fill="#637282">
                             <circle cx="10.5" cy="16.5" r="1.5"></circle>
                             <circle cx="15.5" cy="16.5" r="1.5"></circle>
