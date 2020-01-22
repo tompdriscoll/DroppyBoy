@@ -11,26 +11,10 @@ class UploadForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
  
-  
-
   handleInput(e) {
     this.setState({name: e.currentTarget.value});
   }
 
-  // handleFile(e) {
-  //   e.preventDefault();
-  //   const file = e.currentTarget.files[0];
-  //   const fileReader = new FileReader();
-  //   fileReader.onloadend = () => {
-  //     debugger
-  //       this.setState({file: file.name, url: fileReader.result, file: file});
-
-  //   };
-  //   if (file) {
-  //     fileReader.readAsDataURL(file);
-  //   }
-  //  }
-  
   handleFile(e){
     e.preventDefault();
     const file = e.currentTarget.files[0];
@@ -56,7 +40,9 @@ class UploadForm extends React.Component {
       }
     );
     }
+
     this.props.history.push('/');
+    this.props.handleUpload()
   }
 
   render() {

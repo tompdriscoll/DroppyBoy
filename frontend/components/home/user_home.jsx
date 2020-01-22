@@ -8,6 +8,15 @@ class UserHome extends React.Component {
 
     constructor(props){
         super(props)
+        this.state = {
+            files: props.currentUser.files
+        }
+        this.handleUpload = this.handleUpload.bind(this)
+    }
+
+    handleUpload(){
+        debugger
+        this.setState({files: this.props.currentUser.files})
     }
     
 
@@ -20,8 +29,8 @@ class UserHome extends React.Component {
         <div id='home-main-container'>
             <HomeMainHeader/>
             <div id='main-content'>    
-                <HomeMain user={this.props.currentUser}/>
-                <HomeSideBar />
+                <HomeMain files={this.state.files}/>
+                <HomeSideBar handleUpload={this.handleUpload}/>
             </div>
         </div>
         <div id='logout-button'>

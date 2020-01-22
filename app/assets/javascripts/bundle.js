@@ -327,7 +327,9 @@ var HomeSideBar = function HomeSideBar(props) {
     className: "home-sidebar-content"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     id: "home-sidebar-list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_uploads_upload_from__WEBPACK_IMPORTED_MODULE_1__["default"], null))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_uploads_upload_from__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    handleUpload: props.handleUpload
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (HomeSideBar);
@@ -395,7 +397,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var HomeMain = function HomeMain(props) {
-  var recentItems = props.user.files.map(function (file) {
+  var recentItems = props.files.map(function (file) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
       file: file
     });
@@ -600,9 +602,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -620,12 +622,27 @@ function (_React$Component) {
   _inherits(UserHome, _React$Component);
 
   function UserHome(props) {
+    var _this;
+
     _classCallCheck(this, UserHome);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(UserHome).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(UserHome).call(this, props));
+    _this.state = {
+      files: props.currentUser.files
+    };
+    _this.handleUpload = _this.handleUpload.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(UserHome, [{
+    key: "handleUpload",
+    value: function handleUpload() {
+      debugger;
+      this.setState({
+        files: this.props.currentUser.files
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -635,8 +652,10 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_main_header__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "main-content"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_main__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        user: this.props.currentUser
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_sidebar__WEBPACK_IMPORTED_MODULE_4__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        files: this.state.files
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_sidebar__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        handleUpload: this.handleUpload
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "logout-button"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         onClick: this.props.logout
@@ -1035,7 +1054,7 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Drawer).call(this, props));
     _this.state = {
-      form: 'Sign up'
+      form: 'Sign in'
     };
     _this.changeForm = _this.changeForm.bind(_assertThisInitialized(_this));
     return _this;
@@ -1799,19 +1818,7 @@ function (_React$Component) {
       this.setState({
         name: e.currentTarget.value
       });
-    } // handleFile(e) {
-    //   e.preventDefault();
-    //   const file = e.currentTarget.files[0];
-    //   const fileReader = new FileReader();
-    //   fileReader.onloadend = () => {
-    //     debugger
-    //       this.setState({file: file.name, url: fileReader.result, file: file});
-    //   };
-    //   if (file) {
-    //     fileReader.readAsDataURL(file);
-    //   }
-    //  }
-
+    }
   }, {
     key: "handleFile",
     value: function handleFile(e) {
@@ -1844,6 +1851,7 @@ function (_React$Component) {
       }
 
       this.props.history.push('/');
+      this.props.handleUpload();
     }
   }, {
     key: "render",

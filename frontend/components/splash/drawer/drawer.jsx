@@ -6,7 +6,7 @@ class Drawer extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            form: 'Sign up'
+            form: 'Sign in'
         }
         this.changeForm = this.changeForm.bind(this)
     }
