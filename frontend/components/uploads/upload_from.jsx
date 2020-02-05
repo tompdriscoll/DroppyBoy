@@ -18,11 +18,14 @@ class UploadForm extends React.Component {
   handleFile(e){
     e.preventDefault();
     const file = e.currentTarget.files[0];
+    debugger
     this.setState({name: file.name, file: file})
+    
   }
 
   handleSubmit(e) {
     e.preventDefault();
+    
     const formData = new FormData();
     if (this.state.file) {
         formData.append('user[uploaded_files][]', this.state.file) 
@@ -38,11 +41,12 @@ class UploadForm extends React.Component {
       (response) => {
         console.log(response.responseJSON)
       }
+      
     );
     }
-
-    this.props.history.push('/');
-    this.props.handleUpload()
+    this.props.history.push('/h');
+    this.props.handleUpload(this.state.file)
+   
   }
 
   render() {

@@ -9,14 +9,27 @@ class UserHome extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            files: props.currentUser.files
+            files: props.currentUser.files,
+            uploaded: ''
         }
         this.handleUpload = this.handleUpload.bind(this)
+        this.handleDelete = this.handleDelete.bind(this)
     }
 
-    handleUpload(){
+    handleUpload(file){
         debugger
-        this.setState({files: this.props.currentUser.files})
+        let newFileArray = this.props.currentUser.files
+        newFileArray.push(file)
+        this.setState({files: newFileArray})
+    }
+
+    
+    handleDelete(file){
+        let id = file.id
+        let toDelete = this.props.currentUser.files.filter(file => file.id !== id)
+        this.setState({files: toDelete})
+
+        console.log(toDelete)
     }
     
 
@@ -29,7 +42,7 @@ class UserHome extends React.Component {
         <div id='home-main-container'>
             <HomeMainHeader/>
             <div id='main-content'>    
-                <HomeMain files={this.state.files}/>
+                <HomeMain handleDelete={this.handleDelete} files={this.state.files}/>
                 <HomeSideBar handleUpload={this.handleUpload}/>
             </div>
         </div>

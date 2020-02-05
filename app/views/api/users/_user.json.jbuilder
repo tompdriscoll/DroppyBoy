@@ -1,5 +1,6 @@
 json.extract! user, :id, :first_name, :last_name, :email, :uploaded_files
 json.files user.uploaded_files.map { |file| {
+    id: file.id,
     file: url_for(file), 
     name: file.filename, 
     time: file.created_at,

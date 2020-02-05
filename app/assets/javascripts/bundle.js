@@ -399,6 +399,7 @@ __webpack_require__.r(__webpack_exports__);
 var HomeMain = function HomeMain(props) {
   var recentItems = props.files.map(function (file) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      handleDelete: props.handleDelete,
       file: file
     });
   }).reverse();
@@ -523,7 +524,12 @@ var RecentItem = function RecentItem(props) {
     className: "recent-buttons-div"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "recent-button"
-  }, "Preview"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+  }, "Preview"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "recent-button",
+    onClick: function onClick(e) {
+      return props.handleDelete(props.file);
+    }
+  }, "Delete"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     className: "recent-ellipsis"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     fill: "none",
@@ -628,19 +634,35 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(UserHome).call(this, props));
     _this.state = {
-      files: props.currentUser.files
+      files: props.currentUser.files,
+      uploaded: ''
     };
     _this.handleUpload = _this.handleUpload.bind(_assertThisInitialized(_this));
+    _this.handleDelete = _this.handleDelete.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(UserHome, [{
     key: "handleUpload",
-    value: function handleUpload() {
+    value: function handleUpload(file) {
       debugger;
+      var newFileArray = this.props.currentUser.files;
+      newFileArray.push(file);
       this.setState({
-        files: this.props.currentUser.files
+        files: newFileArray
       });
+    }
+  }, {
+    key: "handleDelete",
+    value: function handleDelete(file) {
+      var id = file.id;
+      var toDelete = this.props.currentUser.files.filter(function (file) {
+        return file.id !== id;
+      });
+      this.setState({
+        files: toDelete
+      });
+      console.log(toDelete);
     }
   }, {
     key: "render",
@@ -652,6 +674,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_main_header__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "main-content"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_main__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        handleDelete: this.handleDelete,
         files: this.state.files
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_sidebar__WEBPACK_IMPORTED_MODULE_4__["default"], {
         handleUpload: this.handleUpload
@@ -1824,6 +1847,7 @@ function (_React$Component) {
     value: function handleFile(e) {
       e.preventDefault();
       var file = e.currentTarget.files[0];
+      debugger;
       this.setState({
         name: file.name,
         file: file
@@ -1850,8 +1874,8 @@ function (_React$Component) {
         });
       }
 
-      this.props.history.push('/');
-      this.props.handleUpload();
+      this.props.history.push('/h');
+      this.props.handleUpload(this.state.file);
     }
   }, {
     key: "render",
