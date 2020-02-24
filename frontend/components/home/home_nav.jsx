@@ -19,8 +19,8 @@ const HomeNav = props => (
                 </svg>
             </a>
             <ul id='home-nav-list'>
-                <li><h2>Home</h2></li>
-                <li><h2>Files</h2></li>
+                <li><h2 onClick={e => (props.handleMainChange('home'))}>Home</h2></li>
+                <li ><h2 onClick={e => (props.handleMainChange('files'))}>Files</h2></li>
                
             </ul>
             

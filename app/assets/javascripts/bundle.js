@@ -413,18 +413,18 @@ var HomeMain = function HomeMain(props) {
   }, " Suggested for you"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     id: "suggested-list"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "starred",
-    className: "section"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "section-header"
-  }, " Starred"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "When you star items, they\u2019ll show up here for easy access.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "recent",
     className: "section"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "section-header"
   }, " Recent"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     id: "recent-list"
-  }, recentItems)));
+  }, recentItems)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "starred",
+    className: "section"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "section-header"
+  }, " Starred"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "When you star items, they\u2019ll show up here for easy access.")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (HomeMain);
@@ -464,7 +464,15 @@ var HomeNav = function HomeNav(props) {
     d: "M8 2.4l8 5.1-8 5.1-8-5.1 8-5.1zm16 0l8 5.1-8 5.1-8-5.1 8-5.1zM0 17.7l8-5.1 8 5.1-8 5.1-8-5.1zm24-5.1l8 5.1-8 5.1-8-5.1  8-5.1zM8 24.5l8-5.1 8 5.1-8 5.1-8-5.1z"
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     id: "home-nav-list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Files")))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    onClick: function onClick(e) {
+      return props.handleMainChange('home');
+    }
+  }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    onClick: function onClick(e) {
+      return props.handleMainChange('files');
+    }
+  }, "Files")))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (HomeNav);
@@ -485,7 +493,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var RecentItem = function RecentItem(props) {
-  var time = new Date(props.file['time']);
+  var time;
+
+  if (props.file['time']) {
+    time = new Date(props.file['time']);
+  } else {
+    time = new Date();
+  }
+
   var date = time.getMonth() + 1 + '/' + time.getDate();
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "recent-item-wrapper"
@@ -635,10 +650,12 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(UserHome).call(this, props));
     _this.state = {
       files: props.currentUser.files,
-      uploaded: ''
+      uploaded: '',
+      main_content: 'home'
     };
     _this.handleUpload = _this.handleUpload.bind(_assertThisInitialized(_this));
     _this.handleDelete = _this.handleDelete.bind(_assertThisInitialized(_this));
+    _this.handleMainChange = _this.handleMainChange.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -649,7 +666,7 @@ function (_React$Component) {
       var newFileArray = this.props.currentUser.files;
       newFileArray.push(file);
       this.setState({
-        files: newFileArray
+        files: this.props.currentUser.files
       });
     }
   }, {
@@ -665,18 +682,30 @@ function (_React$Component) {
       console.log(toDelete);
     }
   }, {
+    key: "handleMainChange",
+    value: function handleMainChange(type) {
+      this.setState({
+        main_content: type
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
+      var MainContent;
+      console.log(this.state.main_content);
+      this.state.main_content === 'home' ? MainContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_main__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        handleDelete: this.handleDelete,
+        files: this.state.files
+      }) : MainContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "It worked!!"));
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "user-home"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_nav__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        handleMainChange: this.handleMainChange
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "home-main-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_main_header__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "main-content"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_main__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        handleDelete: this.handleDelete,
-        files: this.state.files
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_sidebar__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      }, MainContent, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_sidebar__WEBPACK_IMPORTED_MODULE_4__["default"], {
         handleUpload: this.handleUpload
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "logout-button"
@@ -1847,10 +1876,10 @@ function (_React$Component) {
     value: function handleFile(e) {
       e.preventDefault();
       var file = e.currentTarget.files[0];
-      debugger;
       this.setState({
         name: file.name,
-        file: file
+        file: file,
+        time: file.lastModified
       });
     }
   }, {

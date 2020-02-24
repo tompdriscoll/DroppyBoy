@@ -10,17 +10,19 @@ class UserHome extends React.Component {
         super(props)
         this.state = {
             files: props.currentUser.files,
-            uploaded: ''
+            uploaded: '',
+            main_content: 'home'
         }
         this.handleUpload = this.handleUpload.bind(this)
         this.handleDelete = this.handleDelete.bind(this)
+        this.handleMainChange = this.handleMainChange.bind(this)
     }
 
     handleUpload(file){
         debugger
         let newFileArray = this.props.currentUser.files
         newFileArray.push(file)
-        this.setState({files: newFileArray})
+        this.setState({files: this.props.currentUser.files})
     }
 
     
@@ -28,21 +30,29 @@ class UserHome extends React.Component {
         let id = file.id
         let toDelete = this.props.currentUser.files.filter(file => file.id !== id)
         this.setState({files: toDelete})
-
         console.log(toDelete)
+    }
+
+    handleMainChange(type){
+        this.setState({main_content: type})
+     
     }
     
 
     render(){
-   
+        let MainContent;
+        console.log(this.state.main_content)
+
+        this.state.main_content === 'home' ?  MainContent = <HomeMain handleDelete={this.handleDelete} files={this.state.files}/> 
+        : MainContent = <div><h1>It worked!!</h1></div>
     return (  
     <div className="user-home">
         
-        <HomeNav />
+        <HomeNav handleMainChange={this.handleMainChange}/>
         <div id='home-main-container'>
             <HomeMainHeader/>
             <div id='main-content'>    
-                <HomeMain handleDelete={this.handleDelete} files={this.state.files}/>
+                {MainContent}
                 <HomeSideBar handleUpload={this.handleUpload}/>
             </div>
         </div>

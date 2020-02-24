@@ -3,7 +3,12 @@ import React from 'react'
 
 
 const RecentItem = props => {
-    let time = new Date(props.file['time'])
+    let time;
+    if (props.file['time']) {
+         time = new Date(props.file['time'])
+    } else{
+         time = new Date
+    }
     let date = time.getMonth() + 1 + '/' + time.getDate() 
    return( 
    <div className='recent-item-wrapper'>

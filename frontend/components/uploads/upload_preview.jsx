@@ -8,9 +8,10 @@ class UploadPreview extends React.Component{
 
     render(){
 
-
         return (
-            <img src={this.props.img}></img>
+            <div>
+                <img src={this.props.img}></img>
+            </div>
         )
     }
 }
