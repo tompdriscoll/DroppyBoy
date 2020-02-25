@@ -4,7 +4,7 @@ const HomeMainHeader = props => (
 
         <header id='main-header'>
             <div id='main-header-content'>
-                <h1>Home</h1>
+                <h1>{props.name}</h1>
                 <div className="header-end" >
                     <form id='header-search'>
                         <span className="search-chips"></span>

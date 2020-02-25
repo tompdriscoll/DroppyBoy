@@ -279,7 +279,7 @@ var HomeMainHeader = function HomeMainHeader(props) {
     id: "main-header"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "main-header-content"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Home"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, props.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "header-end"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     id: "header-search"
@@ -377,6 +377,46 @@ var mdp = function mdp(dispatch) {
 
 /***/ }),
 
+/***/ "./frontend/components/home/home_files.jsx":
+/*!*************************************************!*\
+  !*** ./frontend/components/home/home_files.jsx ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _recent_item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./recent_item */ "./frontend/components/home/recent_item.jsx");
+/* harmony import */ var _suggested_list_item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./suggested_list_item */ "./frontend/components/home/suggested_list_item.jsx");
+/* harmony import */ var _uploads_upload_from__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../uploads/upload_from */ "./frontend/components/uploads/upload_from.jsx");
+
+
+
+
+
+var HomeFiles = function HomeFiles(props) {
+  var fileList = props.files.map(function (file) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      handleDelete: props.handleDelete,
+      file: file
+    });
+  }).reverse();
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "home-main"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "recent",
+    className: "section"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    id: "recent-list"
+  }, fileList)));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (HomeFiles);
+
+/***/ }),
+
 /***/ "./frontend/components/home/home_main.jsx":
 /*!************************************************!*\
   !*** ./frontend/components/home/home_main.jsx ***!
@@ -466,11 +506,11 @@ var HomeNav = function HomeNav(props) {
     id: "home-nav-list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     onClick: function onClick(e) {
-      return props.handleMainChange('home');
+      return props.handleMainChange('Home');
     }
   }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     onClick: function onClick(e) {
-      return props.handleMainChange('files');
+      return props.handleMainChange('Files');
     }
   }, "Files")))));
 };
@@ -610,9 +650,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _home_main__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home_main */ "./frontend/components/home/home_main.jsx");
-/* harmony import */ var _home_nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home_nav */ "./frontend/components/home/home_nav.jsx");
-/* harmony import */ var _home_main_header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home-main-header */ "./frontend/components/home/home-main-header.jsx");
-/* harmony import */ var _home_sidebar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./home-sidebar */ "./frontend/components/home/home-sidebar.jsx");
+/* harmony import */ var _home_files__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home_files */ "./frontend/components/home/home_files.jsx");
+/* harmony import */ var _home_nav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home_nav */ "./frontend/components/home/home_nav.jsx");
+/* harmony import */ var _home_main_header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./home-main-header */ "./frontend/components/home/home-main-header.jsx");
+/* harmony import */ var _home_sidebar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./home-sidebar */ "./frontend/components/home/home-sidebar.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -637,6 +678,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var UserHome =
 /*#__PURE__*/
 function (_React$Component) {
@@ -651,7 +693,7 @@ function (_React$Component) {
     _this.state = {
       files: props.currentUser.files,
       uploaded: '',
-      main_content: 'home'
+      main_content: 'Home'
     };
     _this.handleUpload = _this.handleUpload.bind(_assertThisInitialized(_this));
     _this.handleDelete = _this.handleDelete.bind(_assertThisInitialized(_this));
@@ -693,19 +735,24 @@ function (_React$Component) {
     value: function render() {
       var MainContent;
       console.log(this.state.main_content);
-      this.state.main_content === 'home' ? MainContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_main__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      this.state.main_content === 'Home' ? MainContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_main__WEBPACK_IMPORTED_MODULE_1__["default"], {
         handleDelete: this.handleDelete,
         files: this.state.files
-      }) : MainContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "It worked!!"));
+      }) : MainContent = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_files__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        handleDelete: this.handleDelete,
+        files: this.state.files
+      });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "user-home"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_nav__WEBPACK_IMPORTED_MODULE_3__["default"], {
         handleMainChange: this.handleMainChange
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "home-main-container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_main_header__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_main_header__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        name: this.state.main_content
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "main-content"
-      }, MainContent, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_sidebar__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      }, MainContent, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_sidebar__WEBPACK_IMPORTED_MODULE_5__["default"], {
         handleUpload: this.handleUpload
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "logout-button"

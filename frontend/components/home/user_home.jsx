@@ -1,6 +1,7 @@
 import React from 'react';
 
 import HomeMain from './home_main'
+import HomeFiles from './home_files'
 import HomeNav from './home_nav'
 import HomeMainHeader from './home-main-header'
 import HomeSideBar from './home-sidebar'
@@ -11,7 +12,7 @@ class UserHome extends React.Component {
         this.state = {
             files: props.currentUser.files,
             uploaded: '',
-            main_content: 'home'
+            main_content: 'Home'
         }
         this.handleUpload = this.handleUpload.bind(this)
         this.handleDelete = this.handleDelete.bind(this)
@@ -43,14 +44,14 @@ class UserHome extends React.Component {
         let MainContent;
         console.log(this.state.main_content)
 
-        this.state.main_content === 'home' ?  MainContent = <HomeMain handleDelete={this.handleDelete} files={this.state.files}/> 
-        : MainContent = <div><h1>It worked!!</h1></div>
+        this.state.main_content === 'Home' ?  MainContent = <HomeMain handleDelete={this.handleDelete} files={this.state.files}/> 
+        : MainContent = <HomeFiles handleDelete={this.handleDelete} files={this.state.files}></HomeFiles>
     return (  
     <div className="user-home">
         
         <HomeNav handleMainChange={this.handleMainChange}/>
         <div id='home-main-container'>
-            <HomeMainHeader/>
+            <HomeMainHeader name={this.state.main_content}/>
             <div id='main-content'>    
                 {MainContent}
                 <HomeSideBar handleUpload={this.handleUpload}/>
