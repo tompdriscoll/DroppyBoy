@@ -285,20 +285,20 @@ var FileIcon = function FileIcon(props) {
 
   var date = time.getMonth() + 1 + '/' + time.getDate();
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "file-icon-wrapper"
+    className: "files-icon-wrapper"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "file-icon-contents"
+    className: "files-icon-contents"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "file-icon-icon-wrapper"
+    className: "files-icon-icon-wrapper"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "file-icon-icon",
+    className: "files-icon-icon",
     src: props.file['file']
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "recent-title-date"
+    className: "home-title-date"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "file-icon-title"
+    className: "home-icon-title"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "recent-filename"
+    className: "files-filename"
   }, props.file['name']), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "star"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
@@ -311,23 +311,23 @@ var FileIcon = function FileIcon(props) {
     d: "M16 18.657l2.138 1.197-.478-2.403 1.799-1.663-2.433-.289L16  13.275l-1.026 2.224-2.433.289 1.799 1.663-.478 2.403L16 18.657zm-4.944  5.06l1.104-5.558L8 14.312l5.627-.667L16 8.5l2.373 5.145 5.627.667-4.16  3.847 1.104 5.558L16 20.949l-4.944 2.768z",
     className: "mc-icon--mf"
   })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "added-updated-div"
+    className: "files-added-updated-div"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "added-updated"
+    className: "files-added-updated"
   }, "Added "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "added-updated",
+    className: "files-added-updated",
     id: "when"
   }, date)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "recent-buttons-div"
+    className: "files-buttons-div"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "recent-button"
+    className: "files-button"
   }, "Preview"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "recent-button",
+    className: "files-button",
     onClick: function onClick(e) {
       return props.handleDelete(props.file);
     }
   }, "Delete"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-    className: "recent-ellipsis"
+    className: "files-ellipsis"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
@@ -497,10 +497,10 @@ var HomeFiles = function HomeFiles(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "home-main"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "recent",
+    id: "files",
     className: "section"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    id: "recent-list"
+    id: "files-list"
   }, fileList)));
 };
 
@@ -643,11 +643,11 @@ var RecentItem = function RecentItem(props) {
     className: "recent-item-icon",
     src: props.file['file']
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "recent-title-date"
+    className: "home-title-date"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "recent-item-title"
+    className: "home-item-title"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "recent-filename"
+    className: "home-filename"
   }, props.file['name']), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "star"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {

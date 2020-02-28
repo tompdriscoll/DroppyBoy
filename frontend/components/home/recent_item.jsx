@@ -16,10 +16,10 @@ const RecentItem = props => {
             <div className='recent-item-icon-wrapper'>
                 <img className='recent-item-icon' src={props.file['file']}></img>
             </div>
-        <div className='recent-title-date'>
+        <div className='home-title-date'>
 
-            <div className='recent-item-title'>
-                <p className='recent-filename'>{props.file['name']}</p>
+            <div className='home-item-title'>
+                <p className='home-filename'>{props.file['name']}</p>
                 <button className="star" >
                     <svg width="32" 
                     height="32" 

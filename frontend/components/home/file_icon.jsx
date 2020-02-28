@@ -11,15 +11,15 @@ const FileIcon = props => {
     }
     let date = time.getMonth() + 1 + '/' + time.getDate() 
    return( 
-   <div className='file-icon-wrapper'>
-        <div className='file-icon-contents'>
-            <div className='file-icon-icon-wrapper'>
-                <img className='file-icon-icon' src={props.file['file']}></img>
+   <div className='files-icon-wrapper'>
+        <div className='files-icon-contents'>
+            <div className='files-icon-icon-wrapper'>
+                <img className='files-icon-icon' src={props.file['file']}></img>
             </div>
-        <div className='recent-title-date'>
+        <div className='home-title-date'>
 
-            <div className='file-icon-title'>
-                <p className='recent-filename'>{props.file['name']}</p>
+            <div className='home-icon-title'>
+                <p className='files-filename'>{props.file['name']}</p>
                 <button className="star" >
                     <svg width="32" 
                     height="32" 
@@ -33,16 +33,16 @@ const FileIcon = props => {
                     </svg>
                 </button>
             </div>
-            <div className='added-updated-div'>
-                <p className='added-updated'>Added </p>
-                <p className='added-updated' id='when'>{date}</p>
+            <div className='files-added-updated-div'>
+                <p className='files-added-updated'>Added </p>
+                <p className='files-added-updated' id='when'>{date}</p>
             </div>
         </div>
         </div>
-        <div className='recent-buttons-div'>
-            <div className='recent-button'>Preview</div>
-            <div className='recent-button' onClick={ e => (props.handleDelete(props.file))}>Delete</div>
-            <svg className='recent-ellipsis'>
+        <div className='files-buttons-div'>
+            <div className='files-button'>Preview</div>
+            <div className='files-button' onClick={ e => (props.handleDelete(props.file))}>Delete</div>
+            <svg className='files-ellipsis'>
                     <g fill="none" fillRule="evenodd">
                         <g fill="#637282">
                             <circle cx="10.5" cy="16.5" r="1.5"></circle>

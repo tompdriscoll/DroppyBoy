@@ -13,8 +13,8 @@ const HomeFiles = props => {
     return (
     <div id='home-main'>
       
-        <div id='recent' className='section'>
-            <ul id='recent-list'>
+        <div id='files' className='section'>
+            <ul id='files-list'>
                 {fileList}       
             </ul>
             

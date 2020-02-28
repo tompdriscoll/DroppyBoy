@@ -329,20 +329,20 @@
     color: #0070e0;
 }
 
-.recent-item-title {
+.home-item-title {
     display: flex;
     height: 20px;
     max-width: 200px;
     line-height: 24px;
 }
 
-.recent-item-title p{
+.home-item-title p{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.recent-title-date{
+.home-title-date{
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -405,6 +405,11 @@
     border-radius: 10px;
 }
 
-.file-icon-icon{
+.files-icon-icon{
     width: 300px;
+}
+
+.files-title-date{
+    display: flex;
+    height: 30px
 }
