@@ -5,7 +5,7 @@ const NavBarNav = () => (
    
         
     <div className="splash-nav-content">
-        <NavBarNavCta/>
+        {/* <NavBarNavCta/> */}
         <NavBarNavLinks/>
     </div>
 

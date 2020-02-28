@@ -1781,7 +1781,7 @@ __webpack_require__.r(__webpack_exports__);
 var NavBarNav = function NavBarNav() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash-nav-content"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar_nav_cta__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar_nav_links__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar_nav_links__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (NavBarNav);
