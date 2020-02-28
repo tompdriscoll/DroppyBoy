@@ -22,7 +22,7 @@ const HomeMain = props => {
                                          
             </ul>
         </div>
-        <div id='recent' className='section'>
+        <div id='recent1' className='section'>
             <h2 className='section-header'> Recent
 
                     {/* <button className="hide-button">

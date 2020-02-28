@@ -1,11 +1,11 @@
 import React from 'react';
-import RecentItem from './recent_item'
+import FileIcon from './file_icon'
 import SuggestedListItem from './suggested_list_item'
 
 import UploadForm from '../uploads/upload_from'
 const HomeFiles = props => {  
     const fileList = props.files.map(file => (     
-        <RecentItem  handleDelete={props.handleDelete} file={file} />
+        <FileIcon  handleDelete={props.handleDelete} file={file} />
     )).reverse()
 
    

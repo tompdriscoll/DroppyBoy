@@ -261,6 +261,97 @@ var ErrorPage = function ErrorPage() {
 
 /***/ }),
 
+/***/ "./frontend/components/home/file_icon.jsx":
+/*!************************************************!*\
+  !*** ./frontend/components/home/file_icon.jsx ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var FileIcon = function FileIcon(props) {
+  var time;
+
+  if (props.file['time']) {
+    time = new Date(props.file['time']);
+  } else {
+    time = new Date();
+  }
+
+  var date = time.getMonth() + 1 + '/' + time.getDate();
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "file-icon-wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "file-icon-contents"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "file-icon-icon-wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "file-icon-icon",
+    src: props.file['file']
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "recent-title-date"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "file-icon-title"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "recent-filename"
+  }, props.file['name']), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "star"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    width: "32",
+    height: "32",
+    viewBox: "0 0 32 32"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    d: "M16 18.657l2.138 1.197-.478-2.403 1.799-1.663-2.433-.289L16  13.275l-1.026 2.224-2.433.289 1.799 1.663-.478 2.403L16 18.657zm-4.944  5.06l1.104-5.558L8 14.312l5.627-.667L16 8.5l2.373 5.145 5.627.667-4.16  3.847 1.104 5.558L16 20.949l-4.944 2.768z",
+    className: "mc-icon--mf"
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "added-updated-div"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "added-updated"
+  }, "Added "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "added-updated",
+    id: "when"
+  }, date)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "recent-buttons-div"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "recent-button"
+  }, "Preview"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "recent-button",
+    onClick: function onClick(e) {
+      return props.handleDelete(props.file);
+    }
+  }, "Delete"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    className: "recent-ellipsis"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+    fill: "#637282"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("circle", {
+    cx: "10.5",
+    cy: "16.5",
+    r: "1.5"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("circle", {
+    cx: "15.5",
+    cy: "16.5",
+    r: "1.5"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("circle", {
+    cx: "20.5",
+    cy: "16.5",
+    r: "1.5"
+  }))))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (FileIcon);
+
+/***/ }),
+
 /***/ "./frontend/components/home/home-main-header.jsx":
 /*!*******************************************************!*\
   !*** ./frontend/components/home/home-main-header.jsx ***!
@@ -388,7 +479,7 @@ var mdp = function mdp(dispatch) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _recent_item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./recent_item */ "./frontend/components/home/recent_item.jsx");
+/* harmony import */ var _file_icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./file_icon */ "./frontend/components/home/file_icon.jsx");
 /* harmony import */ var _suggested_list_item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./suggested_list_item */ "./frontend/components/home/suggested_list_item.jsx");
 /* harmony import */ var _uploads_upload_from__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../uploads/upload_from */ "./frontend/components/uploads/upload_from.jsx");
 
@@ -398,7 +489,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var HomeFiles = function HomeFiles(props) {
   var fileList = props.files.map(function (file) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_file_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
       handleDelete: props.handleDelete,
       file: file
     });
@@ -453,7 +544,7 @@ var HomeMain = function HomeMain(props) {
   }, " Suggested for you"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     id: "suggested-list"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "recent",
+    id: "recent1",
     className: "section"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "section-header"

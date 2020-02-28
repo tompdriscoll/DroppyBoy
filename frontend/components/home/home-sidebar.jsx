@@ -3,8 +3,7 @@ import UploadForm from '../uploads/upload_from'
 const HomeSideBar = props => (
     <div id='home-sidebar'>
         <div className="home-sidebar-content">
-            <ul id='home-sidebar-list'>
-                
+            <ul id='home-sidebar-list'>        
                 <UploadForm handleUpload={props.handleUpload}/>
             </ul>
             

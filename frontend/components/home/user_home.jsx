@@ -5,6 +5,7 @@ import HomeFiles from './home_files'
 import HomeNav from './home_nav'
 import HomeMainHeader from './home-main-header'
 import HomeSideBar from './home-sidebar'
+
 class UserHome extends React.Component {
 
     constructor(props){
