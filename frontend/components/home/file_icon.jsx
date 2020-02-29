@@ -33,15 +33,15 @@ const FileIcon = props => {
                     </svg>
                 </button>
             </div>
-            <div className='files-added-updated-div'>
-                <p className='files-added-updated'>Added </p>
-                <p className='files-added-updated' id='when'>{date}</p>
+            <div className='added-updated-div'>
+                <p className='added-updated'>Added </p>
+                <p className='added-updated' id='when'>{date}</p>
             </div>
         </div>
         </div>
-        <div className='files-buttons-div'>
-            <div className='files-button'>Preview</div>
-            <div className='files-button' onClick={ e => (props.handleDelete(props.file))}>Delete</div>
+        <div className='recent-buttons-div'>
+            <div className='recent-button'>Preview</div>
+            <div className='recent-button' onClick={ e => (props.handleDelete(props.file))}>Delete</div>
             <svg className='files-ellipsis'>
                     <g fill="none" fillRule="evenodd">
                         <g fill="#637282">
