@@ -16,6 +16,7 @@ class UploadForm extends React.Component {
   }
 
   handleFile(e){
+    
     e.preventDefault();
     const file = e.currentTarget.files[0];
     this.setState({name: file.name, file: file, time: file.lastModified})

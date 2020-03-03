@@ -528,6 +528,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var HomeMain = function HomeMain(props) {
+  debugger;
   var recentItems = props.files.map(function (file) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
       handleDelete: props.handleDelete,
