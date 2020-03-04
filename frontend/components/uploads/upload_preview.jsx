@@ -11,6 +11,7 @@ class UploadPreview extends React.Component{
         return (
             <div>
                 <img src={this.props.img}></img>
+                <h1>{this.props.name}</h1>
             </div>
         )
     }
