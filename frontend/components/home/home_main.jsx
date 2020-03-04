@@ -45,7 +45,6 @@ const HomeMain = props => {
             </h2>
             <p>
                 When you star items, they’ll show up here for easy access. 
-                {/* <a href="/#/help/desktop-web/star-doc-file-folder" target="_blank" rel="noopener noreferrer"> Learn more</a> */}
             </p>
         </div>
     </div>)
