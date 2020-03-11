@@ -16,9 +16,9 @@ const FileIcon = props => {
             <div className='files-icon-icon-wrapper'>
                 <img className='files-icon-icon' src={props.file['file']}></img>
             </div>
-        <div className='home-title-date'>
+        <div className='file-title-date'>
 
-            <div className='home-icon-title'>
+            <div className='file-icon-title'>
                 <p className='files-filename'>{props.file['name']}</p>
                 <button className="star" >
                     <svg width="32" 
