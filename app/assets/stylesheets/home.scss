@@ -414,8 +414,14 @@
     height: 30px
 }
 
+#files{
+    width: 105%;
+}
+
 #files-list{
     display: flex;
+    width: 85%;
+    flex-wrap: wrap;
 }
 
 .files-icon-wrapper{
