@@ -420,11 +420,16 @@
 
 #files-list{
     display: flex;
-    width: 85%;
+
     flex-wrap: wrap;
 }
 
 .files-icon-wrapper{
     width: 400px;
     padding: 10px;
+}
+
+.files-icon-contents{
+    justify-content: center;
+    text-align: center;
 }
