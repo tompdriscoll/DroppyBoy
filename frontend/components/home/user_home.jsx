@@ -36,7 +36,6 @@ class UserHome extends React.Component {
 
     handleMainChange(type){
         this.setState({main_content: type})
-     
     }
     
 
