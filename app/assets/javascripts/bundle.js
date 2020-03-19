@@ -528,7 +528,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var HomeMain = function HomeMain(props) {
-  debugger;
+   ;
   var recentItems = props.files.map(function (file) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
       handleDelete: props.handleDelete,
@@ -796,7 +796,7 @@ function (_React$Component) {
   _createClass(UserHome, [{
     key: "handleUpload",
     value: function handleUpload(file) {
-      debugger;
+       ;
       var newFileArray = this.props.currentUser.files;
       newFileArray.push(file);
       this.setState({
@@ -7423,7 +7423,7 @@ var debugRenderPhaseSideEffects = false;
 // This feature flag can be used to control the behavior:
 var debugRenderPhaseSideEffectsForStrictMode = true;
 
-// To preserve the "Pause on caught exceptions" behavior of the debugger, we
+// To preserve the "Pause on caught exceptions" behavior of the  , we
 // replay the begin phase of a failed component inside invokeGuardedCallback.
 var replayFailedUnitOfWorkWithInvokeGuardedCallback = true;
 
@@ -28394,7 +28394,7 @@ if ( true && replayFailedUnitOfWorkWithInvokeGuardedCallback) {
   var dummyFiber = null;
   beginWork$$1 = function (current$$1, unitOfWork, expirationTime) {
     // If a component throws an error, we replay it again in a synchronously
-    // dispatched event, so that the debugger will treat it as an uncaught
+    // dispatched event, so that the   will treat it as an uncaught
     // error See ReactErrorUtils for more information.
 
     // Before entering the begin phase, copy the work-in-progress onto a dummy
@@ -35461,7 +35461,7 @@ function createEventResponder(displayName, responderConfig) {
 // This feature flag can be used to control the behavior:
 
 
-// To preserve the "Pause on caught exceptions" behavior of the debugger, we
+// To preserve the "Pause on caught exceptions" behavior of the  , we
 // replay the begin phase of a failed component inside invokeGuardedCallback.
 
 
@@ -36514,7 +36514,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 // This feature flag can be used to control the behavior:
 
 
-// To preserve the "Pause on caught exceptions" behavior of the debugger, we
+// To preserve the "Pause on caught exceptions" behavior of the  , we
 // replay the begin phase of a failed component inside invokeGuardedCallback.
 
 
