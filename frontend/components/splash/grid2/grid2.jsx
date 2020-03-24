@@ -1,7 +1,9 @@
 import React from 'react'
 
+
 const Grid2 = () => (
     <div id='grid2'>
+      
         <div id='grid-2-container'>
         <div id='grid2-contents'>
             <div id='grid2-text'>

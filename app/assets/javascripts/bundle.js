@@ -294,9 +294,9 @@ var FileIcon = function FileIcon(props) {
     className: "files-icon-icon",
     src: props.file['file']
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "home-title-date"
+    className: "file-title-date"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "home-icon-title"
+    className: "file-icon-title"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "files-filename"
   }, props.file['name']), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -528,7 +528,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var HomeMain = function HomeMain(props) {
-   ;
   var recentItems = props.files.map(function (file) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
       handleDelete: props.handleDelete,
@@ -796,7 +795,6 @@ function (_React$Component) {
   _createClass(UserHome, [{
     key: "handleUpload",
     value: function handleUpload(file) {
-       ;
       var newFileArray = this.props.currentUser.files;
       newFileArray.push(file);
       this.setState({
@@ -1547,16 +1545,12 @@ var Grid2 = function Grid2() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _nav_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../nav/nav */ "./frontend/components/splash/nav/nav.jsx");
-
 
 
 var Grid3 = function Grid3() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "grid3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "nav2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_nav__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "grid3-contents"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
     id: "grid3-pic-1",
@@ -1893,6 +1887,221 @@ function (_React$Component) {
 
 /***/ }),
 
+/***/ "./frontend/components/splash/nav2/droppyboylogo.jsx":
+/*!***********************************************************!*\
+  !*** ./frontend/components/splash/nav2/droppyboylogo.jsx ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var DroppyboyLogo = function DroppyboyLogo(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "droppyboy-logo"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://cfl.dropboxstatic.com/static/images/index/rebrand/logos/glyphs/glyph_aqua.svg",
+    className: "DropboxLogo--glyph",
+    alt: "",
+    role: "presentation"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "logo-homemade"
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (DroppyboyLogo);
+
+/***/ }),
+
+/***/ "./frontend/components/splash/nav2/nav2.jsx":
+/*!**************************************************!*\
+  !*** ./frontend/components/splash/nav2/nav2.jsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _droppyboylogo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./droppyboylogo */ "./frontend/components/splash/nav2/droppyboylogo.jsx");
+/* harmony import */ var _nav_bar2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nav_bar2 */ "./frontend/components/splash/nav2/nav_bar2.jsx");
+
+
+
+
+var Nav2 = function Nav2() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "splash-nav"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar2__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Nav2);
+
+/***/ }),
+
+/***/ "./frontend/components/splash/nav2/nav_bar2.jsx":
+/*!******************************************************!*\
+  !*** ./frontend/components/splash/nav2/nav_bar2.jsx ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _droppyboylogo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./droppyboylogo */ "./frontend/components/splash/nav2/droppyboylogo.jsx");
+/* harmony import */ var _nav_bar_nav2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nav_bar_nav2 */ "./frontend/components/splash/nav2/nav_bar_nav2.jsx");
+
+
+
+
+var NavBar = function NavBar() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    className: "splash-nav-nav"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_droppyboylogo__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar_nav2__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (NavBar);
+
+/***/ }),
+
+/***/ "./frontend/components/splash/nav2/nav_bar_nav2.jsx":
+/*!**********************************************************!*\
+  !*** ./frontend/components/splash/nav2/nav_bar_nav2.jsx ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _nav_bar_nav_cta__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./nav_bar_nav_cta */ "./frontend/components/splash/nav2/nav_bar_nav_cta.jsx");
+/* harmony import */ var _nav_bar_nav_links__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nav_bar_nav_links */ "./frontend/components/splash/nav2/nav_bar_nav_links.jsx");
+
+
+
+
+var NavBarNav = function NavBarNav() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "splash-nav-content"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar_nav_links__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (NavBarNav);
+
+/***/ }),
+
+/***/ "./frontend/components/splash/nav2/nav_bar_nav_cta.jsx":
+/*!*************************************************************!*\
+  !*** ./frontend/components/splash/nav2/nav_bar_nav_cta.jsx ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var NavBarNavCta = function NavBarNavCta() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "splash-nav-nav-links"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "ob-button ob-button--link RebrandNavigation-nav--links-item",
+    href: "",
+    tabIndex: "0"
+  }, "For Teams"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "ob-button ob-button--link RebrandNavigation-nav--links-item",
+    href: "",
+    tabIndex: "0"
+  }, "For Individuals"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (NavBarNavCta);
+
+/***/ }),
+
+/***/ "./frontend/components/splash/nav2/nav_bar_nav_links.jsx":
+/*!***************************************************************!*\
+  !*** ./frontend/components/splash/nav2/nav_bar_nav_links.jsx ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var NavBarNavLinks =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(NavBarNavLinks, _React$Component);
+
+  function NavBarNavLinks() {
+    _classCallCheck(this, NavBarNavLinks);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(NavBarNavLinks).apply(this, arguments));
+  }
+
+  _createClass(NavBarNavLinks, [{
+    key: "openDrawer",
+    value: function openDrawer() {
+      var drawer = document.getElementsByClassName('closed')[0];
+      drawer.classList.remove('closed');
+      drawer.classList.add('drawer');
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "splash-nav-nav-buttons"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "",
+        tabIndex: "0",
+        onClick: this.openDrawer
+      }, "Sign in"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "",
+        tabIndex: "0",
+        onClick: this.openDrawer
+      }, "Sign up"));
+    }
+  }]);
+
+  return NavBarNavLinks;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (NavBarNavLinks);
+
+/***/ }),
+
 /***/ "./frontend/components/splash/splash.jsx":
 /*!***********************************************!*\
   !*** ./frontend/components/splash/splash.jsx ***!
@@ -1907,13 +2116,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _nav_nav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nav/nav */ "./frontend/components/splash/nav/nav.jsx");
-/* harmony import */ var _grid_hero_aside__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./grid/hero_aside */ "./frontend/components/splash/grid/hero_aside.jsx");
-/* harmony import */ var _drawer_drawer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./drawer/drawer */ "./frontend/components/splash/drawer/drawer.jsx");
-/* harmony import */ var _grid2_grid2__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./grid2/grid2 */ "./frontend/components/splash/grid2/grid2.jsx");
-/* harmony import */ var _grid3_grid3__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./grid3/grid3 */ "./frontend/components/splash/grid3/grid3.jsx");
-/* harmony import */ var _grid4_grid4__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./grid4/grid4 */ "./frontend/components/splash/grid4/grid4.jsx");
-/* harmony import */ var _grid5_grid5__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./grid5/grid5 */ "./frontend/components/splash/grid5/grid5.jsx");
-/* harmony import */ var _grid6_grid6__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./grid6/grid6 */ "./frontend/components/splash/grid6/grid6.jsx");
+/* harmony import */ var _nav2_nav2__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./nav2/nav2 */ "./frontend/components/splash/nav2/nav2.jsx");
+/* harmony import */ var _grid_hero_aside__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./grid/hero_aside */ "./frontend/components/splash/grid/hero_aside.jsx");
+/* harmony import */ var _drawer_drawer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./drawer/drawer */ "./frontend/components/splash/drawer/drawer.jsx");
+/* harmony import */ var _grid2_grid2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./grid2/grid2 */ "./frontend/components/splash/grid2/grid2.jsx");
+/* harmony import */ var _grid3_grid3__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./grid3/grid3 */ "./frontend/components/splash/grid3/grid3.jsx");
+/* harmony import */ var _grid4_grid4__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./grid4/grid4 */ "./frontend/components/splash/grid4/grid4.jsx");
+/* harmony import */ var _grid5_grid5__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./grid5/grid5 */ "./frontend/components/splash/grid5/grid5.jsx");
+/* harmony import */ var _grid6_grid6__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./grid6/grid6 */ "./frontend/components/splash/grid6/grid6.jsx");
+
 
 
 
@@ -1944,7 +2155,9 @@ var Splash = function Splash() {
     id: "splash"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "nav1"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_nav__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid_hero_aside__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid2_grid2__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid3_grid3__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid4_grid4__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid5_grid5__WEBPACK_IMPORTED_MODULE_9__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid6_grid6__WEBPACK_IMPORTED_MODULE_10__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_drawer_drawer__WEBPACK_IMPORTED_MODULE_5__["default"], null));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_nav__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "nav2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav2_nav2__WEBPACK_IMPORTED_MODULE_4__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid_hero_aside__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid2_grid2__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid3_grid3__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid4_grid4__WEBPACK_IMPORTED_MODULE_9__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid5_grid5__WEBPACK_IMPORTED_MODULE_10__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid6_grid6__WEBPACK_IMPORTED_MODULE_11__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_drawer_drawer__WEBPACK_IMPORTED_MODULE_6__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Splash);
@@ -7423,7 +7636,7 @@ var debugRenderPhaseSideEffects = false;
 // This feature flag can be used to control the behavior:
 var debugRenderPhaseSideEffectsForStrictMode = true;
 
-// To preserve the "Pause on caught exceptions" behavior of the  , we
+// To preserve the "Pause on caught exceptions" behavior of the debugger, we
 // replay the begin phase of a failed component inside invokeGuardedCallback.
 var replayFailedUnitOfWorkWithInvokeGuardedCallback = true;
 
@@ -28394,7 +28607,7 @@ if ( true && replayFailedUnitOfWorkWithInvokeGuardedCallback) {
   var dummyFiber = null;
   beginWork$$1 = function (current$$1, unitOfWork, expirationTime) {
     // If a component throws an error, we replay it again in a synchronously
-    // dispatched event, so that the   will treat it as an uncaught
+    // dispatched event, so that the debugger will treat it as an uncaught
     // error See ReactErrorUtils for more information.
 
     // Before entering the begin phase, copy the work-in-progress onto a dummy
@@ -35461,7 +35674,7 @@ function createEventResponder(displayName, responderConfig) {
 // This feature flag can be used to control the behavior:
 
 
-// To preserve the "Pause on caught exceptions" behavior of the  , we
+// To preserve the "Pause on caught exceptions" behavior of the debugger, we
 // replay the begin phase of a failed component inside invokeGuardedCallback.
 
 
@@ -36514,7 +36727,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 // This feature flag can be used to control the behavior:
 
 
-// To preserve the "Pause on caught exceptions" behavior of the  , we
+// To preserve the "Pause on caught exceptions" behavior of the debugger, we
 // replay the begin phase of a failed component inside invokeGuardedCallback.
 
 

@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom';
 
 import Nav from './nav/nav'
+import Nav2 from './nav2/nav2'
 import Grid from './grid/hero_aside'
 import Drawer from './drawer/drawer'
 import Grid2 from './grid2/grid2'
@@ -37,6 +38,9 @@ const Splash = () => (
     <div id='splash'>
         <div id='nav1'>
           <Nav/>                          
+        </div>
+        <div id='nav2'>
+          <Nav2/>
         </div>
         <Grid/>  
         <Grid2 />
