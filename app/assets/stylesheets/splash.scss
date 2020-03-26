@@ -23,12 +23,13 @@
 }
 
 .splash-nav-nav {
-    background: inherit;
+  
     display: inherit;
     width: 100%;
     max-width:1440px;
     padding-left: calc(1440px * (1 / 24));
     padding-right: calc(1440px * (1 / 24));
+    height: 96px;
 }
 
 
@@ -360,6 +361,7 @@ h6 {
     position: fixed;
     width: 100%;
     justify-content: center;
+    z-index: 4
 }
 
 .splash-nav {
@@ -391,5 +393,6 @@ h6 {
     height: 90px;
     padding: 0;
     color: black;
-    z-index: -1;
+
 }
+

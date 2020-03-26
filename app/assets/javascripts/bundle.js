@@ -2149,6 +2149,16 @@ document.addEventListener('scroll', function () {
     }
   }
 });
+document.addEventListener('scroll', function () {
+  var drawer = document.getElementById('nav1');
+
+  if (drawer) {
+    if (window.scrollY >= 1630) {
+      var height = 1726 - window.scrollY;
+      if (height >= 0) drawer.style.height = "".concat(height) + 'px';
+    } else {}
+  }
+});
 
 var Splash = function Splash() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
