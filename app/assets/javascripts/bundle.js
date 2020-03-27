@@ -2153,10 +2153,16 @@ document.addEventListener('scroll', function () {
   var drawer = document.getElementById('nav1');
 
   if (drawer) {
-    if (window.scrollY >= 1630) {
-      var height = 1726 - window.scrollY;
+    if (window.scrollY < 1590) {
+      var height = 96;
       if (height >= 0) drawer.style.height = "".concat(height) + 'px';
-    } else {}
+    } else if (window.scrollY >= 1728) {
+      drawer.style.height = '0px';
+    } else if (window.scrollY >= 1590) {
+      var _height = 1726 - window.scrollY;
+
+      if (_height >= 0) drawer.style.height = "".concat(_height) + 'px';
+    }
   }
 });
 
