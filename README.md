@@ -1,24 +1,34 @@
-# README
+# Droppyboy 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Droppyboy Live Site](https://droppyboy.herokuapp.com/)
 
-Things you may want to cover:
+## Background and Overview
+Droppyboy is a clone of Dropbox.
 
-* Ruby version
+## Features Overview
 
-* System dependencies
+* User Auth/Account creation
+* File Upload
 
-* Configuration
+## Technologies and Technical Challenges
 
-* Database creation
+Backend
+* PostgreSQL
+* Node.js
 
-* Database initialization
+Frontend
+* React
+* Redux
+* Javascript
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Feature Highlights
 
-* Deployment instructions
+### File Upload
+* Users can upload files and store them using AWS S3 Storage Buckets
 
-* ...
+### Future Features
+
+* File Download
+
+* File Sharing
