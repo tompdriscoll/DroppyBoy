@@ -1,11 +1,17 @@
 .preview-container1{
-    position: absolute;
+    position: fixed;
     width: -webkit-fill-available;
     height: -webkit-fill-available;
-    top: 0;
+    top: 90px;
     left: 0;
+    z-index: 6;
 }
 
 .preview-container2{
+    background: cornflowerblue;
     height: 75%;
+}
+
+.prev-img{
+    height: 100%;
 }

@@ -5,7 +5,7 @@ const FilePreview = props => {
 return(
     <div className='preview-container1'>
         <div className='preview-container2'>
-            <img src={props.file.file}/>
+            <img className='prev-img' src={props.file.file}/>
         </div>
     </div>
     )

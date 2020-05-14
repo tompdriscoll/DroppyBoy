@@ -11,8 +11,8 @@ const FileIcon = props => {
     }
     let date = time.getMonth() + 1 + '/' + time.getDate() 
     let prev = null
-    prev = <FilePreview file={props.file}/>
     let previewOpen = function previewOpen(){
+        prev = <FilePreview file={props.file}/>
         console.log('poppycock')
     }
    return( 

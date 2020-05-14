@@ -287,11 +287,11 @@ var FileIcon = function FileIcon(props) {
 
   var date = time.getMonth() + 1 + '/' + time.getDate();
   var prev = null;
-  prev = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_file_preview__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    file: props.file
-  });
 
   var previewOpen = function previewOpen() {
+    prev = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_file_preview__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      file: props.file
+    });
     console.log('poppycock');
   };
 
@@ -369,6 +369,7 @@ var FilePreview = function FilePreview(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "preview-container2"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "prev-img",
     src: props.file.file
   })));
 };
