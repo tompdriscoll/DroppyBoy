@@ -1,5 +1,5 @@
 import React from 'react'
-
+import FilePreview from './file_preview'
 
 
 const RecentItem = props => {
@@ -10,8 +10,13 @@ const RecentItem = props => {
          time = new Date
     }
     let date = time.getMonth() + 1 + '/' + time.getDate() 
+    let prev = null
+    let previewOpen = function preview(){
+        prev = <FilePreview file={props.file['file']}/>
+    }
    return( 
    <div className='recent-item-wrapper'>
+       {prev}
         <div className='recent-item-contents'>
             <div className='recent-item-icon-wrapper'>
                 <img className='recent-item-icon' src={props.file['file']}></img>
@@ -40,8 +45,8 @@ const RecentItem = props => {
         </div>
         </div>
         <div className='recent-buttons-div'>
-            <div className='recent-button'>Preview</div>
-            <div className='recent-button' onClick={ e => (props.handleDelete(props.file))}>Delete</div>
+            <div className='recent-button' onClick={() => previewOpen}>Preview</div>
+            {/* <div className='recent-button' onClick={ e => (props.handleDelete(props.file))}>Delete</div> */}
             <svg className='recent-ellipsis'>
                     <g fill="none" fillRule="evenodd">
                         <g fill="#637282">

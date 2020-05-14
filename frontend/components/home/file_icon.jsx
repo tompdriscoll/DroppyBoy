@@ -1,6 +1,6 @@
 import React from 'react'
 
-
+import FilePreview from './file_preview'
 
 const FileIcon = props => {
     let time;
@@ -10,8 +10,14 @@ const FileIcon = props => {
          time = new Date
     }
     let date = time.getMonth() + 1 + '/' + time.getDate() 
+    let prev = null
+    prev = <FilePreview file={props.file}/>
+    let previewOpen = function previewOpen(){
+        console.log('poppycock')
+    }
    return( 
    <div className='files-icon-wrapper'>
+       {prev}
         <div className='files-icon-contents'>
             <div className='files-icon-icon-wrapper'>
                 <img className='files-icon-icon' src={props.file['file']}></img>
@@ -20,7 +26,7 @@ const FileIcon = props => {
 
             <div className='file-icon-title'>
                 <p className='files-filename'>{props.file['name']}</p>
-                <button className="star" >
+                {/* <button className="star" >
                     <svg width="32" 
                     height="32" 
                     viewBox="0 0 32 32">
@@ -31,7 +37,7 @@ const FileIcon = props => {
                         3.847 1.104 5.558L16 20.949l-4.944 2.768z" className="mc-icon--mf">
                         </path>
                     </svg>
-                </button>
+                </button> */}
             </div>
             <div className='added-updated-div'>
                 <p className='added-updated'>Added </p>
@@ -39,9 +45,9 @@ const FileIcon = props => {
             </div>
         </div>
         </div>
-        <div className='recent-buttons-div'>
-            <div className='recent-button'>Preview</div>
-            <div className='recent-button' onClick={ e => (props.handleDelete(props.file))}>Delete</div>
+        <div className='files-buttons-div'>
+            <div className='recent-button' onClick={() => previewOpen()}>Preview</div>
+            {/* <div className='recent-button' onClick={ e => (props.handleDelete(props.file))}>Delete</div> */}
             <svg className='files-ellipsis'>
                     <g fill="none" fillRule="evenodd">
                         <g fill="#637282">

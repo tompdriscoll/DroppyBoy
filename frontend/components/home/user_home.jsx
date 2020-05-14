@@ -40,6 +40,7 @@ class UserHome extends React.Component {
     
 
     render(){
+    
         let MainContent;
         console.log(this.state.main_content)
 
