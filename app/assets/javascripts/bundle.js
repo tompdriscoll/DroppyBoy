@@ -836,6 +836,7 @@ var UserHome = /*#__PURE__*/function (_React$Component) {
     _this.handleUpload = _this.handleUpload.bind(_assertThisInitialized(_this));
     _this.handleDelete = _this.handleDelete.bind(_assertThisInitialized(_this));
     _this.handleMainChange = _this.handleMainChange.bind(_assertThisInitialized(_this));
+    _this.deleted = [];
     return _this;
   }
 
@@ -851,9 +852,11 @@ var UserHome = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handleDelete",
     value: function handleDelete(file) {
-      var id = file.id;
+      var _this2 = this;
+
+      this.deleted.push(file.id);
       var toDelete = this.props.currentUser.files.filter(function (file) {
-        return file.id !== id;
+        return !_this2.deleted.includes(file.id);
       });
       this.setState({
         files: toDelete
@@ -875,6 +878,8 @@ var UserHome = /*#__PURE__*/function (_React$Component) {
           console.log(response.responseJSON);
         });
       }
+
+      this.props.history.push('/h');
     }
   }, {
     key: "handleMainChange",

@@ -13,11 +13,13 @@ class UserHome extends React.Component {
         this.state = {
             files: props.currentUser.files,
             uploaded: '',
-            main_content: 'Home'
+            main_content: 'Home',
+            
         }
         this.handleUpload = this.handleUpload.bind(this)
         this.handleDelete = this.handleDelete.bind(this)
         this.handleMainChange = this.handleMainChange.bind(this)
+        this.deleted = []
     }
 
     handleUpload(file){
@@ -28,29 +30,29 @@ class UserHome extends React.Component {
 
     
     handleDelete(file){
-        let id = file.id
-        let toDelete = this.props.currentUser.files.filter(file => file.id !== id)
+        this.deleted.push(file.id)
+        let toDelete = this.props.currentUser.files.filter(file => (!this.deleted.includes(file.id)))
         this.setState({files: toDelete})
         console.log(toDelete)
 
         const formData = new FormData();
-    if (file) {
+        if (file) {
         formData.append(`user[delete_id]`, `${file.id}`) 
-        
-    $.ajax({
-      url: '/api/user',
-      method: 'PUT',
-      data: formData,
-      contentType: false,
-      processData: false
-    }).then(
-      (response) => console.log(response.message),
-      (response) => {
-        console.log(response.responseJSON)
-      }
-      
-    );
-    }
+            $.ajax({
+            url: '/api/user',
+            method: 'PUT',
+            data: formData,
+            contentType: false,
+            processData: false
+            }).then(
+            (response) => console.log(response.message),
+            (response) => {
+                console.log(response.responseJSON)
+            }
+            
+            );
+        }
+        this.props.history.push('/h')
     }
 
     handleMainChange(type){
@@ -59,7 +61,6 @@ class UserHome extends React.Component {
     
 
     render(){
-    
         let MainContent;
         console.log(this.state.main_content)
 
