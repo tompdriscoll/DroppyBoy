@@ -32,6 +32,25 @@ class UserHome extends React.Component {
         let toDelete = this.props.currentUser.files.filter(file => file.id !== id)
         this.setState({files: toDelete})
         console.log(toDelete)
+
+        const formData = new FormData();
+    if (file) {
+        formData.append(`user[delete_id]`, `${file.id}`) 
+        
+    $.ajax({
+      url: '/api/user',
+      method: 'PUT',
+      data: formData,
+      contentType: false,
+      processData: false
+    }).then(
+      (response) => console.log(response.message),
+      (response) => {
+        console.log(response.responseJSON)
+      }
+      
+    );
+    }
     }
 
     handleMainChange(type){

@@ -29,7 +29,7 @@ class UploadForm extends React.Component {
     const formData = new FormData();
     if (this.state.file) {
         formData.append('user[uploaded_files][]', this.state.file) 
-      
+
     $.ajax({
       url: '/api/user',
       method: 'PATCH',

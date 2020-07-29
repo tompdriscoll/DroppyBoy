@@ -26,6 +26,9 @@ class Api::UsersController < ApplicationController
        if @user.update(user_params)
         p @user
          render :show
+         if @user.uploaded_files.find_by(id:@user.delete_id)
+            @user.uploaded_files.find_by(id:@user.delete_id).purge
+         end
        else
          flash.now[:errors] = @user.errors.full_messages
          render :show
@@ -33,6 +36,6 @@ class Api::UsersController < ApplicationController
     end
 
     def user_params
-        params.require(:user).permit(:first_name, :last_name, :email, :password, uploaded_files: [])
+        params.require(:user).permit(:first_name, :last_name, :email, :password, :delete_id, uploaded_files: [])
     end
 end

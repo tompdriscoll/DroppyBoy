@@ -1,4 +1,4 @@
-json.extract! user, :id, :first_name, :last_name, :email, :uploaded_files
+json.extract! user, :id, :first_name, :last_name, :email, :uploaded_files, :delete_id
 json.files user.uploaded_files.map { |file| {
     id: file.id,
     file: url_for(file), 

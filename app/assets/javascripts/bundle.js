@@ -713,7 +713,12 @@ var RecentItem = function RecentItem(props) {
     onClick: function onClick() {
       return previewOpen;
     }
-  }, "Preview"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+  }, "Preview"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "recent-button",
+    onClick: function onClick(e) {
+      return props.handleDelete(props.file);
+    }
+  }, "Delete"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     className: "recent-ellipsis"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     fill: "none",
@@ -854,6 +859,22 @@ var UserHome = /*#__PURE__*/function (_React$Component) {
         files: toDelete
       });
       console.log(toDelete);
+      var formData = new FormData();
+
+      if (file) {
+        formData.append("user[delete_id]", "".concat(file.id));
+        $.ajax({
+          url: '/api/user',
+          method: 'PUT',
+          data: formData,
+          contentType: false,
+          processData: false
+        }).then(function (response) {
+          return console.log(response.message);
+        }, function (response) {
+          console.log(response.responseJSON);
+        });
+      }
     }
   }, {
     key: "handleMainChange",
