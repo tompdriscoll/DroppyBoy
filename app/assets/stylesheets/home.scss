@@ -410,7 +410,8 @@
 .recent-ellipsis{
     height: 32px;
     width: 32px;
-    
+    border: 1px solid white;
+    border-radius: 10px;
 }
 
 .recent-ellipsis:hover{

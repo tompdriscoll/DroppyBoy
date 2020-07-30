@@ -845,6 +845,7 @@ var UserHome = /*#__PURE__*/function (_React$Component) {
     key: "handleUpload",
     value: function handleUpload(file) {
       var newFileArray = this.props.currentUser.files;
+      debugger;
       newFileArray.push({
         file: file
       });
@@ -1115,9 +1116,22 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this$props = this.props,
           errors = _this$props.errors,
-          formType = _this$props.formType; // const errorsLi = errors.session.map(error => {
-      //   return <li>{error}</li>
-      // })
+          formType = _this$props.formType;
+      var errorsLi = [];
+
+      if (errors.session) {
+        if (errors.session.message) {
+          errorsLi = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+            className: "error-li"
+          }, errors.session.message);
+        } else {
+          errorsLi = errors.session.map(function (error) {
+            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+              className: "error-li"
+            }, error);
+          });
+        }
+      }
 
       if (this.formType === "Sign up") {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
@@ -1152,6 +1166,10 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
           placeholder: "Password",
           onChange: this.update('password')
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "error-box"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+          className: "error-ul"
+        }, errorsLi)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "session-form-element",
           id: "recaptcha"
         }, "This page is protected by reCAPTCHA, and subject to the Google ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1199,6 +1217,10 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
           placeholder: "Password",
           onChange: this.update('password')
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "error-box"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+          className: "error-ul"
+        }, errorsLi)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "session-form-element",
           id: "recaptcha"
         }, "This page is protected by reCAPTCHA, and subject to the Google ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {

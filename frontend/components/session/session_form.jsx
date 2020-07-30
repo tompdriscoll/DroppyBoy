@@ -51,9 +51,16 @@ class SessionForm extends React.Component {
 
   render() {
     let { errors, formType } = this.props;
-    // const errorsLi = errors.session.map(error => {
-    //   return <li>{error}</li>
-    // })
+    let errorsLi = []
+    if (errors.session){
+      if (errors.session.message){
+        errorsLi = <li className='error-li'>{errors.session.message}</li>
+      } else{ errorsLi = errors.session.map(error => {
+          return <li className='error-li'>{error}</li>
+      })}
+      
+    }
+    
     if (this.formType === "Sign up") {
       return (
         <form id='session-form' onSubmit={this.handleSubmit}>
@@ -63,6 +70,12 @@ class SessionForm extends React.Component {
           <input className='session-form-element' type="text" id="last_name" value={this.state.last_name} placeholder='Last Name' onChange={this.update('last_name')} />
           <input className='session-form-element' type="text" id="email" value={this.state.email} placeholder="Email" onChange={this.update('email')} />
           <input className='session-form-element' type="password" id="password" value={this.state.password} placeholder="Password" onChange={this.update('password')} />
+
+          <div className='error-box'>
+            <ul className='error-ul'>
+              {errorsLi}
+            </ul>
+          </div>
 
           <div className="session-form-element" id='recaptcha'>This page is protected by reCAPTCHA, and subject to the Google <a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a> 
             and 
@@ -88,6 +101,13 @@ class SessionForm extends React.Component {
         <form id='session-form' onSubmit={this.handleSubmit}>
           <input className='session-form-element' type="text" id="email" value={this.state.email} placeholder="Email" onChange={this.update('email')} />
           <input className='session-form-element' type="password" id="password" value={this.state.password} placeholder="Password" onChange={this.update('password')} />
+
+
+          <div className='error-box'>
+            <ul className='error-ul'>
+              {errorsLi}
+            </ul>
+          </div>
 
           <div className="session-form-element" id='recaptcha'>This page is protected by reCAPTCHA, and subject to the Google <a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a> 
             and 

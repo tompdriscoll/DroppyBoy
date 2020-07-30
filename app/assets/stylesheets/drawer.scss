@@ -84,7 +84,7 @@
     padding-top: 20px;
     display: flex;
     flex-direction: column;
-    padding-top: 150px;
+    padding-top: 7vh;
     padding-left: calc(1440px * (1 / 24));
     padding-right: calc(1440px * (1 / 24));
 }
@@ -136,6 +136,24 @@
 
 .session-form-element:focus {
     border: 1px solid black;
+}
+
+.error-box{
+    background: #ffe3e3;
+    border-radius: 5px;
+
+}
+
+.error-ul{
+    list-style: none;
+    margin: 0 8px;
+}
+
+.error-li{
+    font-size: 12px;
+    font-family: Atlas Grotesk Web, Open Sans, sans-serif;
+    font-weight: 400;
+    color: #921515;
 }
 
 #recaptcha {
