@@ -31,23 +31,26 @@ document.addEventListener( 'scroll', () => {
       drawer.classList.remove('closed')
     }    
   }
-})
-document.addEventListener( 'scroll', () => {
-  var drawer = document.getElementById('nav1');  
-  if (drawer) {
-    if (window.scrollY < 1590) {
+
+  var nav1 = document.getElementById('nav1');  
+  let offsetTop = (document.getElementById('grid3').offsetTop)
+
+  if (nav1) {
+    if (window.scrollY <= offsetTop) {
       let height = 96
-      if (height >= 0) drawer.style.height = `${height}` + 'px'
+      if (height >= 0) nav1.style.height = `${height}` + 'px'
     }
-    else if (window.scrollY >= 1728){
-      drawer.style.height = '0px'
+    else if (window.scrollY >= (offsetTop)){
+      nav1.style.height = '0px'
     }
-    else if (window.scrollY >= 1590) {
-      let height = (1726 - window.scrollY)
-      if (height >= 0) drawer.style.height = `${height}` + 'px'
+    if (window.scrollY >= (offsetTop - 96)){
+      let height = ((offsetTop) - window.scrollY)
+      nav1.style.height =  `${height}` + 'px'
     }
+
   }
 })
+
 
 
 const Splash = () => (

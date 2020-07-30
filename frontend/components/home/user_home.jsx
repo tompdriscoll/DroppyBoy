@@ -24,8 +24,9 @@ class UserHome extends React.Component {
 
     handleUpload(file){
         let newFileArray = this.props.currentUser.files
-        newFileArray.push(file)
+        newFileArray.push({file: file})
         this.setState({files: this.props.currentUser.files})
+        
     }
 
     

@@ -556,6 +556,7 @@ __webpack_require__.r(__webpack_exports__);
 var HomeMain = function HomeMain(props) {
   var recentItems = props.files.map(function (file) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      key: file.id,
       handleDelete: props.handleDelete,
       file: file
     });
@@ -844,7 +845,9 @@ var UserHome = /*#__PURE__*/function (_React$Component) {
     key: "handleUpload",
     value: function handleUpload(file) {
       var newFileArray = this.props.currentUser.files;
-      newFileArray.push(file);
+      newFileArray.push({
+        file: file
+      });
       this.setState({
         files: this.props.currentUser.files
       });
@@ -2017,25 +2020,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _droppyboylogo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./droppyboylogo */ "./frontend/components/splash/nav2/droppyboylogo.jsx");
-/* harmony import */ var _nav_bar2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nav_bar2 */ "./frontend/components/splash/nav2/nav_bar2.jsx");
+/* harmony import */ var _nav_bar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nav_bar */ "./frontend/components/splash/nav2/nav_bar.jsx");
 
 
 
 
-var Nav2 = function Nav2() {
+var Nav = function Nav() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash-nav"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar2__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Nav2);
+/* harmony default export */ __webpack_exports__["default"] = (Nav);
 
 /***/ }),
 
-/***/ "./frontend/components/splash/nav2/nav_bar2.jsx":
-/*!******************************************************!*\
-  !*** ./frontend/components/splash/nav2/nav_bar2.jsx ***!
-  \******************************************************/
+/***/ "./frontend/components/splash/nav2/nav_bar.jsx":
+/*!*****************************************************!*\
+  !*** ./frontend/components/splash/nav2/nav_bar.jsx ***!
+  \*****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2044,7 +2047,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _droppyboylogo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./droppyboylogo */ "./frontend/components/splash/nav2/droppyboylogo.jsx");
-/* harmony import */ var _nav_bar_nav2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nav_bar_nav2 */ "./frontend/components/splash/nav2/nav_bar_nav2.jsx");
+/* harmony import */ var _nav_bar_nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nav_bar_nav */ "./frontend/components/splash/nav2/nav_bar_nav.jsx");
 
 
 
@@ -2052,17 +2055,17 @@ __webpack_require__.r(__webpack_exports__);
 var NavBar = function NavBar() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
     className: "splash-nav-nav"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_droppyboylogo__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar_nav2__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_droppyboylogo__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar_nav__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (NavBar);
 
 /***/ }),
 
-/***/ "./frontend/components/splash/nav2/nav_bar_nav2.jsx":
-/*!**********************************************************!*\
-  !*** ./frontend/components/splash/nav2/nav_bar_nav2.jsx ***!
-  \**********************************************************/
+/***/ "./frontend/components/splash/nav2/nav_bar_nav.jsx":
+/*!*********************************************************!*\
+  !*** ./frontend/components/splash/nav2/nav_bar_nav.jsx ***!
+  \*********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2240,20 +2243,22 @@ document.addEventListener('scroll', function () {
       drawer.classList.remove('closed');
     }
   }
-});
-document.addEventListener('scroll', function () {
-  var drawer = document.getElementById('nav1');
 
-  if (drawer) {
-    if (window.scrollY < 1590) {
+  var nav1 = document.getElementById('nav1');
+  var offsetTop = document.getElementById('grid3').offsetTop;
+
+  if (nav1) {
+    if (window.scrollY <= offsetTop) {
       var height = 96;
-      if (height >= 0) drawer.style.height = "".concat(height) + 'px';
-    } else if (window.scrollY >= 1728) {
-      drawer.style.height = '0px';
-    } else if (window.scrollY >= 1590) {
-      var _height = 1726 - window.scrollY;
+      if (height >= 0) nav1.style.height = "".concat(height) + 'px';
+    } else if (window.scrollY >= offsetTop) {
+      nav1.style.height = '0px';
+    }
 
-      if (_height >= 0) drawer.style.height = "".concat(_height) + 'px';
+    if (window.scrollY >= offsetTop - 96) {
+      var _height = offsetTop - window.scrollY;
+
+      nav1.style.height = "".concat(_height) + 'px';
     }
   }
 });
@@ -2338,6 +2343,7 @@ var UploadForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handleFile",
     value: function handleFile(e) {
+      console.log('handleF');
       e.preventDefault();
       var file = e.currentTarget.files[0];
       this.setState({
@@ -2349,6 +2355,7 @@ var UploadForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
+      console.log('hello');
       e.preventDefault();
       var formData = new FormData();
 
@@ -2373,23 +2380,22 @@ var UploadForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log(this.state);
       var preview = this.state.url ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: this.state.url
       }) : null;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         id: "upload-form",
         onSubmit: this.handleSubmit.bind(this)
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "create-new-file"
       }, "Upload File", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         id: "file-select",
         type: "file",
         onChange: this.handleFile.bind(this)
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        id: "file-submit",
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        id: "submit",
         type: "submit"
-      })));
+      }, "Submit"));
     }
   }]);
 

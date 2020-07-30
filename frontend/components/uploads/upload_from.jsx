@@ -16,14 +16,14 @@ class UploadForm extends React.Component {
   }
 
   handleFile(e){
-    
+    console.log('handleF')
     e.preventDefault();
     const file = e.currentTarget.files[0];
     this.setState({name: file.name, file: file, time: file.lastModified})
-    
   }
 
   handleSubmit(e) {
+    console.log('hello')
     e.preventDefault();
     
     const formData = new FormData();
@@ -50,15 +50,16 @@ class UploadForm extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     const preview = this.state.url ? <img src={this.state.url} /> : null;
     return (
       <form id='upload-form' onSubmit={this.handleSubmit.bind(this)}>   
-        <button id='create-new-file'>Upload File
+        <div id='create-new-file'>Upload File
         <input id='file-select' type="file"
-          onChange={this.handleFile.bind(this)}/>
-          <input id='file-submit' type='submit'/>
-          </button>
+          onChange={
+            this.handleFile.bind(this)
+           }/>
+          </div>
+          <button id='submit' type='submit'>Submit</button>
       </form>
     );
   }

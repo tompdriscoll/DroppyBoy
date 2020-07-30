@@ -1,9 +1,9 @@
 import React from 'react';
 
 import DroppyboyLogo from './droppyboylogo'
-import NavBar from './nav_bar2'
+import NavBar from './nav_bar'
 
-const Nav2 = () => (
+const Nav = () => (
    
         
     <div className="splash-nav">
@@ -12,4 +12,4 @@ const Nav2 = () => (
 
 )
 
-export default Nav2;
+export default Nav;

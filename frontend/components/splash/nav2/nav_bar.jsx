@@ -1,7 +1,7 @@
 import React from 'react';
 
 import DroppyboyLogo from './droppyboylogo'
-import NavBarNav from './nav_bar_nav2'
+import NavBarNav from './nav_bar_nav'
 
 const NavBar = () => (
    

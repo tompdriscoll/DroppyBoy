@@ -236,6 +236,19 @@
     outline: none;
     margin: 0;
 }
+::-webkit-file-upload-button{
+    display: none;
+}
+#create-new-file:active{
+    background: salmon;
+}
+
+#create-new-file:focus{
+    background: rgb(150, 255, 164);
+}
+
+
+
 
 
 #home-sidebar {

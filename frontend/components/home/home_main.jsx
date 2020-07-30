@@ -4,14 +4,12 @@ import SuggestedListItem from './suggested_list_item'
 
 import UploadForm from '../uploads/upload_from'
 const HomeMain = props => {  
-     
-    const recentItems = props.files.map(file => (   
-         
-        <RecentItem  handleDelete={props.handleDelete} file={file} />
+    
+    const recentItems = props.files.map(file => (          
+        <RecentItem  key={file.id} handleDelete={props.handleDelete} file={file} />
     )).reverse()
 
    
- 
     return (
     <div id='home-main'>
         <div id='suggested' className='section'>
