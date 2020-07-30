@@ -22,6 +22,15 @@
     margin-left: 10px;
 }
 
+#logo-homemade-black {
+    background: url(./droppy-boy-black.gif);
+    background-size: cover;
+    min-width: 167px;
+    height: auto;
+    image-rendering: auto;
+    margin-left: 10px;
+}
+
 .splash-nav-nav {
   
     display: inherit;
@@ -34,7 +43,7 @@
 
 
 .splash-nav-nav-links a {
-    color: white;
+    
     text-decoration: none;
     margin: 10px;
     font-weight: 400;
@@ -50,7 +59,7 @@
     font-size: 16px;;
     font-weight: 400;
     font-family: SharpGrotesk;
-   
+    color: inherit;
 }
 
 .splash-nav-nav-buttons button:hover{
@@ -355,14 +364,6 @@ h6 {
     font-size: 16px;
 }
 
-#nav1 {
-    display: flex;
-    background: linear-gradient(90deg, #61082b 66.666%, #b4d0e7 33.334%);
-    position: fixed;
-    width: 100%;
-    justify-content: center;
-    z-index: 4
-}
 
 .splash-nav {
     display: inherit;
@@ -381,14 +382,40 @@ h6 {
     height:96px;
 }
 
-#nav2 {
-    display: flex;
-    background: #ffae9f;
+.nav{
     position: fixed;
     width: 100%;
-    height: 90px;
-    padding: 0;
-    color: black;
     justify-content: center;
+    display: flex;
+    overflow: hidden;
 }
 
+#nav1 {
+    background: linear-gradient(90deg, #61082b 66.666%, #b4d0e7 33.334%);    
+    z-index: 4
+}
+
+
+#nav2 {
+    background: #ffae9f;
+    height: 96px;
+    padding: 0;
+    color: navy;
+    z-index: 3;
+}
+
+#nav3{
+    background: #005744;
+    height: 96px;
+    padding: 0;
+    color: #ffd830;
+    z-index: 2;
+}
+
+
+#nav4{
+    background: white;
+    height: 96px;
+    padding: 0;
+    color: black;
+}
