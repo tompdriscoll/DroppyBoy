@@ -2849,7 +2849,6 @@ var UploadForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handleFile",
     value: function handleFile(e) {
-      console.log('handleF');
       e.preventDefault();
       var file = e.currentTarget.files[0];
       this.setState({
@@ -2878,10 +2877,9 @@ var UploadForm = /*#__PURE__*/function (_React$Component) {
         }, function (response) {
           console.log(response.responseJSON);
         });
+        this.props.history.push('/h');
+        this.props.handleUpload(this.state.file);
       }
-
-      this.props.history.push('/h');
-      this.props.handleUpload(this.state.file);
     }
   }, {
     key: "render",

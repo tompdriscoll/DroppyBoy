@@ -16,7 +16,6 @@ class UploadForm extends React.Component {
   }
 
   handleFile(e){
-    console.log('handleF')
     e.preventDefault();
     const file = e.currentTarget.files[0];
     this.setState({name: file.name, file: file, time: file.lastModified})
@@ -43,9 +42,9 @@ class UploadForm extends React.Component {
       }
       
     );
-    }
     this.props.history.push('/h');
     this.props.handleUpload(this.state.file)
+    }
    
   }
 
