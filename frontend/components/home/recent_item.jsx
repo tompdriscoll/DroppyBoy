@@ -3,6 +3,7 @@ import FilePreview from './file_preview'
 
 
 const RecentItem = props => {
+    let image;
     let time;
     if (props.file['time']) {
          time = new Date(props.file['time'])
@@ -14,12 +15,15 @@ const RecentItem = props => {
     let previewOpen = function preview(){
         prev = <FilePreview file={props.file['file']}/>
     }
+    if (props.file.type.includes('audio')){
+        image = <div id='music-icon'></div>
+    }
    return( 
    <div className='recent-item-wrapper'>
        {prev}
         <div className='recent-item-contents'>
             <div className='recent-item-icon-wrapper'>
-                <img className='recent-item-icon' src={props.file['file']}></img>
+                {image}
             </div>
         <div className='home-title-date'>
 

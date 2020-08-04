@@ -556,7 +556,7 @@ __webpack_require__.r(__webpack_exports__);
 var HomeMain = function HomeMain(props) {
   var recentItems = props.files.map(function (file) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      key: file.id,
+      id: file.id,
       handleDelete: props.handleDelete,
       file: file
     });
@@ -657,6 +657,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var RecentItem = function RecentItem(props) {
+  var image;
   var time;
 
   if (props.file['time']) {
@@ -674,16 +675,19 @@ var RecentItem = function RecentItem(props) {
     });
   };
 
+  if (props.file.type.includes('audio')) {
+    image = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "music-icon"
+    });
+  }
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "recent-item-wrapper"
   }, prev, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "recent-item-contents"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "recent-item-icon-wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "recent-item-icon",
-    src: props.file['file']
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, image), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "home-title-date"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "home-item-title"
