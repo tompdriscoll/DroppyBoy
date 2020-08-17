@@ -389,6 +389,8 @@ var FilePreview = function FilePreview(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _notifications__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./notifications */ "./frontend/components/home/notifications.jsx");
+
 
 
 var HomeMainHeader = function HomeMainHeader(props) {
@@ -407,13 +409,7 @@ var HomeMainHeader = function HomeMainHeader(props) {
     maxLength: "200",
     placeholder: "Search your content",
     type: "text"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-    id: "notif-bell"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "M7 21c0-.557.195-.778.816-1.312.106-.091.595-.5.49-.412.208-.174.366-.311.518-.45C9.607 18.107 10 17.506 10 17v-4.123l.03-.12c.154-.618.515-1.484 1.17-2.357C12.316 8.913 13.913 8 16 8c2.087 0 3.684.913 4.8 2.4.655.873 1.016 1.74 1.17 2.357l.03.12V17c0 .469.338.938 1.14 1.607.127.105.694.563.54.439.231.187.39.322.538.461.498.471.782.91.782 1.493 0 1.552-.448 2-2 2H9c-.767 0-1.354-.229-1.707-.758C7.037 21.858 7 21.581 7 21zm16.031.166A.347.347 0 0 1 23 21v.124a.49.49 0 0 1 .031.042zm-.186-.205a7.537 7.537 0 0 0-.424-.362c.168.137-.42-.339-.561-.456C20.637 19.124 20 18.24 20 17v-3.86a5.4 5.4 0 0 0-.8-1.54c-.76-1.013-1.787-1.6-3.2-1.6-1.413 0-2.44.587-3.2 1.6a5.4 5.4 0 0 0-.8 1.54V17c0 1.222-.664 2.236-1.824 3.3-.178.162-.356.317-.584.508l-.23.192h13.523a2.894 2.894 0 0 0-.04-.039zM13 23c0 .391.086.908.356 1.447C13.832 25.4 14.732 26 16 26c1.268 0 2.168-.6 2.644-1.553.27-.539.356-1.056.356-1.447h-2c0 .109-.039.342-.144.553-.15.297-.374.447-.856.447s-.707-.15-.856-.447A1.403 1.403 0 0 1 15 23h-2z"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "M17 9V7a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0z"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_notifications__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "pro-pic"
   }))));
 };
@@ -638,6 +634,37 @@ var HomeNav = function HomeNav(props) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (HomeNav);
+
+/***/ }),
+
+/***/ "./frontend/components/home/notifications.jsx":
+/*!****************************************************!*\
+  !*** ./frontend/components/home/notifications.jsx ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function Notifications(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "notif-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    id: "notif-bell"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M7 21c0-.557.195-.778.816-1.312.106-.091.595-.5.49-.412.208-.174.366-.311.518-.45C9.607 18.107 10 17.506 10 17v-4.123l.03-.12c.154-.618.515-1.484 1.17-2.357C12.316 8.913 13.913 8 16 8c2.087 0 3.684.913 4.8 2.4.655.873 1.016 1.74 1.17 2.357l.03.12V17c0 .469.338.938 1.14 1.607.127.105.694.563.54.439.231.187.39.322.538.461.498.471.782.91.782 1.493 0 1.552-.448 2-2 2H9c-.767 0-1.354-.229-1.707-.758C7.037 21.858 7 21.581 7 21zm16.031.166A.347.347 0 0 1 23 21v.124a.49.49 0 0 1 .031.042zm-.186-.205a7.537 7.537 0 0 0-.424-.362c.168.137-.42-.339-.561-.456C20.637 19.124 20 18.24 20 17v-3.86a5.4 5.4 0 0 0-.8-1.54c-.76-1.013-1.787-1.6-3.2-1.6-1.413 0-2.44.587-3.2 1.6a5.4 5.4 0 0 0-.8 1.54V17c0 1.222-.664 2.236-1.824 3.3-.178.162-.356.317-.584.508l-.23.192h13.523a2.894 2.894 0 0 0-.04-.039zM13 23c0 .391.086.908.356 1.447C13.832 25.4 14.732 26 16 26c1.268 0 2.168-.6 2.644-1.553.27-.539.356-1.056.356-1.447h-2c0 .109-.039.342-.144.553-.15.297-.374.447-.856.447s-.707-.15-.856-.447A1.403 1.403 0 0 1 15 23h-2z"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M17 9V7a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0z"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    id: "notif-list"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Notifications"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Welcome to Droppyboy!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Notifications go here")));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Notifications);
 
 /***/ }),
 

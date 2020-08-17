@@ -136,6 +136,54 @@
     cursor: pointer;
 }
 
+
+#notif-container{
+    
+    position: relative;
+}
+
+#notif-container:hover #notif-list{
+    display: block;
+}
+
+
+
+#notif-list{
+    width: 500px;
+    display: none;
+    list-style: none;
+    position: absolute;
+    background: white;
+    padding: 12px;
+    border: .5px solid #e6e8eb;
+    border-radius: 10px;
+    right: 30%;
+}
+
+#notif-list li:first-of-type{
+    border-top: none;
+    font-family: Atlas Grotesk,AtlasGrotesk,sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+#notif-list li:first-of-type:hover{
+    background:initial;
+}
+
+#notif-list li{
+    padding: 8px 0;
+    border-top: .5px solid #e6e8eb;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: Atlas Grotesk,AtlasGrotesk,sans-serif;
+}
+
+#notif-list li:hover{
+    background-color: lightblue;
+}
+
 #suggested{
     display: flex;
     flex-direction: column;
