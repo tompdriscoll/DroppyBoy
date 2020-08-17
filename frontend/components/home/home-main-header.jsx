@@ -15,8 +15,13 @@ const HomeMainHeader = props => (
                             />
                     </form>
                     <Notifications/>
-                    
-                    <div id='pro-pic'></div>
+                    <div id='propic-container'>
+                        <div id='pro-pic'>
+                        </div>
+                        <div id='logout-button'>
+                            <button onClick={props.logout}>Logout</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>

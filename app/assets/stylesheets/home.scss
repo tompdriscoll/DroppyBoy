@@ -51,10 +51,7 @@
     
 }
 
-#logout-button {
-    opacity: 0;
-    position: fixed;
-}
+
 
 #home-main-container {
     width: 100%;
@@ -86,6 +83,14 @@
     margin: 5px 20px 10px 10px;
 }
 
+#propic-container{
+    position: relative;
+}
+
+#propic-container:hover #logout-button{
+    display: block;
+}
+
 #pro-pic{
     height: 32px;
     width: 32px;
@@ -93,6 +98,29 @@
     border-radius: 20px;
     margin-left: 15px;
 }
+
+#logout-button {
+    display: none;
+    position: absolute;
+    padding: 6px 12px;
+    border: .5px solid #e6e8eb;
+    border-radius: 5px;
+    background: white;
+    right: 25%;
+}
+
+#logout-button:hover{
+    background: rgb(177, 201, 228);
+}
+
+#logout-button button{
+    border: none;
+    background: inherit;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: Atlas Grotesk,AtlasGrotesk,sans-serif;
+}
+
 #header-search{
     border-radius: 25px;
     border: 1px solid #c1c7cd;

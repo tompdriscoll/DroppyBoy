@@ -24,10 +24,8 @@ class UserHome extends React.Component {
 
     handleUpload(file){
         let newFileArray = this.props.currentUser.files
-        debugger
         newFileArray.push({file: file})
-        this.setState({files: this.props.currentUser.files})
-        
+        this.setState({files: this.props.currentUser.files})   
     }
 
     
@@ -73,14 +71,11 @@ class UserHome extends React.Component {
         
         <HomeNav handleMainChange={this.handleMainChange}/>
         <div id='home-main-container'>
-            <HomeMainHeader name={this.state.main_content}/>
+            <HomeMainHeader name={this.state.main_content} logout={this.props.logout}/>
             <div id='main-content'>    
                 {MainContent}
                 <HomeSideBar handleUpload={this.handleUpload}/>
             </div>
-        </div>
-        <div id='logout-button'>
-            <button onClick={this.props.logout}>Logout</button>
         </div>
     </div>)
 

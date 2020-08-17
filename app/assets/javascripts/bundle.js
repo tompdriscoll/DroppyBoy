@@ -410,8 +410,14 @@ var HomeMainHeader = function HomeMainHeader(props) {
     placeholder: "Search your content",
     type: "text"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_notifications__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "propic-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "pro-pic"
-  }))));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "logout-button"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: props.logout
+  }, "Logout"))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (HomeMainHeader);
@@ -876,7 +882,6 @@ var UserHome = /*#__PURE__*/function (_React$Component) {
     key: "handleUpload",
     value: function handleUpload(file) {
       var newFileArray = this.props.currentUser.files;
-      debugger;
       newFileArray.push({
         file: file
       });
@@ -942,16 +947,13 @@ var UserHome = /*#__PURE__*/function (_React$Component) {
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "home-main-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_main_header__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        name: this.state.main_content
+        name: this.state.main_content,
+        logout: this.props.logout
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "main-content"
       }, MainContent, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_sidebar__WEBPACK_IMPORTED_MODULE_5__["default"], {
         handleUpload: this.handleUpload
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "logout-button"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: this.props.logout
-      }, "Logout")));
+      }))));
     }
   }]);
 
