@@ -24,7 +24,7 @@ class UserHome extends React.Component {
 
     handleUpload(file){
         let reader = new FileReader()
-        console.log(reader.readAsDataURL(file))
+        
         let newFileArray = this.props.currentUser.files
         newFileArray.push({file: file})
         this.setState({files: this.props.currentUser.files})   
@@ -52,7 +52,7 @@ class UserHome extends React.Component {
         this.deleted.push(file.id)
         let toDelete = this.props.currentUser.files.filter(file => (!this.deleted.includes(file.id)))
         this.setState({files: toDelete})
-        console.log(toDelete)
+       
 
         const formData = new FormData();
         if (file) {

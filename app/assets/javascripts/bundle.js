@@ -919,7 +919,6 @@ var UserHome = /*#__PURE__*/function (_React$Component) {
     key: "handleUpload",
     value: function handleUpload(file) {
       var reader = new FileReader();
-      console.log(reader.readAsDataURL(file));
       var newFileArray = this.props.currentUser.files;
       newFileArray.push({
         file: file
@@ -956,7 +955,6 @@ var UserHome = /*#__PURE__*/function (_React$Component) {
       this.setState({
         files: toDelete
       });
-      console.log(toDelete);
       var formData = new FormData();
 
       if (file) {
@@ -2951,7 +2949,6 @@ var UploadForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
-      console.log('hello');
       e.preventDefault();
       var formData = new FormData();
 

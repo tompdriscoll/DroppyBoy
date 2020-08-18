@@ -22,7 +22,7 @@ class UploadForm extends React.Component {
   }
 
   handleSubmit(e) {
-    console.log('hello')
+    
     e.preventDefault();
     
     const formData = new FormData();

@@ -11,7 +11,7 @@ export const receiveCurrentUser = currentUser => {
 
 export const requestUpdateUser = user => dispatch => (
     APIUtil.editUser(user).then(user => {
-        console.log(user)
+        
         dispatch(receiveCurrentUser(user))
     })
 )
