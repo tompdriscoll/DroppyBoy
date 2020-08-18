@@ -8,6 +8,7 @@ const msp = ({ session, entities: { users, uploads } }) => {
   
     return {
       currentUser: users[session.id]
+
     };
   };
 

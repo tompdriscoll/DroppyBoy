@@ -85,6 +85,7 @@
 
 #propic-container{
     position: relative;
+    margin-left: 15px;
 }
 
 #propic-container:hover #logout-button{
@@ -96,7 +97,7 @@
     width: 32px;
     background: darkgray;
     border-radius: 20px;
-    margin-left: 15px;
+    
 }
 
 #logout-button {
@@ -529,6 +530,11 @@
 
 }
 
+.files-item-icon{
+    max-height: 200px;
+    max-width: 350px;
+
+}
 .files-buttons-div{
     margin-top: 20px;
     display: flex;

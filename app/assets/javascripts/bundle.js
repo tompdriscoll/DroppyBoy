@@ -277,6 +277,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var FileIcon = function FileIcon(props) {
+  var image;
   var time;
 
   if (props.file['time']) {
@@ -286,14 +287,34 @@ var FileIcon = function FileIcon(props) {
   }
 
   var date = time.getMonth() + 1 + '/' + time.getDate();
-  var prev = null;
+  var prev = null; // let previewOpen = function preview(){
+  //     prev = <FilePreview file={props.file['file']}/>
+  // }
 
-  var previewOpen = function previewOpen() {
-    prev = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_file_preview__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      file: props.file
+  var file = props.file.file;
+  var type = 'default';
+  var name;
+
+  if (props.file.file.type) {
+    type = props.file.file.type;
+    name = props.file.file.name;
+  } else {
+    type = props.file.type;
+    name = props.file.name;
+  }
+
+  if (type.includes('audio')) {
+    image = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      id: "music-icon",
+      className: "files-item-icon",
+      src: window.musicIcon
     });
-    console.log('poppycock');
-  };
+  } else if (type.includes('image')) {
+    image = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      className: "files-item-icon",
+      src: file
+    });
+  }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "files-icon-wrapper"
@@ -301,16 +322,13 @@ var FileIcon = function FileIcon(props) {
     className: "files-icon-contents"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "files-icon-icon-wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "files-icon-icon",
-    src: props.file['file']
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, image), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "file-title-date"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "file-icon-title"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "files-filename"
-  }, props.file['name'])), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "added-updated-div"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "added-updated"
@@ -324,7 +342,12 @@ var FileIcon = function FileIcon(props) {
     onClick: function onClick() {
       return previewOpen();
     }
-  }, "Preview"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+  }, "Preview"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "recent-button",
+    onClick: function onClick(e) {
+      return props.handleDelete(props.file);
+    }
+  }, "Delete"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     className: "files-ellipsis"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     fill: "none",
@@ -700,17 +723,31 @@ var RecentItem = function RecentItem(props) {
   }
 
   var date = time.getMonth() + 1 + '/' + time.getDate();
-  var prev = null;
+  var prev = null; // let previewOpen = function preview(){
+  //     prev = <FilePreview file={props.file['file']}/>
+  // }
 
-  var previewOpen = function preview() {
-    prev = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_file_preview__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      file: props.file['file']
+  var file = props.file.file;
+  var type;
+  var name;
+
+  if (props.file.file.type) {
+    type = props.file.file.type;
+    name = props.file.file.name;
+  } else {
+    type = props.file.type;
+    name = props.file.name;
+  }
+
+  if (type.includes('audio')) {
+    image = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      id: "music-icon",
+      src: window.musicIcon
     });
-  };
-
-  if (props.file.type.includes('audio')) {
-    image = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      id: "music-icon"
+  } else if (type.includes('image')) {
+    image = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      className: "recent-item-icon",
+      src: file
     });
   }
 
@@ -726,7 +763,7 @@ var RecentItem = function RecentItem(props) {
     className: "home-item-title"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "home-filename"
-  }, props.file['name']), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "star"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     width: "32",
@@ -881,6 +918,8 @@ var UserHome = /*#__PURE__*/function (_React$Component) {
   _createClass(UserHome, [{
     key: "handleUpload",
     value: function handleUpload(file) {
+      var reader = new FileReader();
+      console.log(reader.readAsDataURL(file));
       var newFileArray = this.props.currentUser.files;
       newFileArray.push({
         file: file
@@ -888,6 +927,22 @@ var UserHome = /*#__PURE__*/function (_React$Component) {
       this.setState({
         files: this.props.currentUser.files
       });
+      this.previewFile(file);
+    }
+  }, {
+    key: "previewFile",
+    value: function previewFile(file) {
+      var preview = document.getElementById('testy');
+      var reader = new FileReader();
+      reader.addEventListener("load", function () {
+        // convert image file to base64 string
+        var square = document.getElementsByClassName('recent-item-icon')[0];
+        square.src = reader.result;
+      }, false);
+
+      if (file) {
+        reader.readAsDataURL(file);
+      }
     }
   }, {
     key: "handleDelete",
@@ -932,7 +987,6 @@ var UserHome = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var MainContent;
-      console.log(this.state.main_content);
       this.state.main_content === 'Home' ? MainContent = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home_main__WEBPACK_IMPORTED_MODULE_1__["default"], {
         handleDelete: this.handleDelete,
         files: this.state.files
@@ -1835,8 +1889,9 @@ var DroppyboyLogo = function DroppyboyLogo(props) {
     className: "DropboxLogo--glyph",
     alt: "",
     role: "presentation"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "logo-homemade"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    id: "logo-homemade",
+    src: window.logoWhite
   }));
 };
 
@@ -2054,8 +2109,9 @@ var DroppyboyLogo = function DroppyboyLogo(props) {
     className: "DropboxLogo--glyph",
     alt: "",
     role: "presentation"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "logo-homemade"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    id: "logo-homemade",
+    src: window.logoWhite
   }));
 };
 
@@ -2273,8 +2329,9 @@ var DroppyboyLogo = function DroppyboyLogo(props) {
     className: "DropboxLogo--glyph",
     alt: "",
     role: "presentation"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "logo-homemade"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    id: "logo-homemade",
+    src: window.logoWhite
   }));
 };
 
@@ -2492,8 +2549,9 @@ var DroppyboyLogo = function DroppyboyLogo(props) {
     className: "DropboxLogo",
     alt: "",
     role: "presentation"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "logo-homemade-black"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    id: "logo-homemade-black",
+    src: window.logoBlack
   }));
 };
 

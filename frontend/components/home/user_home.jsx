@@ -23,10 +23,29 @@ class UserHome extends React.Component {
     }
 
     handleUpload(file){
+        let reader = new FileReader()
+        console.log(reader.readAsDataURL(file))
         let newFileArray = this.props.currentUser.files
         newFileArray.push({file: file})
         this.setState({files: this.props.currentUser.files})   
+        this.previewFile(file)
     }
+
+     previewFile(file) {
+        const preview = document.getElementById('testy')
+        
+        const reader = new FileReader();
+      
+        reader.addEventListener("load", function () {
+          // convert image file to base64 string
+          let square = document.getElementsByClassName('recent-item-icon')[0]
+          square.src = reader.result;
+        }, false);
+      
+        if (file) {
+          reader.readAsDataURL(file);
+        }
+      }
 
     
     handleDelete(file){
@@ -62,7 +81,6 @@ class UserHome extends React.Component {
 
     render(){
         let MainContent;
-        console.log(this.state.main_content)
 
         this.state.main_content === 'Home' ?  MainContent = <HomeMain handleDelete={this.handleDelete} files={this.state.files}/> 
         : MainContent = <HomeFiles handleDelete={this.handleDelete} files={this.state.files}></HomeFiles>
@@ -77,6 +95,7 @@ class UserHome extends React.Component {
                 <HomeSideBar handleUpload={this.handleUpload}/>
             </div>
         </div>
+
     </div>)
 
     }

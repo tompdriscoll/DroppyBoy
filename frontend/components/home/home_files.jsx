@@ -4,6 +4,7 @@ import SuggestedListItem from './suggested_list_item'
 
 import UploadForm from '../uploads/upload_from'
 const HomeFiles = props => {  
+
     const fileList = props.files.map(file => (     
         <FileIcon  handleDelete={props.handleDelete} file={file} />
     )).reverse()

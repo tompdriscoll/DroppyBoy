@@ -5,19 +5,43 @@ import FilePreview from './file_preview'
 const RecentItem = props => {
     let image;
     let time;
+
     if (props.file['time']) {
          time = new Date(props.file['time'])
     } else{
          time = new Date
     }
+
     let date = time.getMonth() + 1 + '/' + time.getDate() 
+    
     let prev = null
-    let previewOpen = function preview(){
-        prev = <FilePreview file={props.file['file']}/>
+    // let previewOpen = function preview(){
+    //     prev = <FilePreview file={props.file['file']}/>
+    // }
+    
+    let file = props.file.file
+    let type;
+    let name;
+    
+    if (props.file.file.type){
+        type = props.file.file.type
+        name = props.file.file.name
+    } else {
+        type = props.file.type
+        name = props.file.name
     }
-    if (props.file.type.includes('audio')){
-        image = <div id='music-icon'></div>
+   
+
+   
+   
+    if (type.includes('audio')){
+        image = <img id='music-icon' src={window.musicIcon}></img>
+    } else if (type.includes('image')){
+        image = <img className="recent-item-icon" src={file}></img>
     }
+
+
+
    return( 
    <div className='recent-item-wrapper'>
        {prev}
@@ -28,7 +52,7 @@ const RecentItem = props => {
         <div className='home-title-date'>
 
             <div className='home-item-title'>
-                <p className='home-filename'>{props.file['name']}</p>
+                <p className='home-filename'>{name}</p>
                 <button className="star" >
                     <svg width="32" 
                     height="32" 
