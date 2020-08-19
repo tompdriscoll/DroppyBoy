@@ -73,7 +73,7 @@ const RecentItem = props => {
         </div>
         </div>
         <div className='recent-buttons-div'>
-            <div className='recent-button' onClick={() => previewOpen}>Preview</div>
+            {/* <div className='recent-button' onClick={() => previewOpen}>Preview</div> */}
             <div className='recent-button' onClick={ e => (props.handleDelete(props.file))}>Delete</div>
             <svg className='recent-ellipsis'>
                     <g fill="none" fillRule="evenodd">

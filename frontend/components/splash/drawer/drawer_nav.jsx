@@ -23,7 +23,7 @@ class DrawerNav extends React.Component {
         return (
             <nav className="drawerNav">
                 <button id="drawer-sign-in" className="drawer-link" onClick={this.props.changeForm}>{button}</button>
-                <a href="/install" className="drawer-link">Download</a>
+                <a href="/error" className="drawer-link">Download</a>
                 <button className='noShow' id="drawer-close" 
                  onClick={this.closeDrawer}></button>
             </nav>

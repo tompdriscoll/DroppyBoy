@@ -19,7 +19,7 @@ const App = () => (
     <Switch>
       <AuthRoute path='/' exact component={Splash}/>
       <ProtectedRoute path='/h' component={HomeContainer}/>
-      <Route component={ErrorPage}/>
+      <Route path='/error' component={ErrorPage}/>
     </Switch>
   </div>
     
