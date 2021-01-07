@@ -226,6 +226,7 @@ var App = function App() {
     path: "/h",
     component: _home_home_container__WEBPACK_IMPORTED_MODULE_4__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    path: "/error",
     component: _error_page__WEBPACK_IMPORTED_MODULE_5__["default"]
   })));
 };
@@ -768,13 +769,21 @@ var RecentItem = function RecentItem(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     width: "32",
     height: "32",
-    viewBox: "0 0 32 32"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    fillRule: "evenodd",
-    clipRule: "evenodd",
-    d: "M16 18.657l2.138 1.197-.478-2.403 1.799-1.663-2.433-.289L16  13.275l-1.026 2.224-2.433.289 1.799 1.663-.478 2.403L16 18.657zm-4.944  5.06l1.104-5.558L8 14.312l5.627-.667L16 8.5l2.373 5.145 5.627.667-4.16  3.847 1.104 5.558L16 20.949l-4.944 2.768z",
-    className: "mc-icon--mf"
-  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 238.98 227.79"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("defs", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("style", null, ".cls-1.fill:white;.cls-2.fill:blue;")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+    id: "Layer_2",
+    "data-name": "Layer 2"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+    id: "Layer_1-2",
+    "data-name": "Layer 1"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("polygon", {
+    className: "cls-1",
+    points: "62.83 144.57 5.38 89.35 84.16 77.34 118.93 5.65  154.69 76.86 233.62 87.77 176.94 143.78 190.96 222.23 120.17 185.63 49.9  223.2 62.83 144.57"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    className: "cls-2",
+    d: "M119,11.3l32.89,65.51L153, 79.16l2.61.36,72.61,10-52.14,51.52-1.87,1.85.46,2.59,12.89,72.16L122.49,184l-2.34-1.21-2.32, 1.24L53.19,218.61l11.89-72.33.43-2.6-1.9-1.82L10.77,91.06,83.24,80l2.59-.39L87,77.25, 119,11.3M118.89,0,82.48,75.07,0,87.64l60.15,57.82L46.61,227.79l73.58-39.33,74.12, 38.31-14.67-82.13L239,86,156.33,74.56,118.89,0Z"
+  })))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "added-updated-div"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "added-updated"
@@ -784,11 +793,6 @@ var RecentItem = function RecentItem(props) {
   }, date)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "recent-buttons-div"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "recent-button",
-    onClick: function onClick() {
-      return previewOpen;
-    }
-  }, "Preview"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "recent-button",
     onClick: function onClick(e) {
       return props.handleDelete(props.file);
@@ -1549,7 +1553,7 @@ var DrawerNav = /*#__PURE__*/function (_React$Component) {
         className: "drawer-link",
         onClick: this.props.changeForm
       }, button), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "/install",
+        href: "/error",
         className: "drawer-link"
       }, "Download"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "noShow",

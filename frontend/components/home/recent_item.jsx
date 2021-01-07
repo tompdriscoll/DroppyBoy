@@ -54,16 +54,18 @@ const RecentItem = props => {
             <div className='home-item-title'>
                 <p className='home-filename'>{name}</p>
                 <button className="star" >
-                    <svg width="32" 
-                    height="32" 
-                    viewBox="0 0 32 32">
-                        <path fillRule="evenodd" clipRule="evenodd" 
-                        d="M16 18.657l2.138 1.197-.478-2.403 1.799-1.663-2.433-.289L16 
-                        13.275l-1.026 2.224-2.433.289 1.799 1.663-.478 2.403L16 18.657zm-4.944 
-                        5.06l1.104-5.558L8 14.312l5.627-.667L16 8.5l2.373 5.145 5.627.667-4.16 
-                        3.847 1.104 5.558L16 20.949l-4.944 2.768z" className="mc-icon--mf">
-                        </path>
-                    </svg>
+                <svg width="32" 
+                    height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 238.98 227.79">
+                <defs><style>.cls-1.fill:white;.cls-2.fill:blue;</style></defs><g id="Layer_2" 
+                data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon 
+                className="cls-1" points="62.83 144.57 5.38 89.35 84.16 77.34 118.93 5.65 
+                154.69 76.86 233.62 87.77 176.94 143.78 190.96 222.23 120.17 185.63 49.9 
+                223.2 62.83 144.57"/><path className="cls-2" d="M119,11.3l32.89,65.51L153,
+                79.16l2.61.36,72.61,10-52.14,51.52-1.87,1.85.46,2.59,12.89,72.16L122.49,184l-2.34-1.21-2.32,
+                1.24L53.19,218.61l11.89-72.33.43-2.6-1.9-1.82L10.77,91.06,83.24,80l2.59-.39L87,77.25,
+                119,11.3M118.89,0,82.48,75.07,0,87.64l60.15,57.82L46.61,227.79l73.58-39.33,74.12,
+                38.31-14.67-82.13L239,86,156.33,74.56,118.89,0Z"/></g></g></svg>
+                    
                 </button>
             </div>
             <div className='added-updated-div'>
