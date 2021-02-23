@@ -40,8 +40,26 @@ const RecentItem = props => {
         image = <img className="recent-item-icon" src={file}></img>
     }
 
-
-
+    let star;
+    let starMarker = 2
+    let fave = function fave() {
+        if (starMarker === 1){
+            star = <svg viewBox="0 0 24 24" fill="none" className="dig-UIIcon dig-UIIcon--standard" width="24" height="24" focusable="false"><path d="M20.836 9.91096L14.7305 9.02446L12 3.49146L9.2695 9.02446L3.164 9.91096L7.594 14.2295L6.7605 20.3935L12 17.4415L17.2395 20.3935L16.406 14.2295L20.836 9.91096Z" fill="currentColor"></path></svg>
+                   
+            starMarker = 2
+        } else {
+            star = <svg viewBox="0 0 24 24" fill="none" className=" " width="24" 
+            height="24" focusable="false"><path d="M20.8361 9.91108L14.7306 9.02458L12.0001 3.49158L9.26956
+            9.02458L3.16406 9.91108L7.59406 14.2296L6.76056 20.3936L12.0001 17.4416L17.2396 20.3916L16.4061 
+            14.2296L20.8361 9.91108ZM12.0001 15.7196L8.65006 17.6061L9.18106 13.6821L6.38656 10.9586L10.2646
+            10.3951L12.0001 6.88158L13.7346 10.3956L17.6126 10.9591L14.8181 13.6826L15.3501 17.6066L12.0001 
+            15.7196Z" fill="currentColor"></path>
+            </svg>
+                     
+            starMarker = 1
+        }
+    }
+    fave()
    return( 
    <div className='recent-item-wrapper'>
        {prev}
@@ -53,19 +71,9 @@ const RecentItem = props => {
 
             <div className='home-item-title'>
                 <p className='home-filename'>{name}</p>
-                <button className="star" >
-                <svg width="32" 
-                    height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 238.98 227.79">
-                <defs><style>.cls-1.fill:white;.cls-2.fill:blue;</style></defs><g id="Layer_2" 
-                data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon 
-                className="cls-1" points="62.83 144.57 5.38 89.35 84.16 77.34 118.93 5.65 
-                154.69 76.86 233.62 87.77 176.94 143.78 190.96 222.23 120.17 185.63 49.9 
-                223.2 62.83 144.57"/><path className="cls-2" d="M119,11.3l32.89,65.51L153,
-                79.16l2.61.36,72.61,10-52.14,51.52-1.87,1.85.46,2.59,12.89,72.16L122.49,184l-2.34-1.21-2.32,
-                1.24L53.19,218.61l11.89-72.33.43-2.6-1.9-1.82L10.77,91.06,83.24,80l2.59-.39L87,77.25,
-                119,11.3M118.89,0,82.48,75.07,0,87.64l60.15,57.82L46.61,227.79l73.58-39.33,74.12,
-                38.31-14.67-82.13L239,86,156.33,74.56,118.89,0Z"/></g></g></svg>
-                    
+                <button className="star" onClick={ e => fave()}>
+     
+                 {star}  
                 </button>
             </div>
             <div className='added-updated-div'>

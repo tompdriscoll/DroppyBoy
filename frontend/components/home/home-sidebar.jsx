@@ -1,5 +1,5 @@
 import React from 'react'
-import UploadForm from '../uploads/upload_from'
+import UploadForm from '../uploads/upload_form'
 const HomeSideBar = props => (
     <div id='home-sidebar'>
         <div className="home-sidebar-content">

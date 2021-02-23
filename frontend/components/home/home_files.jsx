@@ -2,7 +2,7 @@ import React from 'react';
 import FileIcon from './file_icon'
 import SuggestedListItem from './suggested_list_item'
 
-import UploadForm from '../uploads/upload_from'
+import UploadForm from '../uploads/upload_form'
 const HomeFiles = props => {  
 
     const fileList = props.files.map(file => (     

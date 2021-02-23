@@ -2,7 +2,7 @@ import React from 'react';
 import RecentItem from './recent_item'
 import SuggestedListItem from './suggested_list_item'
 
-import UploadForm from '../uploads/upload_from'
+import UploadForm from '../uploads/upload_form'
 const HomeMain = props => {  
     
     const recentItems = props.files.map(file => {
