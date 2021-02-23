@@ -15,8 +15,8 @@ const Grid2 = () => (
                 anywhere. No more wasting the day tracking down work.
                 </p>
             </div>
-            <img id='grid2-pic-1'src='https://cfl.dropboxstatic.com/static/images/index/rebrand/co_create/desktop/dropbox_digital_desktop_01-vflTDaJ3U.jpg'/>
-            <img id='grid2-pic-2'src='https://cfl.dropboxstatic.com/static/images/index/rebrand/co_create/desktop/dropbox_digital_desktop_02-vflq-5NiU.jpg'/>
+            <img alt='grid2-pic1' id='grid2-pic-1'src='https://cfl.dropboxstatic.com/static/images/index/rebrand/co_create/desktop/dropbox_digital_desktop_01-vflTDaJ3U.jpg'/>
+            <img alt='grid2-pic2' id='grid2-pic-2'src='https://cfl.dropboxstatic.com/static/images/index/rebrand/co_create/desktop/dropbox_digital_desktop_02-vflq-5NiU.jpg'/>
         </div>
         </div>
     </div>
