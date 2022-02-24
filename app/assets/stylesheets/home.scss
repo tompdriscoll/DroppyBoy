@@ -192,7 +192,7 @@
     padding: 12px;
     border: 1px solid #a8a8a8;
     border-radius: 10px;
-    right: 30%;
+    right: -200%;
 }
 
 #notif-list li:first-of-type{
@@ -205,6 +205,8 @@
 
 #notif-list li:first-of-type:hover{
     background:initial;
+    color: initial;
+    cursor: default;
 }
 
 #notif-list li{
@@ -216,7 +218,9 @@
 }
 
 #notif-list li:hover{
-    background-color: lightblue;
+    background-color: #0070e0;
+    color: white;
+    cursor: pointer;
 }
 
 #suggested{
