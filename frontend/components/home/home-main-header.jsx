@@ -17,6 +17,23 @@ const HomeMainHeader = props => (
                     <Notifications/>
                     <div id='propic-container'>
                         <div id='pro-pic'>
+                            <svg>
+
+                            <title>Abstract user icon</title>
+
+                            <defs>
+                                <clipPath id="circular-border">
+                                <circle cx="300" cy="300" r="280" />
+                                </clipPath>
+                                <clipPath id="avoid-antialiasing-bugs">
+                                <rect width="100%" height="498" />
+                                </clipPath>
+                            </defs>
+                            
+                            <circle cx="16" cy="16" r="16" fill="black" clip-path="url(#avoid-antialiasing-bugs)" />
+                            <circle cx="16" cy="12" r="6.5" fill="white"/>
+                            <circle cx="16" cy="29" r="11.7"  fill="white"/>
+                            </svg>
                         </div>
                         <div id='logout-button'>
                             <button onClick={props.logout}>Logout</button>

@@ -90,6 +90,13 @@
 
 #propic-container:hover #logout-button{
     display: block;
+    position: absolute;
+    right: -100%;
+}
+
+#propic-container:hover #pro-pic{
+    background: #0070e0;
+    cursor: pointer;
 }
 
 #pro-pic{
@@ -97,7 +104,6 @@
     width: 32px;
     background: darkgray;
     border-radius: 20px;
-    
 }
 
 #logout-button {
