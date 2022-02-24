@@ -463,6 +463,7 @@ var HomeMainHeader = function HomeMainHeader(props) {
     width: "100%",
     height: "498"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("circle", {
+    id: "pro-pic-svg-main-circle",
     cx: "16",
     cy: "16",
     r: "16",

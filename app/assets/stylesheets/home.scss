@@ -86,6 +86,7 @@
 #propic-container{
     position: relative;
     margin-left: 15px;
+    cursor: pointer;
 }
 
 #propic-container:hover #logout-button{
@@ -94,16 +95,16 @@
     right: -100%;
 }
 
-#propic-container:hover #pro-pic{
-    background: #0070e0;
-    cursor: pointer;
+#propic-container:hover #pro-pic-svg-main-circle{
+    fill: #0070e0;
 }
 
 #pro-pic{
     height: 32px;
     width: 32px;
-    background: darkgray;
+    padding: 1px;
     border-radius: 20px;
+    overflow: hidden;
 }
 
 #logout-button {

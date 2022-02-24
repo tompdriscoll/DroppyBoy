@@ -30,7 +30,7 @@ const HomeMainHeader = props => (
                                 </clipPath>
                             </defs>
                             
-                            <circle cx="16" cy="16" r="16" fill="black" clip-path="url(#avoid-antialiasing-bugs)" />
+                            <circle id='pro-pic-svg-main-circle' cx="16" cy="16" r="16" fill="black" clip-path="url(#avoid-antialiasing-bugs)" />
                             <circle cx="16" cy="12" r="6.5" fill="white"/>
                             <circle cx="16" cy="29" r="11.7"  fill="white"/>
                             </svg>
