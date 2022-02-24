@@ -10,7 +10,7 @@ function Notifications(props){
             <ul id='notif-list'>
                 <li>Notifications</li>
                 <li>Welcome to Droppyboy!</li>
-                <li>Notifications go here</li>
+                <li>Notifications go here.</li>
             </ul>
         </div>
     )

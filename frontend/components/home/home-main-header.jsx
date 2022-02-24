@@ -10,7 +10,7 @@ const HomeMainHeader = props => (
                         <span className="search-chips"></span>
                         <input className="search__input" 
                             maxLength="200" 
-                            placeholder="Search your content" 
+                            // placeholder="Search your content" 
                             type="text" 
                             />
                     </form>

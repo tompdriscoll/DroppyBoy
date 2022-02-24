@@ -1,4 +1,5 @@
 class Api::UsersController < ApplicationController
+    include ActiveStorage::Downloading
     def create
         @user = User.new(user_params)
         p @user
@@ -27,7 +28,8 @@ class Api::UsersController < ApplicationController
         p @user
          render :show
          if @user.uploaded_files.find_by(id:@user.delete_id)
-            @user.uploaded_files.find_by(id:@user.delete_id).purge
+            open(@user.uploaded_files.find_by(id:@user.delete_id).download)
+            # file.open
          end
        else
          flash.now[:errors] = @user.errors.full_messages
