@@ -3061,18 +3061,22 @@ var UploadForm = /*#__PURE__*/function (_React$Component) {
     key: "handleFile",
     value: function handleFile(e) {
       e.preventDefault();
-      var file = e.currentTarget.files[0];
-      this.setState({
-        name: file.name,
-        file: file,
-        time: file.lastModified
+      var file = e.currentTarget.files[0]; // this.setState({name: file.name, file: file, time: file.lastModified})
+
+      this.setState(function (prevState) {
+        return {
+          name: file.name,
+          file: file
+        };
+      }, function () {
+        return document.getElementById('submit').click();
       });
-      var form = document.getElementById('upload-form');
-      form.submit();
     }
   }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
+      var _this2 = this;
+
       e.preventDefault();
       var formData = new FormData();
 
@@ -3088,8 +3092,9 @@ var UploadForm = /*#__PURE__*/function (_React$Component) {
           return console.log(response.message);
         }, function (response) {
           console.log(response.responseJSON);
+
+          _this2.props.history.push('/h');
         });
-        this.props.history.push('/h');
         this.props.handleUpload(this.state.file);
       }
     }

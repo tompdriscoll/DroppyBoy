@@ -28,7 +28,7 @@ class Api::UsersController < ApplicationController
         p @user
          render :show
          if @user.uploaded_files.find_by(id:@user.delete_id)
-            open(@user.uploaded_files.find_by(id:@user.delete_id).download)
+            (@user.uploaded_files.find_by(id:@user.delete_id).delete)
             # file.open
          end
        else

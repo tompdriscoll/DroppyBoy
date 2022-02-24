@@ -19,13 +19,20 @@ class UploadForm extends React.Component {
     
     e.preventDefault();
     const file = e.currentTarget.files[0];
-    this.setState({name: file.name, file: file, time: file.lastModified})
-    let form = document.getElementById('upload-form')
-    form.submit()
+    // this.setState({name: file.name, file: file, time: file.lastModified})
+    this.setState(
+      (prevState) => {
+        return {
+          name: file.name, 
+          file: file        
+        };
+      },
+      () => document.getElementById('submit').click()
+    );
+   
   }
 
   handleSubmit(e) {
-    
     e.preventDefault();
     
     const formData = new FormData();
@@ -42,10 +49,10 @@ class UploadForm extends React.Component {
       (response) => console.log(response.message),
       (response) => {
         console.log(response.responseJSON)
+        this.props.history.push('/h');
       }
       
     );
-    this.props.history.push('/h');
     this.props.handleUpload(this.state.file)
     }
    
