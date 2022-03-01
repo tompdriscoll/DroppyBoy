@@ -647,11 +647,7 @@ var HomeMain = function HomeMain(props) {
     className: "section"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
     className: "section-header"
-  }, " Recent", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-    className: "hide-button"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: ""
-  }, "Hide"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+  }, " Recent"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
     id: "recent-list"
   }, recentItems)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "starred",
@@ -801,24 +797,23 @@ var RecentItem = function RecentItem(props) {
     });
   }
 
-  var star;
+  var star = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Okay Okay");
   var starMarker = 2;
 
-  var fave = function fave() {
+  var fave = function fave(e) {
     if (starMarker === 1) {
-      star = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
-        viewBox: "0 0 24 24",
-        fill: "none",
-        className: "dig-UIIcon dig-UIIcon--standard",
-        width: "24",
-        height: "24",
-        focusable: "false"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-        d: "M20.836 9.91096L14.7305 9.02446L12 3.49146L9.2695 9.02446L3.164 9.91096L7.594 14.2295L6.7605 20.3935L12 17.4415L17.2395 20.3935L16.406 14.2295L20.836 9.91096Z",
-        fill: "currentColor"
-      }));
+      star = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Ooopsy Poopsy"); // <svg viewBox="0 0 24 24" fill="blue" className="dig-UIIcon dig-UIIcon--standard" 
+      //         width="24" height="24" focusable="false">
+      //             <path d="M20.836 9.91096L14.7305 9.02446L12 3.49146L9.2695 9.02446L3.164 
+      //                     9.91096L7.594 14.2295L6.7605 20.3935L12 17.4415L17.2395 20.3935L16.406 14.2295L20.836 9.91096Z" 
+      //                     fill="blue">
+      //             </path>
+      //         </svg>
+
+      debugger;
       starMarker = 2;
     } else {
+      console.log('hey');
       star = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
         viewBox: "0 0 24 24",
         fill: "none",
@@ -3075,8 +3070,6 @@ var UploadForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
-      var _this2 = this;
-
       e.preventDefault();
       var formData = new FormData();
 
@@ -3092,8 +3085,6 @@ var UploadForm = /*#__PURE__*/function (_React$Component) {
           return console.log(response.message);
         }, function (response) {
           console.log(response.responseJSON);
-
-          _this2.props.history.push('/h');
         });
         this.props.handleUpload(this.state.file);
       }

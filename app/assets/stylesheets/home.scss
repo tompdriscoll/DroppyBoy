@@ -373,11 +373,13 @@
 }
 
 #file-submit{
+    
     position: absolute;
     bottom: -30px;
 }
 
 #submit{
+    display: none;
     color: #0052d9;
 }
 
@@ -458,6 +460,7 @@
 .added-updated-div{
     line-height: normal;
 }
+
 .star{
     background: none;
     border:none;
@@ -499,6 +502,7 @@
 .recent-button:hover{
     border: 1px solid #0070e0;
     color: #0070e0;
+    cursor: pointer;
 }
 
 .recent-ellipsis{

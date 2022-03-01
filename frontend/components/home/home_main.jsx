@@ -25,9 +25,9 @@ const HomeMain = props => {
         <div id='recent1' className='section'>
             <h2 className='section-header'> Recent
 
-                    <button className="hide-button">
+                    {/* <button className="hide-button">
                         <span className="">Hide</span>
-                    </button>
+                    </button> */}
 
             </h2>
             <ul id='recent-list'>

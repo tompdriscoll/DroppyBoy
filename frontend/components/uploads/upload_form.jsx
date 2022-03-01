@@ -49,10 +49,9 @@ class UploadForm extends React.Component {
       (response) => console.log(response.message),
       (response) => {
         console.log(response.responseJSON)
-        this.props.history.push('/h');
       }
       
-    );
+      );
     this.props.handleUpload(this.state.file)
     }
    

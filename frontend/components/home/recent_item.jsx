@@ -40,14 +40,23 @@ const RecentItem = props => {
         image = <img className="recent-item-icon" src={file}></img>
     }
 
-    let star;
+    let star = <h1>Okay Okay</h1>;
     let starMarker = 2
-    let fave = function fave() {
+    let fave = function fave(e) {
+        
         if (starMarker === 1){
-            star = <svg viewBox="0 0 24 24" fill="none" className="dig-UIIcon dig-UIIcon--standard" width="24" height="24" focusable="false"><path d="M20.836 9.91096L14.7305 9.02446L12 3.49146L9.2695 9.02446L3.164 9.91096L7.594 14.2295L6.7605 20.3935L12 17.4415L17.2395 20.3935L16.406 14.2295L20.836 9.91096Z" fill="currentColor"></path></svg>
-                   
+            star = <h1>Ooopsy Poopsy</h1>
+            // <svg viewBox="0 0 24 24" fill="blue" className="dig-UIIcon dig-UIIcon--standard" 
+            //         width="24" height="24" focusable="false">
+            //             <path d="M20.836 9.91096L14.7305 9.02446L12 3.49146L9.2695 9.02446L3.164 
+            //                     9.91096L7.594 14.2295L6.7605 20.3935L12 17.4415L17.2395 20.3935L16.406 14.2295L20.836 9.91096Z" 
+            //                     fill="blue">
+            //             </path>
+            //         </svg>
+            debugger
             starMarker = 2
         } else {
+            console.log('hey')
             star = <svg viewBox="0 0 24 24" fill="none" className=" " width="24" 
             height="24" focusable="false"><path d="M20.8361 9.91108L14.7306 9.02458L12.0001 3.49158L9.26956
             9.02458L3.16406 9.91108L7.59406 14.2296L6.76056 20.3936L12.0001 17.4416L17.2396 20.3916L16.4061 
