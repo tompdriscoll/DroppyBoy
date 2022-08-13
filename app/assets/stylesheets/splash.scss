@@ -166,7 +166,8 @@
     font-size: calc(25px + 7 * ((100vw - 375px) / 1065));
     line-height: 38px;
     font-weight: 500;
-    font-family: 'SharpGroteskWide', sans-serif;
+    font-family: 'Lexend Giga', sans-serif;
+    letter-spacing: -4px;
 }
 
 #grid2-text p{
@@ -362,10 +363,11 @@
 }
 
 h6 {
-    font-family: 'SharpGroteskWide', sans-serif;
+    font-family: 'Lexend Giga', sans-serif;
     font-weight: 500;
     text-align: left;
     font-size: 16px;
+    letter-spacing: -3px;
 }
 
 
