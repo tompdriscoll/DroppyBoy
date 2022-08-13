@@ -57,7 +57,8 @@
     background: inherit;
     font-size: 16px;;
     font-weight: 400;
-    font-family: SharpGrotesk;
+    font-family:  'Lexend Giga', sans-serif;
+    letter-spacing: -2px;
     color: inherit;
 }
 
@@ -98,9 +99,10 @@
 
 .grid header h1{
     font-size: 71px;
-    font-family: SharpGroteskWide;
+    font-family: 'Lexend Giga', sans-serif;
     font-weight: 500;
     margin-bottom:50px;
+    letter-spacing: -10px;
 }
 
  .grid header p{
@@ -223,7 +225,8 @@
     font-size: calc(25px + 7 * ((100vw - 375px) / 1065));
     line-height: 38px;
     font-weight: 500;
-    font-family: 'SharpGroteskWide', sans-serif;
+    font-family: 'Lexend Giga', sans-serif;
+    letter-spacing: -4px;
 }
 
 #grid3-text p{
@@ -268,7 +271,8 @@
     font-size: calc(25px + 7 * ((100vw - 375px) / 1065));
     line-height: 38px;
     font-weight: 500;
-    font-family: 'SharpGroteskWide', sans-serif;
+    font-family: 'Lexend Giga', sans-serif;
+    letter-spacing: -4px;
 }
 
 #grid4-text p{
@@ -304,9 +308,10 @@
     margin-bottom: 30px;
     font-size: calc(32px + 8 * ((100vw - 375px) / 1065));
     line-height: 46px;
-    font-family: 'SharpGroteskWide', sans-serif;
+    font-family: 'Lexend Giga', sans-serif;
     font-weight: 500;
     font-size: 36px;
+    letter-spacing: -4px;
 }
 
 .grid5-text button{

@@ -40,7 +40,29 @@ class SessionForm extends React.Component {
     let email = 'test' + digest + '@user.com'
     console.log(email)
     const guest = {first_name: "test", last_name: 'user', email: email, password: "hunter12"}
-    this.props.processForm(guest)
+    
+    var i = 0;
+  
+  var speed = 50; /* The speed/duration of the effect in milliseconds */
+    let typing =  function () {document.getElementById("email").value += email.charAt(i);
+  }
+
+    if (i < email.length) {
+      document.getElementById("email").value += email.charAt(i);
+      i++;
+      setTimeout(typing,speed);
+    }  else {
+      i=0
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    // this.props.processForm(guest)
   }
 
   demoLogin(e){

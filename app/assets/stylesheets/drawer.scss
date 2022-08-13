@@ -32,10 +32,11 @@
 
 #drawer-contents header h2{
     margin: 0px;
-    font-family: SharpGrotesk;
-    font-weight: 500;
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: 400;
     font-size: 25px;
     line-height: 1.14286;
+    letter-spacing: -4px;
 }
 
 
@@ -65,19 +66,21 @@
 .drawerNav button {
     font-size: 16px;;
     font-weight: 400;
-    font-family: SharpGrotesk;
+    font-family: 'Lexend Giga', sans-serif;
     margin-top: auto !important;
     margin-bottom: auto !important;
     margin-left: 30px;
+    letter-spacing: -2px;
 }
 
 .drawerNav a {
     font-size: 16px;;
     font-weight: 400;
-    font-family: SharpGrotesk;
+    font-family: 'Lexend Giga', sans-serif;
     margin-top: auto !important;
     margin-bottom: auto !important;
     margin-left: 30px;
+    letter-spacing: -2px;
 }
 
 #drawer-form {

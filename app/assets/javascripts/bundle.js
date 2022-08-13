@@ -1256,7 +1256,22 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
         email: email,
         password: "hunter12"
       };
-      this.props.processForm(guest);
+      var i = 0;
+      var speed = 50;
+      /* The speed/duration of the effect in milliseconds */
+
+      var typing = function typing() {
+        document.getElementById("email").value += email.charAt(i);
+      };
+
+      if (i < email.length) {
+        document.getElementById("email").value += email.charAt(i);
+        i++;
+        setTimeout(typing, speed);
+      } else {
+        i = 0;
+      } // this.props.processForm(guest)
+
     }
   }, {
     key: "demoLogin",
