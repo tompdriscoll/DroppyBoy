@@ -59,7 +59,7 @@ const FileIcon = props => {
         <div className='files-buttons-div'>
             <div className='recent-button' onClick={() => previewOpen()}>Preview</div>
             <div className='recent-button' onClick={ e => (props.handleDelete(props.file))}>Delete</div>
-            <svg className='files-ellipsis'>
+            {/* <svg className='files-ellipsis'>
                     <g fill="none" fillRule="evenodd">
                         <g fill="#637282">
                             <circle cx="10.5" cy="16.5" r="1.5"></circle>
@@ -67,7 +67,7 @@ const FileIcon = props => {
                             <circle cx="20.5" cy="16.5" r="1.5"></circle>
                         </g>
                     </g>
-            </svg>
+            </svg> */}
         </div>
 
        

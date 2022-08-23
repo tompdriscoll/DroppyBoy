@@ -360,26 +360,7 @@ var FileIcon = function FileIcon(props) {
     onClick: function onClick(e) {
       return props.handleDelete(props.file);
     }
-  }, "Delete"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
-    className: "files-ellipsis"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("g", {
-    fill: "none",
-    fillRule: "evenodd"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("g", {
-    fill: "#637282"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("circle", {
-    cx: "10.5",
-    cy: "16.5",
-    r: "1.5"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("circle", {
-    cx: "15.5",
-    cy: "16.5",
-    r: "1.5"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("circle", {
-    cx: "20.5",
-    cy: "16.5",
-    r: "1.5"
-  }))))));
+  }, "Delete")));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FileIcon);
